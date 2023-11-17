@@ -19,8 +19,8 @@
 			</p>
 		</div>
 
-		<div class="o-hidden">
-			<img src="/h1.jpg" alt="" class="w-100 b-r-d" />
+		<div class="o-hidden w-h-100">
+			<img src="/h1.jpg" alt="" class="w-h-100 b-r-d" />
 		</div>
 	</article>
 
@@ -28,8 +28,8 @@
 		<article
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
-			<div class="o-hidden">
-				<img src="/h2.jpg" alt="" class="w-100 b-r-d" />
+			<div class="o-hidden w-h-100">
+				<img src="/h2.jpg" alt="" class="w-h-100 b-r-d" />
 			</div>
 
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
@@ -123,8 +123,8 @@
 				</div>
 			</div>
 
-			<div class="o-hidden">
-				<img src="/h3.jpg" alt="" class="w-100 b-r-d" />
+			<div class="o-hidden w-h-100">
+				<img src="/h3.jpg" alt="" class="w-h-100 b-r-d" />
 			</div>
 		</article>
 	</div>
@@ -132,8 +132,8 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="o-hidden">
-			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="w-100 b-r-d" />
+		<div class="o-hidden w-h-100">
+			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="w-h-100 b-r-d" />
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
