@@ -1,0 +1,31 @@
+@media (min-width: 65.001em) {
+    body {
+        --header-height: 5rem;
+    }
+
+    .big-screen-page-p-t-for-header {
+        padding-top: calc(var(--main-v-padding) * 2.5 + var(--header-height));
+    }
+
+    /* ||| */
+
+    .language-name {
+        font-size: 0.75rem;
+    }
+
+    .language-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    @media(hover: hover) {
+        .language-name {
+            transition: color .25s ease-in-out;
+        }
+
+        .selected-language-container:hover .language-name,
+        .language-item-wrapper:hover .language-name {
+            color: var(--accent-color);
+        }
+    }
+}

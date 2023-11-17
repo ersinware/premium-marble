@@ -1,0 +1,125 @@
+@media (min-width: 65.001em) {
+    body {
+        --main-h-padding: 2rem;
+        --main-v-padding: 2.5rem;
+    }
+
+    .for-small-screen {
+        display: none !important;
+    }
+
+    /* ||| */
+
+    .big-screen-d-none {
+        display: none;
+    }
+
+    /* ||| */
+
+    .big-screen-grid {
+        display: grid;
+    }
+
+    .big-screen-flex {
+        display: flex;
+    }
+
+    .big-screen-f-column {
+        flex-direction: column;
+    }
+
+    .big-screen-f-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .big-screen-j-c-c {
+        justify-content: center;
+    }
+
+    .big-screen-f-s-b {
+        justify-content: space-between;
+    }
+
+    .big-screen-a-i-c {
+        align-items: center;
+    }
+
+    .big-screen-f-s-e {
+        justify-content: space-evenly;
+    }
+
+    .big-screen-g-v-d {
+        gap: var(--main-v-padding);
+    }
+
+    .big-screen-g-h-d {
+        gap: var(--main-h-padding);
+    }
+
+    .big-screen-g-2 {
+        gap: 2rem;
+    }
+
+    .big-screen-g-2dot5 {
+        gap: 2.5rem;
+    }
+
+    .big-screen-g-4 {
+        gap: 4rem;
+    }
+
+    /* ||| */
+
+    .big-screen-page-max-w {
+        max-width: 65rem;
+    }
+
+    .big-screen-max-w-35 {
+        max-width: 35%;
+    }
+
+    .big-screen-page-max-h {
+        max-height: calc(var(--actual-vh) - 4 * var(--main-v-padding));
+    }
+
+    .big-screen-max-h-100 {
+        max-height: 100%;
+    }
+
+    .big-screen-h-100vh {
+        height: var(--actual-vh);
+    }
+
+    .big-screen-h-100 {
+        height: 100%;
+    }
+
+    /* ||| */
+
+    .big-screen-m-h-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .big-screen-page-p-b {
+        padding-bottom: calc(var(--main-v-padding) * 2.5);
+    }
+
+    .big-screen-page-p-v-d {
+        padding-block: calc(var(--main-v-padding) * 2.5);
+    }
+
+    .big-screen-p-v-d {
+        padding-block: var(--main-v-padding);
+    }
+
+    .big-screen-p-b-v-d {
+        padding-bottom: var(--main-v-padding);
+    }
+
+    /* ||| */
+
+    .big-screen-o-y-scroll {
+        overflow-y: scroll;
+    }
+}

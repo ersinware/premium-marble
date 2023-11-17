@@ -1,0 +1,9 @@
+@media (max-width: 65em) {
+    body {
+        --mobile-header-height: 5rem;
+    }
+
+    .small-screen-page-p-t-for-mobile-header {
+        padding-top: calc(var(--main-v-padding) * 2 + var(--mobile-header-height));
+    }
+}

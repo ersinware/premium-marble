@@ -1,0 +1,159 @@
+body {
+    --background-color: rgb(255, 255, 255);
+    --secondary-background-color: rgb(247, 247, 247);
+    --third-background-color: rgb(239, 239, 239);
+    --fourth-background-color: rgb(231, 231, 231);
+    --hoverable-content-background-color: rgb(247, 247, 247);
+    --tooltip-background-color-default: rgb(231, 231, 231);
+    --accent-color: orange;
+    --accent-color-darker: darkorange;
+
+    --title-color: rgb(24, 24, 24);
+    --text-color: rgb(48, 48, 48);
+    --secondary-text-color: rgb(72, 72, 72);
+    --third-text-color: rgb(88, 88, 88);
+    --text-color-unimportant: rgb(159, 159, 159);
+
+    --positive-color: green;
+    --positive-color-darker: darkgreen;
+
+    --error-color: indianred;
+    --error-color-darker: rgb(185, 72, 72);
+
+    --ripple-color: rgb(0, 0, 0, 0.075);
+    --button-ripple-color: rgb(0, 0, 0, 0.1);
+
+    --button-color: white;
+    --divider-color: rgba(0, 0, 0, 0.075);
+
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --disabled-button-background-color: rgb(223, 223, 223);
+    --disabled-button-color: white;
+
+    --header-background-color: rgb(255, 255, 255 .5);
+    --header-icon-color: var(--text-color);
+    --active-header-icon-color: var(--accent-color);
+    --active-header-icon-color-darker: var(--accent-color-darker);
+
+    --hoverable-background-color: var(--secondary-background-color);
+    --hoverable-secondary-background-color: var(--third-background-color);
+
+    --navigation-page-item-color: var(--secondary-text-color);
+    --active-navigation-page-item-color: var(--accent-color);
+    --active-navigation-page-item-color-darker: var(--accent-color-darker);
+    --hoverable-navigation-page-item-color: var(--secondary-text-color);
+    --active-hoverable-navigation-page-item-color: var(--accent-color);
+    --active-hoverable-navigation-page-item-color-darker: var(--accent-color-darker);
+    --hoverable-menu-item-icon-color: var(--accent-color);
+    --hoverable-menu-item-text-color: var(--secondary-text-color);
+    --active-hoverable-menu-item-text-color: var(--accent-color);
+    --active-hoverable-menu-item-text-color-darker: var(--accent-color-darker);
+
+    --bottom-bar-background-color: var(--secondary-background-color);
+    --bottom-bar-icon-color: var(--text-color);
+    --bottom-bar-active-icon-color: var(--accent-color);
+    --bottom-bar-active-icon-color-darker: var(--accent-color-darker);
+    --bottom-bar-text-color: var(--text-color);
+    --bottom-bar-active-text-color: var(--accent-color);
+    --bottom-bar-active-text-color-darker: var(--accent-color-darker);
+
+    --modal-menu-item-icon-color: var(--accent-color);
+    --modal-menu-item-text-color: var(--text-color);
+    --modal-active-menu-item-text-color: var(--accent-color);
+    --modal-active-menu-item-text-color-darker: var(--accent-color-darker);
+
+    --left-menu-background-color: var(--secondary-background-color);
+    --left-menu-icon-color: var(--text-color);
+    --active-left-menu-icon-color: var(--accent-color);
+    --active-left-menu-icon-color-darker: var(--accent-color-darker);
+
+    --fab-background-color: green;
+    --fab-background-color-darker: darkgreen;
+    --fab-icon-color: white;
+
+    --switch-hover-circle-color: rgba(0, 0, 0, 0.09);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --background-color: rgb(24, 24, 24);
+        --secondary-background-color: rgb(36, 36, 36);
+        --third-background-color: rgb(48, 48, 48);
+        --fourth-background-color: rgb(60, 60, 60);
+        --hoverable-content-background-color: rgb(36, 36, 36);
+        --tooltip-background-color-default: rgb(48, 48, 48);
+        --accent-color: orange;
+        --accent-color-darker: darkorange;
+
+        --title-color: rgb(231, 231, 231);
+        --text-color: rgb(215, 215, 215);
+        --secondary-text-color: rgb(183, 183, 183);
+        --third-text-color: rgb(151, 151, 151);
+        --text-color-unimportant: rgb(120, 120, 120);
+
+        --positive-color: green;
+        --positive-color-darker: darkgreen;
+
+        --error-color: indianred;
+        --error-color-darker: rgb(185, 72, 72);
+
+        --ripple-color: rgb(255, 255, 255, 0.075);
+        --button-ripple-color: rgb(0, 0, 0, 0.1);
+
+        --button-color: white;
+        --divider-color: rgba(255, 255, 255, 0.075);
+
+        --shadow-color: rgb(16, 16, 16);
+
+        --disabled-button-background-color: rgb(60, 60, 60);
+        --disabled-button-color: rgb(116, 116, 116);
+
+        --header-background-color: rgba(24, 24, 24, .5);
+        --header-icon-color: var(--text-color);
+        --active-header-icon-color: var(--accent-color);
+        --active-header-icon-color-darker: var(--accent-color-darker);
+
+        --hoverable-background-color: var(--secondary-background-color);
+        --hoverable-secondary-background-color: var(--third-background-color);
+
+        --navigation-page-item-color: var(--secondary-text-color);
+        --active-navigation-page-item-color: var(--accent-color);
+        --active-navigation-page-item-color-darker: var(--accent-color-darker);
+        --hoverable-navigation-page-item-color: var(--secondary-text-color);
+        --active-hoverable-navigation-page-item-color: var(--accent-color);
+        --active-hoverable-navigation-page-item-color-darker: var(--accent-color-darker);
+        --hoverable-menu-item-icon-color: var(--accent-color);
+        --hoverable-menu-item-text-color: var(--secondary-text-color);
+        --active-hoverable-menu-item-text-color: var(--accent-color);
+        --active-hoverable-menu-item-text-color-darker: var(--accent-color-darker);
+
+        --bottom-bar-background-color: var(--secondary-background-color);
+        --bottom-bar-icon-color: var(--text-color);
+        --bottom-bar-active-icon-color: var(--accent-color);
+        --bottom-bar-active-icon-color-darker: var(--accent-color-darker);
+        --bottom-bar-text-color: var(--text-color);
+        --bottom-bar-active-text-color: var(--accent-color);
+        --bottom-bar-active-text-color-darker: var(--accent-color-darker);
+
+        --modal-menu-item-icon-color: var(--accent-color);
+        --modal-menu-item-text-color: var(--text-color);
+        --modal-active-menu-item-text-color: var(--accent-color);
+        --modal-active-menu-item-text-color-darker: var(--accent-color-darker);
+
+        --left-menu-background-color: var(--secondary-background-color);
+        --left-menu-icon-color: var(--text-color);
+        --active-left-menu-icon-color: var(--accent-color);
+        --active-left-menu-icon-color-darker: var(--accent-color-darker);
+
+        --fab-background-color: green;
+        --fab-background-color-darker: darkgreen;
+        --fab-icon-color: white;
+
+        --switch-hover-circle-color: rgba(255, 255, 255, 0.09);
+    }
+
+    img {
+        filter: brightness(0.9);
+    }
+}

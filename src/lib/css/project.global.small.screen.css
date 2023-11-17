@@ -1,0 +1,39 @@
+@media (max-width: 65em) {
+    .section-title {
+        font-size: 2.1rem;
+        line-height: 2.35rem;
+    }
+
+    .smaller-section-title {
+        font-size: 1.85rem;
+        line-height: 2rem;
+    }
+
+    .section-text {
+        font-size: .85rem;
+    }
+
+    /* ||| */
+
+    .button {
+        padding: .2rem 1.5rem .2rem;
+    }
+
+    .fab-icon {
+        fill: var(--fab-icon-color);
+    }
+
+    /* ||| */
+
+    .badge {
+        top: .75rem;
+        right: .25rem;
+    }
+
+    /* ||| */
+
+    .section-content-p-d {
+        padding-left: var(--main-h-padding);
+        padding-right: var(--main-h-padding)
+    }
+}

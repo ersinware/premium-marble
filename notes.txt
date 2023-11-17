@@ -1,0 +1,40 @@
+kodu düzenle
+    ürünler ve blog sayfası
+    reusable yap
+
+mobilde tek sütuna düştüğünde page-g ver?
+
+makale sayfasını yap
+anasayfayı yap
+
+//
+
+şimdiye kadarkileri gerçek telefonda test et
+
+modal'ların tasarımını gözden geçir
+
+language-switcher touchable olduğu zaman yapmadın
+    touchable ayrı, hoverable ayrı yap
+    
+iletişim sayfasına harita ekle
+mail'e bağla
+offline olduğu durumu test et
+    tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
+
+tüm projeyi dillere bağla
+
+//
+
+TODO: cPanel server zaten compress yapıyor mu?
+    sanırım evet
+
+optimizasyon için can-mese projesindeki notlara bak
+    SEO
+    preload
+        fonts, images vb.
+    responsive images
+    CSP, CORS vb.
+    javascript devredışı bırakıldığı durum
+    projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
+    kullanılmayan static dosyaları sil
+        precache'de yükleniyor onlar
