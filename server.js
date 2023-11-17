@@ -27,7 +27,7 @@ app
     .use("/", express.static("static", { immutable: true, maxAge: 31556926000, index: false }))
     .use(handler);
 
-app.listen(80, onConnect);
+app.listen(3000, onConnect);
 
 async function onConnect() {
     console.log("onConnect");
