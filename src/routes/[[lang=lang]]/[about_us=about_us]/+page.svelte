@@ -106,7 +106,7 @@
 				<h2 class="smaller-section-title">Kalitenin Simgesi</h2>
 
 				<p class="section-text">
-					Şimşek Mermer olarak bizler, hatasız üretim ve zamanında teslimat gerçekleştiririz. Mevcut durumumuzu
+					Premium Mermer olarak bizler, hatasız üretim ve zamanında teslimat gerçekleştiririz. Mevcut durumumuzu
 					korumakla yetinmeyip her noktada sürekli iyileşmeyi temel felsefemiz olarak belirleriz. Personel kalifikasyonu
 					için sürekli eğitim faaliyetleri yürütürüz. Ülke ve şirket gelişimine katkı sağlamak amacıyla ihracatta
 					yerimiz daima ön sıralardadır. Kalitenin bir tesadüf olmadığına inanıyoruz. Markamız kalitemizin simgesidir ve
