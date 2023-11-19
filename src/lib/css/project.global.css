@@ -5,7 +5,6 @@ h4,
 h5,
 h6 {
     color: var(--title-color);
-    font-weight: 700;
 }
 
 body {
@@ -45,6 +44,40 @@ body {
 
 .t-hint-at-top {
     margin-bottom: calc(var(--main-v-padding) / 2);
+}
+
+.article-image {
+    width: 100%;
+    aspect-ratio: 16/14;
+    border: 1px var(--divider-color) solid;
+}
+
+.article-name {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.article-content {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2;
+
+    max-width: 75%;
+    margin-top: 0.1rem;
+
+    color: var(--secondary-text-color);
+}
+
+.hoverable-image {
+    transition: transform .5s ease-in-out;
+}
+
+.hoverable-image-wrapper:hover .hoverable-image {
+    transform: scale(1.05) !important;
 }
 
 /* ||| */

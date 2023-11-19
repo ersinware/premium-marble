@@ -7,13 +7,13 @@
 <section id="contact-wrapper" class="grid page-max-w" in:fly={TRANSITION_PAGE}>
 	<div id="contact-items" class="flex f-column">
 		<article class="grid g-v-d">
-			<h1 class="smaller-section-title">Premium Mermer</h1>
+			<h1 class="section-title">Premium Mermer</h1>
 
 			<p class="section-text">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis veniam consequuntur quasi voluptas.
 			</p>
 
-			<button class="nude-button" on:click={onContactClick}>BİZE YAZIN</button>
+			<button class="nude-button small-button" on:click={onContactClick}>BİZE YAZIN</button>
 		</article>
 
 		<article class="h-divider" style:margin-block=".75rem" />
@@ -116,7 +116,7 @@
 			gap: var(--main-v-padding);
 		}
 
-		.smaller-section-title {
+		.section-title {
 			margin-top: 0.25rem;
 		}
 

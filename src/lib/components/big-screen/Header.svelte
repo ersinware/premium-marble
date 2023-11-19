@@ -1,13 +1,12 @@
 <script>
-	import { EVENT_CLOSE_LANGUAGE_SWITCHER } from "./../../js/client/constants.events.client.js";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffect } from "$lib/js/client/util.client";
 	import { onMount } from "svelte";
+	import { cubicInOut } from "svelte/easing";
 	import { fly } from "svelte/transition";
 	import LanguageSwitcher from "./LanguageSwitcher.svelte";
-	import { cubicInOut } from "svelte/easing";
 
 	const lang = getStore("lang"),
 		url = getStore("url");
@@ -17,7 +16,7 @@
 	$: linkObjects = [
 		{ name: L("homepage", $lang), link: getLocalizedLink("", $lang) },
 		{ name: L("products", $lang), link: getLocalizedLink("products", $lang) },
-		{ name: L("blog", $lang), link: getLocalizedLink("blog", $lang) },
+		// { name: L("blog", $lang), link: getLocalizedLink("blog", $lang) },
 		{ name: L("about-us", $lang), link: getLocalizedLink("hakkımızda", $lang) },
 		{ name: L("contact", $lang), link: getLocalizedLink("iletişim", $lang) },
 	];
@@ -43,13 +42,31 @@
 		<article class="logo third-background-color b-r-d" />
 
 		<section class="header-links flex g-2dot5">
-			{#each linkObjects as linkObject}
+			{#each new Array(linkObjects.length / 2) as _, index}
 				<a
-					href={linkObject.link}
+					href={linkObjects[index].link}
 					class="header-link nowrap"
-					class:active-header-link={decodeURI($url.pathname) === linkObject.link}
+					class:active-header-link={decodeURI($url.pathname) === linkObjects[index].link}
 				>
-					{linkObject.name}
+					{linkObjects[index].name}
+				</a>
+			{/each}
+
+			<a
+				href={getLocalizedLink("blog", $lang)}
+				class="header-link nowrap"
+				class:active-header-link={decodeURI($url.pathname).includes("/blog")}
+			>
+				{L("blog", $lang)}
+			</a>
+
+			{#each new Array(linkObjects.length / 2) as _, index}
+				<a
+					href={linkObjects[index + linkObjects.length / 2].link}
+					class="header-link nowrap"
+					class:active-header-link={decodeURI($url.pathname) === linkObjects[index + linkObjects.length / 2].link}
+				>
+					{linkObjects[index + linkObjects.length / 2].name}
 				</a>
 			{/each}
 		</section>
@@ -116,7 +133,7 @@
 			z-index: 999;
 
 			height: var(--header-height);
-            background-color: var(--header-background-color);
+			background-color: var(--header-background-color);
 
 			backdrop-filter: blur(1rem);
 		}

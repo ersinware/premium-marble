@@ -33,17 +33,19 @@
 </script>
 
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
-	<div id="footer-content" class="grid  page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
+	<div id="footer-content" class="page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
 		<article id="footer-logo-and-description" class="flex f-column g-1dot75 small-screen-a-i-c small-screen-t-a-c">
 			<div id="footer-logo" class="b-r-d" />
 
-			<p class="article-text">
+			<p id="footer-description" class="article-text">
 				Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi
 				kullanarak, doğaya zarar vermeden kaliteli mermer üretimi yapıyor.
 			</p>
 		</article>
 
-		<article class="flex f-column g-1dot5">
+		<div class="v-divider" />
+
+		<article class="flex f-column j-c-r g-1dot5">
 			<div class="flex g-1">
 				<svg style:margin-top=".1rem" class="contact-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
 					><path
@@ -86,12 +88,16 @@
 					<a href="mailto:info@premiummermer.com.tr" class="contact-item-content-text article-text"
 						>info@premiummermer.com.tr</a
 					>
-					<button class="contact-item-content-text article-text link-button" on:click={onContactClick}>İletişim Formu</button>
+					<button class="contact-item-content-text article-text link-button" on:click={onContactClick}
+						>İletişim Formu</button
+					>
 				</div>
 			</div>
 		</article>
 
 		<article id="footer-pages" class="flex f-column g-dot5">
+			<p id="footer-pages-t-hint" class="t-hint nowrap unimportant-text-color">SİTE HARİTASI</p>
+
 			{#each linkObjects as linkObject}
 				<a href={linkObject.link} class="link-button article-text">{linkObject.name}</a>
 			{/each}
@@ -109,13 +115,37 @@
 
 	.contact-item-icon {
 		height: 1.25rem;
+		width: 1.5rem;
+		min-width: 1.5rem;
+
 		fill: var(--accent-color);
 	}
 
 	@media (min-width: 65.001em) {
 		#footer-content {
-			grid-template-columns: 1.65fr 1.5fr 1fr;
-            gap: var(--page-g);
+			display: grid;
+			grid-template-columns: 6fr auto 2fr 1fr;
+
+			gap: var(--page-g);
+		}
+
+		#footer-pages {
+            width: 5.5rem;
+			text-align: right;
+		}
+
+		#footer-pages-t-hint {
+			margin-bottom: 0.9rem;
+
+            margin-left: -1.1rem;
+
+			margin-top: 0.2rem;
+		}
+
+		.v-divider {
+			margin: auto;
+			height: 100%;
+			/* height: 75%; */
 		}
 	}
 

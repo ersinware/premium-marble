@@ -7,16 +7,20 @@ export const localizedPaths = new Map([
         { name: '' },
         { name: 'ürünler' },
         { name: 'blog' },
+        { name: 'makale' },
         { name: 'hakkımızda' },
         { name: 'iletişim' },
+        { name: 'mermer-secerken-nelere-dikkat-etmelisiniz' },
     ]],
 
     ['en', [
         { name: 'en' },
         { name: 'products' },
         { name: 'blog' },
+        { name: 'article' },
         { name: 'about-us' },
         { name: 'contact' },
+        { name: 'what-should-you-pay-care-for-when-choosing-marble' },
     ]]
 ]),
     localizedSearchParams = new Map([]),

@@ -1,27 +1,32 @@
-kodu düzenle
-    ürünler ve blog sayfası
-    reusable yap
-
-mobilde tek sütuna düştüğünde page-g ver?
+footer kodunu düzenle
 
 makale sayfasını yap
-anasayfayı yap
+    hepsi için tek sayfa yap?
+        route da tek olsun
+    kodu gözden geçir, düzenle
+    similar articles gözden geçir
+        benzer makaleleri random olarak göster
+            ama açık olan gözükmesin
 
 //
 
-şimdiye kadarkileri gerçek telefonda test et
-
 modal'ların tasarımını gözden geçir
-
-language-switcher touchable olduğu zaman yapmadın
-    touchable ayrı, hoverable ayrı yap
+hoverable'a gölge ekle
     
 iletişim sayfasına harita ekle
 mail'e bağla
+
+language-switcher touchable olduğu zaman yapmadın
+    touchable ayrı, hoverable ayrı yap
+
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
 
+anasayfayı yap
+
 tüm projeyi dillere bağla
+
+gerçek telefonda test et
 
 //
 

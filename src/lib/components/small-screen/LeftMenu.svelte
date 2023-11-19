@@ -84,7 +84,7 @@
 		<a
 			href={localizedLinks[2]}
 			class="menu-item flex g-1 a-i-c pointer"
-			class:active-menu-item={decodeURI($url.pathname) === localizedLinks[2]}
+			class:active-menu-item={decodeURI($url.pathname).includes('/blog')}
 		>
 			<svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.916 43.916">
 				<path

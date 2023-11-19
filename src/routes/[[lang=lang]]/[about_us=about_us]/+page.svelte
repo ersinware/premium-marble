@@ -8,7 +8,7 @@
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="smaller-section-title">Premium Mermer</h2>
+			<h2 class="section-title">Premium Mermer</h2>
 
 			<p class="section-text">
 				Fabrikamız; Silifke’nin ilk mermer fabrikası olarak 2005 yılında Küçük Sanayi Sitesinde faaliyete geçmiş, 2011
@@ -33,7 +33,7 @@
 			</div>
 
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-				<h2 class="smaller-section-title">18 Yıllık Deneyim</h2>
+				<h2 class="section-title">18 Yıllık Deneyim</h2>
 
 				<p class="section-text">
 					Silifke’nin köklü mermer fabrikalarından olan Şimşek Mermer Fabrikası, kurulduğu yıldan bu yana kalitesini
@@ -103,7 +103,7 @@
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-				<h2 class="smaller-section-title">Kalitenin Simgesi</h2>
+				<h2 class="section-title">Kalitenin Simgesi</h2>
 
 				<p class="section-text">
 					Premium Mermer olarak bizler, hatasız üretim ve zamanında teslimat gerçekleştiririz. Mevcut durumumuzu
@@ -133,7 +133,7 @@
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="smaller-section-title">Müşteri Memnuniyeti</h2>
+			<h2 class="section-title">Müşteri Memnuniyeti</h2>
 
 			<p class="section-text">
 				Müşterilerimizin değişen ve gelişen şartlarını göz önüne alarak ihtiyaç ve beklentilerini doğru algılayıp
