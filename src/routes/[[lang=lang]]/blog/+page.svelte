@@ -4,6 +4,7 @@
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { getLocalizedURL } from "$lib/js/common/localization/localization.util.common";
 	import { getPaths } from "$lib/js/common/util.common";
+	import { articles } from "$lib/js/common/util.data.articles";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
 
@@ -35,110 +36,23 @@
 	</div>
 
 	<article id="articles-wrapper" class="grid">
-		<a
-			href={getLocalizedURL(
-				getPaths("/blog/article/what-should-you-pay-care-for-when-choosing-marble"),
-				undefined,
-				$lang
-			)}
-			class="article-wrapper hoverable-image-wrapper grid t-a-c"
-		>
-			<div class="b-r-d o-hidden">
-				<img src="/b1.jpg" alt="" class="article-image hoverable-image b-r-d" />
-			</div>
-
-			<div>
-				<div class="article-name section-text f-w-500 o-hidden">Mermer Seçerken Nelere Dikkat Etmelisiniz?</div>
-				<div class="article-content article-text m-h-auto o-hidden">
-					Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut
-					ipsa, quidem et molestias.
+		{#each articles.get($lang).entries() as [key, value]}
+			<a
+				href={getLocalizedURL(getPaths(`blog/article/${key}`), undefined, $lang)}
+				class="article-wrapper hoverable-image-wrapper grid t-a-c"
+			>
+				<div class="b-r-d o-hidden">
+					<img src={value.imageName} alt="" class="article-image hoverable-image b-r-d" />
 				</div>
-			</div>
-		</a>
 
-		<a
-			href={getLocalizedURL(
-				getPaths("/blog/article/what-should-you-pay-care-for-when-choosing-marble"),
-				undefined,
-				$lang
-			)}
-			class="article-wrapper hoverable-image-wrapper grid t-a-c"
-		>
-			<div class="b-r-d o-hidden">
-				<img src="/b2.jpg" alt="" class="article-image hoverable-image b-r-d" />
-			</div>
-
-			<div>
-				<div class="article-name section-text f-w-500 o-hidden">Mermer Nasıl Temizlenir?</div>
-				<div class="article-content article-text m-h-auto o-hidden">
-					Sit necessitatibus qui, nemo fugit pariatur minus aspernatur, nihil consequatur dolor numquam, eveniet
-					impedit? Eaque illum animi mollitia neque placeat, labore rerum.
+				<div>
+					<div class="article-name section-text f-w-500 o-hidden">{value.name}</div>
+					<div class="article-content article-text m-h-auto o-hidden">
+						{value.summary}
+					</div>
 				</div>
-			</div>
-		</a>
-
-		<a
-			href={getLocalizedURL(
-				getPaths("/blog/article/what-should-you-pay-care-for-when-choosing-marble"),
-				undefined,
-				$lang
-			)}
-			class="article-wrapper hoverable-image-wrapper grid t-a-c"
-		>
-			<div class="b-r-d o-hidden">
-				<img src="/b3.jpg" alt="" class="article-image hoverable-image b-r-d" />
-			</div>
-
-			<div>
-				<div class="article-name section-text f-w-500 o-hidden">Mermer Bakımı Nasıl Yapılmalı?</div>
-				<div class="article-content article-text m-h-auto o-hidden">
-					Placeat a deleniti debitis ab, odit iure perspiciatis tempore illum neque fuga similique tempora culpa ipsa
-					amet magni harum voluptas itaque fugit.
-				</div>
-			</div>
-		</a>
-
-		<a
-			href={getLocalizedURL(
-				getPaths("/blog/article/what-should-you-pay-care-for-when-choosing-marble"),
-				undefined,
-				$lang
-			)}
-			class="article-wrapper hoverable-image-wrapper grid t-a-c"
-		>
-			<div class="b-r-d o-hidden">
-				<img src="/b4.jpg" alt="" class="article-image hoverable-image b-r-d" />
-			</div>
-
-			<div>
-				<div class="article-name section-text f-w-500 o-hidden o-hidden">Mermerin Dünyamızdaki Yeri ve Tarihçesi</div>
-				<div class="article-content article-text m-h-auto o-hidden">
-					Tenetur molestiae fugit doloribus pariatur, natus quisquam incidunt, rem cumque omnis quam a at dolores
-					eligendi dolor dolorem sequi labore recusandae rerum?
-				</div>
-			</div>
-		</a>
-
-		<a
-			href={getLocalizedURL(
-				getPaths("/blog/article/what-should-you-pay-care-for-when-choosing-marble"),
-				undefined,
-				$lang
-			)}
-			class="article-wrapper hoverable-image-wrapper grid t-a-c"
-		>
-			<div class="b-r-d o-hidden">
-				<img src="/h2.jpg" alt="" class="article-image hoverable-image b-r-d" />
-			</div>
-
-			<div>
-				<div class="article-name section-text f-w-500 o-hidden o-hidden">Türkiye'nin Mermer Potansiyeli</div>
-				<div class="article-content article-text m-h-auto o-hidden">
-					Tenetur molestiae fugit doloribus pariatur, natus quisquam incidunt, rem cumque omnis quam a at dolores
-					eligendi dolor dolorem sequi labore recusandae rerum?
-				</div>
-			</div>
-		</a>
+			</a>
+		{/each}
 	</article>
 </section>
 

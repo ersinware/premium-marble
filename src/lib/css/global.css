@@ -66,6 +66,7 @@ img {
     object-position: center;
     object-fit: cover;
     pointer-events: none;
+    border: 1px var(--divider-color) solid;
 }
 
 input,

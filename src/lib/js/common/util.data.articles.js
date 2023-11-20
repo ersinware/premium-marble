@@ -1,34 +1,6 @@
-<script>
-	import { goto } from "$app/navigation";
-	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
-	import { performRippleEffectAndWait } from "$lib/js/client/util.client";
-	import { onMount } from "svelte";
-	import { fly } from "svelte/transition";
-	import SimilarArticles from "$lib/components/blog/article/SimilarArticles.svelte";
+import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 
-	onMount(_onMount);
-
-	function _onMount() {
-		for (const link of document.body.querySelectorAll("#similar-articles a"))
-			link.addEventListener("click", async (event) => {
-				event.preventDefault();
-
-				const href = event.currentTarget.href;
-				await performRippleEffectAndWait(event);
-
-				goto(href);
-			});
-	}
-</script>
-
-<section class="grid page-g">
-	<div class="flex f-column g-v-d w-100 page-max-w m-h-auto t-a-c" in:fly={TRANSITION_PAGE}>
-		<img src="/b1.jpg" alt="" id="poster-img" class="w-h-100 b-r-d" />
-
-		<div class="content grid g-v-d page-max-w-smaller m-h-auto">
-			<h1 class="smaller-section-title f-w-600">Mermer Seçimi Nasıl Yapılmalı?</h1>
-
-			<p class="section-text">
+const content = `<p class="section-text">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum doloremque natus vel provident? Blanditiisme
 				laborum saepe aliquid sequi? Culpa qui, recusandae temporibus molestias cum odio nam sunt ullam in magnam!
 				Maiores, ab. Natus animi nostrum, non mollitia a consequatur neque.
@@ -71,26 +43,75 @@
 				Voluptatibus repellat quas explicabo animi beatae voluptates atque non ad expedita fugiat, odit assumenda fuga
 				pariatur ipsam. Ab perspiciatis cupiditate reiciendis, expedita, iure corrupti excepturi sed sunt esse veniam
 				rerum!
-			</p>
-		</div>
-	</div>
+			</p>`
 
-	<SimilarArticles />
-</section>
+const articlesTR = new Map([
+    ['mermer-secerken-nelere-dikkat-etmelisiniz', {
+        name: 'Mermer Seçerken Nelere Dikkat Etmelisiniz?',
+        imageName: '/b1.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content,
+    }],
+    ['mermer-nasıl-temizlenmeli', {
+        name: 'Mermer Nasıl Temizlenmeli?',
+        imageName: '/b2.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content
+    }],
+    ['mermer-bakımı-nasıl-yapılmalı', {
+        name: 'Mermer Bakımı Nasıl Yapılmalı?',
+        imageName: '/b3.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content,
+    }],
+    ['mermerin-dünyamızdaki-yeri-ve-tarihçesi', {
+        name: 'Mermerin Dünyamızdaki Yeri ve Tarihçesi',
+        imageName: '/b4.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content
+    }],
+    ["türkiye'nin-mermer-potansiyeli", {
+        name: "Türkiye'nin Mermer Potansiyeli",
+        imageName: '/h2.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content,
+    }],
+])
 
-<style>
-	#poster-img {
-		aspect-ratio: 16/10;
-		border: 1px var(--divider-color) solid;
-	}
+const articlesEN = new Map([
+    ['what-should-you-pay-care-for-when-choosing-marble', {
+        name: 'What Should You Pay Attention to When Choosing Marble?',
+        imageName: '/b1.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content,
+    }],
+    ['how-to-clean-marble', {
+        name: 'How to Clean Marble?',
+        imageName: '/b2.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content
+    }],
+    ['how-to-care-for-marble', {
+        name: 'How to Care for Marble?',
+        imageName: '/b3.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content,
+    }],
+    ['the-place-and-history-of-marble-in-our-world', {
+        name: 'The Place and History of Marble in Our World',
+        imageName: '/b4.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content
+    }],
+    ["turkey's-marble-potential", {
+        name: "Turkey's Marble Potential",
+        imageName: '/h2.jpg',
+        summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
+        content,
+    }],
+])
 
-	.content {
-		margin-top: 1rem;
-	}
-
-	@media (max-width: 30.1875em) {
-		#poster-img {
-			aspect-ratio: 16/14;
-		}
-	}
-</style>
+export const articles = new Map([
+    [PUBLIC_DEFAULT_LANGUAGE, articlesTR],
+    ['en', articlesEN],
+])

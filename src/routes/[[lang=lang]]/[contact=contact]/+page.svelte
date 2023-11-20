@@ -6,10 +6,10 @@
 
 <section id="contact-wrapper" class="grid page-max-w" in:fly={TRANSITION_PAGE}>
 	<div id="contact-items" class="flex f-column">
-		<article class="grid g-v-d">
+		<article class="grid g-v-d small-screen-j-i-c">
 			<h1 class="section-title">Premium Mermer</h1>
 
-			<p class="section-text">
+			<p class="section-text small-screen-t-a-c">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis veniam consequuntur quasi voluptas.
 			</p>
 
@@ -18,9 +18,9 @@
 
 		<article class="h-divider" style:margin-block=".75rem" />
 
-		<div class="grid g-v-d">
-			<article class="grid g-1">
-				<p class="section-text f-w-500">Ziyaret Edin</p>
+		<div class="grid g-v-d small-screen-j-c-c">
+			<article class="grid g-1 ">
+				<p class="section-text f-w-500 small-screen-t-a-c">Ziyaret Edin</p>
 
 				<div class="flex g-1">
 					<svg
@@ -43,7 +43,7 @@
 			</article>
 
 			<article class="grid g-1">
-				<p class="section-text f-w-500">Bizi Arayın</p>
+				<p class="section-text f-w-500 small-screen-t-a-c">Bizi Arayın</p>
 
 				<div class="flex g-1">
 					<svg
@@ -65,7 +65,7 @@
 			</article>
 
 			<article class="grid g-1">
-				<div class="section-text f-w-500">Bize Yazın</div>
+				<div class="section-text f-w-500 small-screen-t-a-c">Bize Yazın</div>
 
 				<div class="flex g-1">
 					<svg

@@ -7,10 +7,10 @@ export function init() {
     constructTranslationTables(localizedSearchParams, searchParams)
     constructTranslationTables(localizedSearchValues, searchValues)
 
-    console.log(langs);
-    console.log(paths);
-    console.log(searchParams);
-    console.log(searchValues);
+    // console.log(langs);
+    // console.log(paths);
+    // console.log(searchParams);
+    // console.log(searchValues);
 }
 
 function constructLangs() {

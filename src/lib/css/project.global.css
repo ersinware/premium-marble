@@ -49,7 +49,6 @@ body {
 .article-image {
     width: 100%;
     aspect-ratio: 16/14;
-    border: 1px var(--divider-color) solid;
 }
 
 .article-name {
@@ -70,14 +69,6 @@ body {
     margin-top: 0.1rem;
 
     color: var(--secondary-text-color);
-}
-
-.hoverable-image {
-    transition: transform .5s ease-in-out;
-}
-
-.hoverable-image-wrapper:hover .hoverable-image {
-    transform: scale(1.05) !important;
 }
 
 /* ||| */
@@ -199,5 +190,15 @@ body {
 
     100% {
         opacity: 0;
+    }
+}
+
+@media(hover: hover) {
+    .hoverable-image {
+        transition: transform .5s ease-in-out;
+    }
+
+    .hoverable-image-wrapper:hover .hoverable-image {
+        transform: scale(1.05) !important;
     }
 }

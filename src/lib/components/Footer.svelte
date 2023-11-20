@@ -33,17 +33,17 @@
 </script>
 
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
-	<div id="footer-content" class="page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
-		<article id="footer-logo-and-description" class="flex f-column g-1dot75 small-screen-a-i-c small-screen-t-a-c">
+	<div id="footer-content" class="grid page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
+		<article class="flex f-column g-2 small-screen-a-i-c">
 			<div id="footer-logo" class="b-r-d" />
 
-			<p id="footer-description" class="article-text">
+			<p class="article-text small-screen-t-a-c">
 				Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi
 				kullanarak, doğaya zarar vermeden kaliteli mermer üretimi yapıyor.
 			</p>
 		</article>
 
-		<div class="v-divider" />
+		<div class="v-divider for-big-screen" />
 
 		<article class="flex f-column j-c-r g-1dot5">
 			<div class="flex g-1">
@@ -95,7 +95,7 @@
 			</div>
 		</article>
 
-		<article id="footer-pages" class="flex f-column g-dot5">
+		<article id="footer-pages" class="flex f-column g-dot5 t-a-c">
 			<p id="footer-pages-t-hint" class="t-hint nowrap unimportant-text-color">SİTE HARİTASI</p>
 
 			{#each linkObjects as linkObject}
@@ -114,45 +114,41 @@
 	}
 
 	.contact-item-icon {
-		height: 1.25rem;
-		width: 1.5rem;
+        width: 1.5rem;
 		min-width: 1.5rem;
+		height: 1.25rem;
 
 		fill: var(--accent-color);
 	}
 
 	@media (min-width: 65.001em) {
 		#footer-content {
-			display: grid;
 			grid-template-columns: 6fr auto 2fr 1fr;
 
 			gap: var(--page-g);
 		}
 
 		#footer-pages {
-            width: 5.5rem;
+			width: 5rem;
 			text-align: right;
 		}
 
 		#footer-pages-t-hint {
-			margin-bottom: 0.9rem;
+			margin-top: 0.15rem;
+			margin-bottom: 1rem;
+			margin-left: -1.6rem;
 
-            margin-left: -1.1rem;
-
-			margin-top: 0.2rem;
-		}
-
-		.v-divider {
-			margin: auto;
-			height: 100%;
-			/* height: 75%; */
 		}
 	}
 
 	@media (max-width: 65em) {
 		#footer-content {
-			max-width: 20rem;
+			max-width: min(25rem, 75%);
 			gap: calc(var(--main-v-padding) * 1.5);
 		}
+
+        #footer-pages {
+            margin-top: .25rem;
+        }
 	}
 </style>

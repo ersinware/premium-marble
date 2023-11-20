@@ -1,14 +1,4 @@
-footer kodunu düzenle
-
-makale sayfasını yap
-    hepsi için tek sayfa yap?
-        route da tek olsun
-    kodu gözden geçir, düzenle
-    similar articles gözden geçir
-        benzer makaleleri random olarak göster
-            ama açık olan gözükmesin
-
-//
+anasayfayı yap
 
 modal'ların tasarımını gözden geçir
 hoverable'a gölge ekle
@@ -21,8 +11,6 @@ language-switcher touchable olduğu zaman yapmadın
 
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
-
-anasayfayı yap
 
 tüm projeyi dillere bağla
 
