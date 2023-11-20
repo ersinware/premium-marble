@@ -19,7 +19,7 @@
 			</p>
 		</div>
 
-		<div class="img-wrapper w-100  o-hidden">
+		<div class="img-wrapper w-100 o-hidden">
 			<img src="/h1.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
 		</div>
 	</article>
@@ -28,7 +28,7 @@
 		<article
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
-			<div class="img-wrapper w-100  o-hidden">
+			<div class="img-wrapper w-100 o-hidden">
 				<img src="/h2.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
 			</div>
 
@@ -119,7 +119,7 @@
 				</div>
 			</div>
 
-			<div class="img-wrapper w-100  o-hidden">
+			<div class="img-wrapper w-100 o-hidden">
 				<img src="/h3.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
 			</div>
 		</article>
@@ -128,7 +128,7 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="img-wrapper w-100  o-hidden">
+		<div class="img-wrapper w-100 o-hidden">
 			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
 		</div>
 
@@ -149,11 +149,6 @@
 
 <style>
 	img,
-	.img-wrapper {
-		max-width: 45rem;
-		aspect-ratio: 720/480;
-	}
-
 	#statistics-wrapper {
 		--grid-item-min-width: 10rem;
 		--grid-layout-gap: var(--main-h-padding);
@@ -182,6 +177,11 @@
 			max-width: 30rem;
 			min-width: 30rem;
 		}
+
+		.img-wrapper {
+			max-width: 45rem;
+			aspect-ratio: 720/480;
+		}
 	}
 
 	@media (max-width: 65em) {
@@ -195,6 +195,11 @@
 
 		#about-us-buttons {
 			margin-top: -0.5rem;
+		}
+
+		.img-wrapper {
+			aspect-ratio: 16/14;
+			max-width: 42.5rem;
 		}
 	}
 </style>

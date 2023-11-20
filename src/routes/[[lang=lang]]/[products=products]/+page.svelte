@@ -1,6 +1,6 @@
 <script>
-	import { fly } from "svelte/transition";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { fly } from "svelte/transition";
 </script>
 
 <section id="products-section" class="grid page-g w-100 page-max-w-smaller t-a-c" in:fly={TRANSITION_PAGE}>
@@ -16,22 +16,30 @@
 
 	<div id="products-wrapper" class="grid">
 		<div class="product-wrapper grid g-1 t-a-c">
-			<img src="/p1.jpg" alt="" class="article-image b-r-d" />
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/p1.jpg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
 			<div class="product-name section-text">Silifke Bej Mermer</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<img src="/p2.jpg" alt="" class="article-image b-r-d" />
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/p2.jpg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
 			<div class="product-name section-text">Crema Siva</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<img src="/p3.jpg" alt="" class="article-image b-r-d" />
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/p3.jpg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
 			<div class="product-name section-text">Crema Taurus</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<img src="/p4.jpg" alt="" class="article-image b-r-d" />
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/p4.jpg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
 			<div class="product-name section-text">Cremera Mermer</div>
 		</div>
 	</div>

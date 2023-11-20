@@ -29,15 +29,17 @@
 </section>
 
 <style>
-	#poster-img {
-		aspect-ratio: 16/10;
-	}
-
 	.content {
 		margin-top: 1rem;
 	}
 
-	@media (max-width: 30.1875em) {
+	@media (min-width: 47.5001em) {
+		#poster-img {
+			aspect-ratio: 16/10;
+		}
+	}
+
+	@media (max-width: 47.5em) {
 		#poster-img {
 			aspect-ratio: 16/14;
 		}

@@ -144,12 +144,6 @@
 </section>
 
 <style>
-	img,
-	.img-wrapper {
-		max-width: 45rem;
-		aspect-ratio: 720/480;
-	}
-
 	#texts-with-icons-wrapper {
 		flex-wrap: wrap;
 	}
@@ -176,6 +170,12 @@
 		#slider-homepage {
 			aspect-ratio: 16/8;
 		}
+
+	
+		.img-wrapper {
+			max-width: 45rem;
+			aspect-ratio: 720/480;
+		}
 	}
 
 	@media (max-width: 65em) {
@@ -188,5 +188,14 @@
 			max-width: calc(45rem - var(--main-h-padding) * 2);
 		}
 
+		.button {
+			margin-bottom: 0.25rem;
+		}
+
+	
+		.img-wrapper {
+			max-width: 42.5rem;
+			aspect-ratio: 16/14;
+		}
 	}
 </style>
