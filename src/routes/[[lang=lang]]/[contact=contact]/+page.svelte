@@ -98,23 +98,20 @@
 
 	<div id="map-wrapper" class="w-h-100">
 		<iframe
-        id="map"
+			id="map"
 			class="w-h-100 b-r-d"
 			title="Premium Mermer"
-			frameborder="0"
-			scrolling="no"
-			marginheight="0"
-			marginwidth="0"
-			src="https://maps.google.com/maps?amp;key=AIzaSyBYINml0NowfOv_d8MGuqtlSlFU2Xy16tM&hl={$lang}&amp;q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()&amp;t=p&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+			referrerpolicy="no-referrer-when-downgrade"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBYINml0NowfOv_d8MGuqtlSlFU2Xy16tM&q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()"
 		/>
 	</div>
 </section>
 
 <style>
-    iframe {
-        margin: 0;
-        padding: 0;
-    }
+	iframe {
+		margin: 0;
+		padding: 0;
+	}
 
 	#contact-items {
 		min-width: 18rem;
