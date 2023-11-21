@@ -85,7 +85,7 @@
 						<a href="mailto:info@premiummermer.com.tr" class="contact-item-content-text article-text"
 							>info@premiummermer.com.tr</a
 						>
-						<button class="contact-item-content-text article-text link-button" on:click={onContactClick}
+						<button class="contact-item-contenCt-text article-text link-button" on:click={onContactClick}
 							>İletişim Formu</button
 						>
 					</div>

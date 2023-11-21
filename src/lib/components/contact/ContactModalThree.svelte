@@ -43,9 +43,14 @@
 
 		performRippleEffect(event);
 
-		const response = { status: 200, json: () => {} };
-
-		await waitFor(1500);
+		const response = await fetch("/api/contact", {
+			method: "PUT",
+			body: JSON.stringify({
+				...$holder,
+				email: form.querySelector("#email").value,
+				phone: form.querySelector("#phone").value,
+			}),
+		});
 
 		if (response.status === 200) onSuccess();
 		else onError((await response.json())?.error);

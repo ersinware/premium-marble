@@ -1,11 +1,13 @@
-mail'e bağla
-
-AIzaSyBYINml0NowfOv_d8MGuqtlSlFU2Xy16tM
 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
+
 //
+
+logoyu ekle
 
 tasarımı komple gözden geçir
     modal'ların tasarımını gözden geçir    
+    indicator'lerin boyutu?
+    arrow'lar, dark mode'da tam beyaz olmasın
 
 //
 
@@ -23,6 +25,8 @@ offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
 
 gerçek telefonda test et
+
+formdan gerçek mail hesabına göndersin
 
 //
 
@@ -45,4 +49,4 @@ slider kodunu komple düzenle
     slider'ı infinite yap
     hızını input'a göre ayarlamaya çalış
     y ekseninde kaydırmaya başladığında x ekseninde, x ekseninde kaydırmaya başladığında y ekseninde kaydırılmasın
-    arrow'lar, dark mode'da tam beyaz olmasın
+    

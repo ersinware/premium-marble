@@ -5,6 +5,7 @@ import { getPaths } from '$lib/js/common/util.common';
 import { getLanguageByHeader } from '$lib/js/server/localization/localization.util.server';
 import { redirect } from '@sveltejs/kit';
 import { paths, searchParams, searchValues } from '$lib/js/server/localization/localization.constants.server';
+import { initMail } from '$lib/js/server/util.mail.server';
 
 const minificationOptions = {
     collapseBooleanAttributes: true,
@@ -30,6 +31,7 @@ init()
 function init() {
     initLocalization()
     initLocalizationUtil(paths, searchParams, searchValues)
+    initMail()
 }
 
 export async function handle({ event, resolve }) {
