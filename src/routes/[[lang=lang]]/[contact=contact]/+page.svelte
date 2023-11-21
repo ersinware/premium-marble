@@ -105,7 +105,7 @@
 			scrolling="no"
 			marginheight="0"
 			marginwidth="0"
-			src="https://maps.google.com/maps?amp;hl={$lang}&amp;q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()&amp;t=p&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+			src="https://maps.google.com/maps?amp;key=AIzaSyBYINml0NowfOv_d8MGuqtlSlFU2Xy16tM&hl={$lang}&amp;q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()&amp;t=p&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 		/>
 	</div>
 </section>
