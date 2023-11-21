@@ -16,19 +16,19 @@
 
 				<div class="b-box slider-item p-h-d">
 					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/a2.avif" class="w-h-100" alt="" />
+						<img src="/p1.jpg" class="w-h-100" alt="" />
 					</div>
 				</div>
 
 				<div class="b-box slider-item p-h-d">
 					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/a1.avif" class="w-h-100" alt="" />
+						<img src="/p2.jpg" class="w-h-100" alt="" />
 					</div>
 				</div>
 
 				<div class="b-box slider-item p-h-d">
 					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/b4.jpg" class="w-h-100" alt="" />
+						<img src="/p3.jpg" class="w-h-100" alt="" />
 					</div>
 				</div>
 			</div>
