@@ -9,26 +9,62 @@
 		<Slider absoluteIndicators>
 			<div id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
 				<div class="b-box slider-item p-h-d">
-					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/h3.jpg" class="w-h-100" alt="" />
+
+						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+							<h2 class="slider-text-title f-w-600">Taşın Ahengini Hissedin</h2>
+							<div class="slider-text-content article-text">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
+								error pariatur.
+							</div>
+							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
+						</div>
 					</div>
 				</div>
 
 				<div class="b-box slider-item p-h-d">
-					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/p1.jpg" class="w-h-100" alt="" />
+
+						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+							<h2 class="slider-text-title f-w-600">Mermerin Eşsiz Zerafeti</h2>
+							<div class="slider-text-content article-text">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
+								error pariatur.
+							</div>
+							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
+						</div>
 					</div>
 				</div>
 
 				<div class="b-box slider-item p-h-d">
-					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/p2.jpg" class="w-h-100" alt="" />
+
+						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+							<h2 class="slider-text-title f-w-600">Taşın Ahengini Hissedin</h2>
+							<div class="slider-text-content article-text">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
+								error pariatur.
+							</div>
+							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
+						</div>
 					</div>
 				</div>
 
 				<div class="b-box slider-item p-h-d">
-					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/p3.jpg" class="w-h-100" alt="" />
+
+						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+							<h2 class="slider-text-title f-w-600">Mermerin Eşsiz Zerafeti</h2>
+							<div class="slider-text-content article-text">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
+								error pariatur.
+							</div>
+							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -47,7 +83,7 @@
 			>
 
 			<div class="texts-after-icons grid g-dot5">
-				<p class="text-of-icon section-text f-w-500">Son Sistem Makineler</p>
+				<p class="title-of-icon section-text f-w-500">Son Sistem Makineler</p>
 				<p class="text-of-icon article-text">
 					Doğadan çıkardığımız mermerleri son teknolojiyi kullanarak, doğaya zarar vermeden üretim yapıyoruz.
 				</p>
@@ -62,7 +98,7 @@
 			>
 
 			<div class="texts-after-icons grid g-dot5">
-				<p class="text-of-icon section-text f-w-500">Deneyimli Ekip</p>
+				<p class="title-of-icon section-text f-w-500">Deneyimli Ekip</p>
 				<p class="text-of-icon article-text">
 					Alanında uzman ekibimizin özverili çalışmaları neticesinde kaliteden ödün vermiyoruz.
 				</p>
@@ -77,7 +113,7 @@
 			>
 
 			<div class="texts-after-icons grid g-dot5">
-				<p class="text-of-icon section-text f-w-500">Müşteri Memnuniyeti</p>
+				<p class="title-of-icon section-text f-w-500">Müşteri Memnuniyeti</p>
 				<p class="text-of-icon article-text">
 					Sürdürülebilir başarılar için müşterilerimizin memnuniyetini ön planda tutmak için elimizden geleni yapıyoruz.
 				</p>
@@ -185,9 +221,36 @@
 		flex: 0 0 max(var(--grid-item-max-width), var(--grid-item-min-width)) !important;
 	}
 
+	.slider-text-wrapper {
+		z-index: 1;
+		background-color: var(--slider-item-text-wrapper-background-color);
+		border: 1px solid var(--divider-color);
+
+		max-width: min(40rem, 50%);
+
+		bottom: calc(var(--main-v-padding) * 2);
+
+		border-radius: calc(var(--border-radius) - 0.25rem);
+	}
+
 	.slider-item-content {
 		border: 1px solid var(--divider-color);
-		background-color: var(--secondary-background-color);
+	}
+
+	.slider-text-title {
+		letter-spacing: 0.025rem;
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+	}
+
+	.slider-text-content {
+		max-width: 30rem;
+	}
+
+	.slider-button {
+		margin-top: 0.5rem;
+		margin-left: auto;
+		display: none;
 	}
 
 	#texts-with-icons-wrapper {
@@ -221,6 +284,10 @@
 			max-width: 45rem;
 			aspect-ratio: 720/480;
 		}
+
+		.slider-text-wrapper {
+			left: calc(var(--main-h-padding) * 2);
+		}
 	}
 
 	@media (max-width: 65em) {
@@ -240,6 +307,10 @@
 		.img-wrapper {
 			max-width: 42.5rem;
 			aspect-ratio: 16/14;
+		}
+
+		.slider-text-wrapper {
+			left: var(--main-h-padding);
 		}
 	}
 </style>

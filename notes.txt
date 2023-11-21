@@ -1,18 +1,19 @@
-slider'ı yap
-    yazılar ekle
+slider responsive yap
+
+anasayfa kodunu düzenle
 
 //
 
-iletişim sayfasına harita ekle
-mail'e bağla
+tasarımı komple gözden geçir
+    modal'ların tasarımını gözden geçir    
+    hoverable'a gölge ekle
 
 //
-
-modal'ların tasarımını gözden geçir    
-hoverable'a gölge ekle
 
 language-switcher touchable olduğu zaman yapmadın
     touchable ayrı, hoverable ayrı yap
+
+mail'e bağla
 
 tüm projeyi dillere bağla
 
@@ -26,9 +27,6 @@ lazy image yap
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
 
-slider kodunu düzenle
-    animasyonla gelmiyor
-
 //
 
 TODO: cPanel server zaten compress yapıyor mu?
@@ -38,10 +36,15 @@ optimizasyon için can-mese projesindeki notlara bak
     SEO
     preload
         fonts, images vb.
+    preconnect
     CSP, CORS vb.
     javascript devredışı bırakıldığı durum
     projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
     kullanılmayan static dosyaları sil
         precache'de yükleniyor onlar
 
-slider'ı infinite yap
+slider kodunu komple düzenle
+    animasyonla gelmiyor navigation component
+    slider'ı infinite yap
+    hızını input'a göre ayarlamaya çalış
+    y ekseninde kaydırmaya başladığında x ekseninde, x ekseninde kaydırmaya başladığında y ekseninde kaydırılmasın

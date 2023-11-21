@@ -3,6 +3,7 @@ body {
     --secondary-background-color: rgb(247, 247, 247);
     --third-background-color: rgb(239, 239, 239);
     --fourth-background-color: rgb(231, 231, 231);
+    --slider-item-text-wrapper-background-color: rgba(247, 247, 247, .95);
     --hoverable-content-background-color: rgb(247, 247, 247);
     --tooltip-background-color-default: rgb(231, 231, 231);
     --accent-color: orange;
@@ -31,7 +32,7 @@ body {
     --disabled-button-background-color: rgb(223, 223, 223);
     --disabled-button-color: white;
 
-    --header-background-color: rgb(255, 255, 255 .5);
+    --header-background-color: rgb(255, 255, 255, .9);
     --header-icon-color: var(--text-color);
     --active-header-icon-color: var(--accent-color);
     --active-header-icon-color-darker: var(--accent-color-darker);
@@ -81,6 +82,7 @@ body {
         --secondary-background-color: rgb(36, 36, 36);
         --third-background-color: rgb(48, 48, 48);
         --fourth-background-color: rgb(60, 60, 60);
+        --slider-item-text-wrapper-background-color: rgba(36, 36, 36, .95);
         --hoverable-content-background-color: rgb(36, 36, 36);
         --tooltip-background-color-default: rgb(48, 48, 48);
         --accent-color: orange;

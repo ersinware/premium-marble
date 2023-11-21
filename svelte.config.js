@@ -11,7 +11,8 @@ const config = {
                 "style-src": ["self", "unsafe-inline", "https://fonts.googleapis.com"],
                 "font-src": ["self", "unsafe-inline", "https://fonts.gstatic.com"],
                 "base-uri": ["self"],
-                "frame-ancestors": ["none"]
+                "frame-ancestors": ["none"],
+                "frame-src": ["https://www.google.com/", "https://maps.google.com/"]
             },
             mode: "auto",
         },

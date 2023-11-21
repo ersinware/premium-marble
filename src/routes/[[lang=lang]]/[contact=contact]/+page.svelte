@@ -1,10 +1,12 @@
 <script>
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
-	import { onContactClick } from "$lib/js/client/util.client";
+	import { getStore, onContactClick } from "$lib/js/client/util.client";
 	import { fly } from "svelte/transition";
+
+	const lang = getStore("lang");
 </script>
 
-<section id="contact-wrapper" class="grid page-max-w" in:fly={TRANSITION_PAGE}>
+<section id="contact-wrapper" class="flex page-max-w small-screen-f-column " in:fly={TRANSITION_PAGE}>
 	<div id="contact-items" class="flex f-column">
 		<article class="grid g-v-d small-screen-j-i-c">
 			<h1 class="section-title">Premium Mermer</h1>
@@ -19,7 +21,7 @@
 		<article class="h-divider" style:margin-block=".75rem" />
 
 		<div class="grid g-v-d small-screen-j-c-c">
-			<article class="grid g-1 ">
+			<article class="grid g-1">
 				<p class="section-text f-w-500 small-screen-t-a-c">Ziyaret Edin</p>
 
 				<div class="flex g-1">
@@ -83,7 +85,9 @@
 						<a href="mailto:info@premiummermer.com.tr" class="contact-item-content-text article-text"
 							>info@premiummermer.com.tr</a
 						>
-						<button class="contact-item-content-text article-text link-button" on:click={onContactClick}>İletişim Formu</button>
+						<button class="contact-item-content-text article-text link-button" on:click={onContactClick}
+							>İletişim Formu</button
+						>
 					</div>
 				</div>
 			</article>
@@ -92,7 +96,17 @@
 
 	<article id="contact-page-second-divider" class="h-divider" style:margin-top=".75rem" style:margin-bottom="1rem" />
 
-	<img src="/map.png" alt="Premium Mermer Lokasyonu" class="b-r-d" />
+	<div id="map-wrapper" class="w-h-100">
+		<iframe
+			class="w-h-100 b-r-d"
+			title="Premium Mermer"
+			frameborder="0"
+			scrolling="no"
+			marginheight="0"
+			marginwidth="0"
+			src="https://maps.google.com/maps?amp;hl={$lang}&amp;q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()&amp;t=p&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+		/>
+	</div>
 </section>
 
 <style>
@@ -123,6 +137,11 @@
 		#contact-page-second-divider {
 			display: none;
 		}
+
+		#map-wrapper {
+			max-width: 37.5rem;
+			aspect-ratio: 16/19;
+		}
 	}
 
 	@media (max-width: 65em) {
@@ -137,8 +156,12 @@
 			gap: var(--main-v-padding);
 		}
 
-        #contact-desccription-text {
-            max-width: 25rem;
-        }
+		#contact-desccription-text {
+			max-width: 25rem;
+		}
+
+        #map-wrapper {
+			aspect-ratio: 16/22;
+		}
 	}
 </style>

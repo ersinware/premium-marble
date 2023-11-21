@@ -67,11 +67,11 @@
 	}
 
 	function _onMount() {
-		setInterval(() => {
-			if (showArrows === true) return;
+		// setInterval(() => {
+		// 	if (showArrows === true || startX !== undefined) return;
 
-			toLeft();
-		}, 5000);
+		// 	toLeft();
+		// }, 5000);
 
 		sliderContent = wrapper.querySelector(".slider-content");
 

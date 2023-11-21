@@ -123,19 +123,19 @@
 	}
 
 	async function onToLeft(event) {
-        await performRippleEffectAndWait(event)
+		await performRippleEffectAndWait(event);
 		dispatch("toLeft");
 	}
 
 	async function onToRight(event) {
-        await performRippleEffectAndWait(event)
-        dispatch("toRight")
-    }
+		await performRippleEffectAndWait(event);
+		dispatch("toRight");
+	}
 
 	async function onToIndex(event, _index) {
-        await performRippleEffectAndWait(event)
-        dispatch("toIndex", _index)
-    }
+		await performRippleEffectAndWait(event);
+		dispatch("toIndex", _index);
+	}
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -170,7 +170,7 @@
 					<div
 						class="indicator"
 						class:activeIndicator={index === _index}
-						on:click={event => onToIndex(event, _index)}
+						on:click={(event) => onToIndex(event, _index)}
 						in:fly|local={indicatorTransition}
 						animate:flip={{ duration: 400 }}
 					/>
@@ -228,7 +228,7 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: var(--absoluteIndicatorsWrapperBottom, 3rem);
+		bottom: var(--absoluteIndicatorsWrapperBottom, var(--main-v-padding));
 	}
 
 	.absoluteIndicatorsWithArrows {
@@ -253,7 +253,7 @@
 		border-radius: 0.25rem;
 
 		transition: background-color 0.25s;
-        border: 1px solid var(--divider-color);
+		border: 1px solid var(--divider-color);
 	}
 
 	.activeIndicator {
@@ -289,6 +289,10 @@
 			transition: background-color 0.25s;
 		}
 
+		.navigationArrow:hover {
+			background-color: var(--accent-color-darker);
+		}
+
 		.wrapper:not(.absoluteIndicatorsWithArrows) .navigationArrowLeft {
 			left: max(calc((100vw - var(--max-width)) / 2), var(--main-h-padding));
 			transform: translate(-50%, -50%);
@@ -299,8 +303,12 @@
 			transform: translate(50%, -50%);
 		}
 
-		.disabledNavigationArrow {
-			background-color: silver;
+		.indicator:hover {
+			background-color: var(--accent-color);
+		}
+
+        .activeIndicator:hover {
+			background-color: var(--accent-color-darker);
 		}
 	}
 </style>
