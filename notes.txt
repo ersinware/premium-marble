@@ -1,31 +1,28 @@
-slider responsive yap
+mail'e bağla
 
-anasayfa kodunu düzenle
+AIzaSyBYINml0NowfOv_d8MGuqtlSlFU2Xy16tM
 
 //
 
 tasarımı komple gözden geçir
     modal'ların tasarımını gözden geçir    
-    hoverable'a gölge ekle
+
+//
+
+tüm projeyi dillere bağla
 
 //
 
 language-switcher touchable olduğu zaman yapmadın
     touchable ayrı, hoverable ayrı yap
 
-mail'e bağla
-
-tüm projeyi dillere bağla
-
-gerçek telefonda test et
-
-//
-
 responsive image yap
 lazy image yap
 
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
+
+gerçek telefonda test et
 
 //
 
@@ -48,3 +45,4 @@ slider kodunu komple düzenle
     slider'ı infinite yap
     hızını input'a göre ayarlamaya çalış
     y ekseninde kaydırmaya başladığında x ekseninde, x ekseninde kaydırmaya başladığında y ekseninde kaydırılmasın
+    arrow'lar, dark mode'da tam beyaz olmasın

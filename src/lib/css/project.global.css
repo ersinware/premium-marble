@@ -103,7 +103,7 @@ body {
 }
 
 .small-button {
-    font-size: 0.75rem;
+    font-size: 0.7725rem;
 }
 
 .link-button {
@@ -199,6 +199,6 @@ body {
     }
 
     .hoverable-image-wrapper:hover .hoverable-image {
-        transform: scale(1.05) !important;
+        transform: scale(1.025) !important;
     }
 }

@@ -88,6 +88,8 @@
 
 		border-bottom-left-radius: var(--border-radius);
 		border-bottom-right-radius: var(--border-radius);
+
+        border: 1px solid var(--divider-color);
 	}
 
 	.active-language-name {

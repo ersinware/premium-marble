@@ -190,11 +190,12 @@
 		}
 
 		.section-texts {
-			max-width: calc(45rem - var(--main-h-padding) * 2);
+			max-width: calc(42.5rem - var(--main-h-padding) * 2);
 		}
 
 		#about-us-buttons {
 			margin-top: -0.5rem;
+            flex-wrap: wrap;
 		}
 
 		.img-wrapper {

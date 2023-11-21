@@ -7,67 +7,63 @@
 <section class="flex f-column page-g w-100 max-w" in:fly={TRANSITION_PAGE}>
 	<div class="full-width">
 		<Slider absoluteIndicators>
-			<div id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
-				<div class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/h3.jpg" class="w-h-100" alt="" />
+			<article id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
+				<article class="b-box slider-item p-h-d">
+					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<img src="/h3.jpg" class="hoverable-image w-h-100" alt="" />
 
-						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Taşın Ahengini Hissedin</h2>
-							<div class="slider-text-content article-text">
+							<p class="slider-text-content article-text">
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
 								error pariatur.
-							</div>
-							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
-						</div>
+							</p>
+						</article>
 					</div>
-				</div>
+				</article>
 
-				<div class="b-box slider-item p-h-d">
+				<article class="b-box slider-item p-h-d">
 					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/p1.jpg" class="w-h-100" alt="" />
 
-						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Mermerin Eşsiz Zerafeti</h2>
-							<div class="slider-text-content article-text">
+							<p class="slider-text-content article-text">
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
 								error pariatur.
-							</div>
-							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
-						</div>
+							</p>
+						</article>
 					</div>
-				</div>
+				</article>
 
-				<div class="b-box slider-item p-h-d">
+				<article class="b-box slider-item p-h-d">
 					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/p2.jpg" class="w-h-100" alt="" />
 
-						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Taşın Ahengini Hissedin</h2>
-							<div class="slider-text-content article-text">
+							<p class="slider-text-content article-text">
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
 								error pariatur.
-							</div>
-							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
-						</div>
+							</p>
+						</article>
 					</div>
-				</div>
+				</article>
 
-				<div class="b-box slider-item p-h-d">
+				<article class="b-box slider-item p-h-d">
 					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<img src="/p3.jpg" class="w-h-100" alt="" />
 
-						<div class="slider-text-wrapper p-a grid g-1dot25 p-d">
+						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Mermerin Eşsiz Zerafeti</h2>
-							<div class="slider-text-content article-text">
+							<p class="slider-text-content article-text">
 								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reprehenderit sunt iure fugiat labore
 								error pariatur.
-							</div>
-							<button class="nude-button small-button slider-button">ÜRÜNLERİMİZ</button>
-						</div>
+							</p>
+						</article>
 					</div>
-				</div>
-			</div>
+				</article>
+			</article>
 		</Slider>
 	</div>
 
@@ -137,7 +133,7 @@
 				<button class="button small-button small-screen-m-h-auto">ÜRÜNLERİMİZ</button>
 			</div>
 
-			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+			<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<img src="/h3.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 			</div>
 		</article>
@@ -146,7 +142,7 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+		<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 			<img src="/h2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 		</div>
 
@@ -179,7 +175,7 @@
 				<button class="button small-button small-screen-m-h-auto">MAKALELER</button>
 			</div>
 
-			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+			<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<img src="/b5.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 			</div>
 		</article>
@@ -188,7 +184,7 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+		<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 		</div>
 
@@ -222,14 +218,12 @@
 	}
 
 	.slider-text-wrapper {
-		z-index: 1;
-		background-color: var(--slider-item-text-wrapper-background-color);
-		border: 1px solid var(--divider-color);
-
-		max-width: min(40rem, 50%);
-
 		bottom: calc(var(--main-v-padding) * 2);
+		z-index: 1;
 
+		background-color: var(--slider-item-text-wrapper-background-color);
+
+		border: 1px solid var(--divider-color);
 		border-radius: calc(var(--border-radius) - 0.25rem);
 	}
 
@@ -245,12 +239,6 @@
 
 	.slider-text-content {
 		max-width: 30rem;
-	}
-
-	.slider-button {
-		margin-top: 0.5rem;
-		margin-left: auto;
-		display: none;
 	}
 
 	#texts-with-icons-wrapper {
@@ -271,6 +259,11 @@
 	}
 
 	@media (min-width: 65.001em) {
+		.slider-text-wrapper {
+			left: calc(var(--main-h-padding) * 2);
+			max-width: min(40rem, calc(50% - var(--main-h-padding) * 2));
+		}
+
 		.section-texts {
 			max-width: 30rem;
 			min-width: 30rem;
@@ -280,37 +273,41 @@
 			aspect-ratio: 16/8;
 		}
 
-		.img-wrapper {
+		.section-img-wrapper {
 			max-width: 45rem;
 			aspect-ratio: 720/480;
-		}
-
-		.slider-text-wrapper {
-			left: calc(var(--main-h-padding) * 2);
 		}
 	}
 
 	@media (max-width: 65em) {
-		#slider-homepage {
+		.slider-item-content {
 			aspect-ratio: 16/16;
 			max-height: 45rem;
 		}
 
+		.slider-text-wrapper {
+			left: var(--main-h-padding);
+			max-width: calc(100% - var(--main-h-padding) * 4);
+			max-height: calc(100% - var(--main-v-padding) * 5);
+		}
+
 		.section-texts {
-			max-width: calc(45rem - var(--main-h-padding) * 2);
+			max-width: calc(42.5rem - var(--main-h-padding) * 2);
 		}
 
 		.button {
 			margin-bottom: 0.25rem;
 		}
 
-		.img-wrapper {
+		.section-img-wrapper {
 			max-width: 42.5rem;
 			aspect-ratio: 16/14;
 		}
+	}
 
+	@media (max-width: 34.1875em) {
 		.slider-text-wrapper {
-			left: var(--main-h-padding);
+			max-width: min(calc(20rem - var(--main-h-padding) * 2), calc(100% - var(--main-h-padding) * 4));
 		}
 	}
 </style>

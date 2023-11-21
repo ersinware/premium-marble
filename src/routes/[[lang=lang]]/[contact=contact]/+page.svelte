@@ -6,7 +6,7 @@
 	const lang = getStore("lang");
 </script>
 
-<section id="contact-wrapper" class="flex page-max-w small-screen-f-column " in:fly={TRANSITION_PAGE}>
+<section id="contact-wrapper" class="flex page-max-w small-screen-f-column" in:fly={TRANSITION_PAGE}>
 	<div id="contact-items" class="flex f-column">
 		<article class="grid g-v-d small-screen-j-i-c">
 			<h1 class="section-title">Premium Mermer</h1>
@@ -98,6 +98,7 @@
 
 	<div id="map-wrapper" class="w-h-100">
 		<iframe
+        id="map"
 			class="w-h-100 b-r-d"
 			title="Premium Mermer"
 			frameborder="0"
@@ -110,6 +111,11 @@
 </section>
 
 <style>
+    iframe {
+        margin: 0;
+        padding: 0;
+    }
+
 	#contact-items {
 		min-width: 18rem;
 	}
@@ -118,6 +124,10 @@
 		height: 1.5rem;
 
 		fill: var(--accent-color);
+	}
+
+	#map {
+		border: 1px solid var(--divider-color);
 	}
 
 	@media (min-width: 65.001em) {
@@ -160,7 +170,7 @@
 			max-width: 25rem;
 		}
 
-        #map-wrapper {
+		#map-wrapper {
 			aspect-ratio: 16/22;
 		}
 	}

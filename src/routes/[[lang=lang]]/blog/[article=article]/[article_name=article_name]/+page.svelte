@@ -35,6 +35,10 @@
 		margin-top: 1rem;
 	}
 
+    .smaller-section-title {
+        line-height: 2rem;
+    }
+
 	@media (min-width: 47.5001em) {
 		#poster-img {
 			aspect-ratio: 16/10;

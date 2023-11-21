@@ -41,7 +41,8 @@
 		startScrollLeft,
 		nextEdgeAtStart,
 		previousEdgeAtStart,
-		startTime;
+		startTime,
+		interval;
 
 	$: onCommand(command);
 
@@ -67,11 +68,7 @@
 	}
 
 	function _onMount() {
-		// setInterval(() => {
-		// 	if (showArrows === true || startX !== undefined) return;
-
-		// 	toLeft();
-		// }, 5000);
+		startInterval();
 
 		sliderContent = wrapper.querySelector(".slider-content");
 
@@ -255,6 +252,8 @@
 	}
 
 	function toLeft() {
+        restartInterval()
+
 		if (atLast()) {
 			// if ($hoverable) return;
 
@@ -268,6 +267,8 @@
 	}
 
 	function toRight() {
+        restartInterval()
+
 		if (atFirst()) {
 			// if ($hoverable) return;
 
@@ -294,6 +295,8 @@
 	}
 
 	function toIndex(message) {
+        restartInterval()
+        
 		index = message.detail;
 		place();
 	}
@@ -352,6 +355,19 @@
 	function clear() {
 		startX = undefined;
 		lastX = undefined;
+	}
+
+	function startInterval() {
+		interval = setInterval(() => {
+			if (showArrows === true || startX !== undefined) return;
+
+			toLeft();
+		}, 5000);
+	}
+
+	function restartInterval() {
+		clearInterval(interval);
+		startInterval();
 	}
 </script>
 
