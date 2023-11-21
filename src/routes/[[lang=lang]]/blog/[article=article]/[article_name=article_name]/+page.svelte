@@ -15,7 +15,9 @@
 <section class="grid page-g" in:fly={TRANSITION_PAGE}>
 	{#key article.imageName}
 		<div class="flex f-column g-v-d w-100 page-max-w m-h-auto t-a-c" in:fly={TRANSITION_PAGE}>
-			<img src={article.imageName} alt="" id="poster-img" class="w-h-100 b-r-d" />
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src={article.imageName} alt="" id="poster-img" class="hoverable-image w-h-100 b-r-d" />
+			</div>
 
 			<div class="content grid g-v-d page-max-w-smaller m-h-auto">
 				<h1 class="smaller-section-title f-w-600">{article.name}</h1>

@@ -1,20 +1,33 @@
-anasayfayı yap
+slider'ı yap
+    yazılar ekle
 
-modal'ların tasarımını gözden geçir
-hoverable'a gölge ekle
-    
+//
+
 iletişim sayfasına harita ekle
 mail'e bağla
+
+//
+
+modal'ların tasarımını gözden geçir    
+hoverable'a gölge ekle
 
 language-switcher touchable olduğu zaman yapmadın
     touchable ayrı, hoverable ayrı yap
 
-offline olduğu durumu test et
-    tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
-
 tüm projeyi dillere bağla
 
 gerçek telefonda test et
+
+//
+
+responsive image yap
+lazy image yap
+
+offline olduğu durumu test et
+    tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
+
+slider kodunu düzenle
+    animasyonla gelmiyor
 
 //
 
@@ -25,9 +38,10 @@ optimizasyon için can-mese projesindeki notlara bak
     SEO
     preload
         fonts, images vb.
-    responsive images
     CSP, CORS vb.
     javascript devredışı bırakıldığı durum
     projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
     kullanılmayan static dosyaları sil
         precache'de yükleniyor onlar
+
+slider'ı infinite yap

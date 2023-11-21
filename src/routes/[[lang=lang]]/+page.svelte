@@ -1,13 +1,39 @@
 <script>
+	import Slider from "$lib/components/slider/Slider.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
-	import { getStore } from "$lib/js/client/util.client";
 	import { fly } from "svelte/transition";
-
-	const lang = getStore("lang");
 </script>
 
 <section class="flex f-column page-g w-100 max-w" in:fly={TRANSITION_PAGE}>
-	<div id="slider-homepage" class="w-100 secondary-background-color b-r-d" />
+	<div class="full-width">
+		<Slider absoluteIndicators>
+			<div id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
+				<div class="b-box slider-item p-h-d">
+					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<img src="/h3.jpg" class="w-h-100" alt="" />
+					</div>
+				</div>
+
+				<div class="b-box slider-item p-h-d">
+					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<img src="/a2.avif" class="w-h-100" alt="" />
+					</div>
+				</div>
+
+				<div class="b-box slider-item p-h-d">
+					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<img src="/a1.avif" class="w-h-100" alt="" />
+					</div>
+				</div>
+
+				<div class="b-box slider-item p-h-d">
+					<div class="b-box slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<img src="/b4.jpg" class="w-h-100" alt="" />
+					</div>
+				</div>
+			</div>
+		</Slider>
+	</div>
 
 	<div
 		id="texts-with-icons-wrapper"
@@ -75,8 +101,8 @@
 				<button class="button small-button small-screen-m-h-auto">ÜRÜNLERİMİZ</button>
 			</div>
 
-			<div class="img-wrapper w-100 o-hidden">
-				<img src="/h3.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
+			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+				<img src="/h3.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 			</div>
 		</article>
 	</div>
@@ -84,8 +110,8 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="img-wrapper w-100 o-hidden">
-			<img src="/h2.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
+		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+			<img src="/h2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
@@ -117,8 +143,8 @@
 				<button class="button small-button small-screen-m-h-auto">MAKALELER</button>
 			</div>
 
-			<div class="img-wrapper w-100 o-hidden">
-				<img src="/b5.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
+			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+				<img src="/b5.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 			</div>
 		</article>
 	</div>
@@ -126,8 +152,8 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="img-wrapper w-100 o-hidden">
-			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="w-h-100 m-h-auto b-r-d" />
+		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
@@ -144,6 +170,26 @@
 </section>
 
 <style>
+	#slider-homepage {
+		--grid-item-min-width: 1rem;
+		--grid-layout-gap: var(--main-h-padding);
+		--grid-max-column-count: 1;
+		--gap-count: calc(var(--grid-max-column-count) - 1);
+		--total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+		--grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-max-column-count));
+
+		gap: var(--grid-layout-gap);
+	}
+
+	.slider-item {
+		flex: 0 0 max(var(--grid-item-max-width), var(--grid-item-min-width)) !important;
+	}
+
+	.slider-item-content {
+		border: 1px solid var(--divider-color);
+		background-color: var(--secondary-background-color);
+	}
+
 	#texts-with-icons-wrapper {
 		flex-wrap: wrap;
 	}
@@ -167,11 +213,10 @@
 			min-width: 30rem;
 		}
 
-		#slider-homepage {
+		.slider-item-content {
 			aspect-ratio: 16/8;
 		}
 
-	
 		.img-wrapper {
 			max-width: 45rem;
 			aspect-ratio: 720/480;
@@ -192,7 +237,6 @@
 			margin-bottom: 0.25rem;
 		}
 
-	
 		.img-wrapper {
 			max-width: 42.5rem;
 			aspect-ratio: 16/14;

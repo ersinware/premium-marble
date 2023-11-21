@@ -9,7 +9,7 @@
 		<article class="grid g-v-d small-screen-j-i-c">
 			<h1 class="section-title">Premium Mermer</h1>
 
-			<p class="section-text small-screen-t-a-c">
+			<p id="contact-desccription-text" class="section-text small-screen-t-a-c">
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis veniam consequuntur quasi voluptas.
 			</p>
 
@@ -136,5 +136,9 @@
 		#contact-items {
 			gap: var(--main-v-padding);
 		}
+
+        #contact-desccription-text {
+            max-width: 25rem;
+        }
 	}
 </style>
