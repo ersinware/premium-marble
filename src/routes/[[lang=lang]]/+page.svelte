@@ -2,6 +2,7 @@
 	import { goto } from "$app/navigation";
 	import Slider from "$lib/components/slider/Slider.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectForButtonAndWait } from "$lib/js/client/util.client";
 	import { onMount } from "svelte";
@@ -23,6 +24,10 @@
 			});
 	}
 </script>
+
+<svelte:head>
+	<title>{L("homepage-page-title", $lang)}</title>
+</svelte:head>
 
 <section id="homepage" class="flex f-column page-g w-100 max-w" in:fly={TRANSITION_PAGE}>
 	<div class="full-width">

@@ -1,10 +1,15 @@
 <script>
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore, onContactClick } from "$lib/js/client/util.client";
 	import { fly } from "svelte/transition";
 
 	const lang = getStore("lang");
 </script>
+
+<svelte:head>
+	<title>{L("contact-page-title", $lang)}</title>
+</svelte:head>
 
 <section id="contact-wrapper" class="flex page-max-w small-screen-f-column" in:fly={TRANSITION_PAGE}>
 	<div id="contact-items" class="flex f-column">
@@ -12,7 +17,7 @@
 			<h1 class="section-title">Premium Mermer</h1>
 
 			<p id="contact-desccription-text" class="section-text small-screen-t-a-c">
-				İster soru sormanız, ister bir projeyi tartışmanız, ister sadece merhaba demeniz için buradayız. 
+				İster soru sormanız, ister bir projeyi tartışmanız, ister sadece merhaba demeniz için buradayız.
 			</p>
 
 			<button class="nude-button small-button" on:click={onContactClick}>BİZE YAZIN</button>

@@ -10,7 +10,7 @@ tüm projeyi dillere bağla
 SEO
     notları gözden geçir, buraya not al yapılacakları
     dosyaları doğru isimlendir
-    title, description ve alt
+    description ve alt
 //
 
 language-switcher touchable olduğu zaman yapmadın

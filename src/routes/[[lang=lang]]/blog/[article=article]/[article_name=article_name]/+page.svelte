@@ -2,6 +2,7 @@
 	import { page } from "$app/stores";
 	import SimilarArticles from "$lib/components/blog/article/SimilarArticles.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { getLocalizedPath } from "$lib/js/common/localization/localization.util.common";
 	import { articles } from "$lib/js/common/util.data.articles";
@@ -11,6 +12,10 @@
 
 	$: article = articles.get($lang).get(getLocalizedPath($page.params.article_name, $lang));
 </script>
+
+<svelte:head>
+	<title>{article.name} | {L("app-name", $lang)}</title>
+</svelte:head>
 
 <section class="grid page-g" in:fly={TRANSITION_PAGE}>
 	{#key article.imageName}
@@ -33,7 +38,7 @@
 <style>
 	.content {
 		margin-top: 1rem;
-        max-width: calc(50rem - var(--main-h-padding) * 2);
+		max-width: calc(50rem - var(--main-h-padding) * 2);
 	}
 
 	.smaller-section-title {

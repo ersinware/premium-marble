@@ -1,7 +1,15 @@
 <script>
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getStore } from "$lib/js/client/util.client";
 	import { fly } from "svelte/transition";
+
+	const lang = getStore("lang");
 </script>
+
+<svelte:head>
+	<title>{L("about-us-page-title", $lang)}</title>
+</svelte:head>
 
 <section class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
 	<article

@@ -1,6 +1,7 @@
 <script>
 	import { goto } from "$app/navigation";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { getLocalizedURL } from "$lib/js/common/localization/localization.util.common";
 	import { getPaths } from "$lib/js/common/util.common";
@@ -24,6 +25,10 @@
 			});
 	}
 </script>
+
+<svelte:head>
+	<title>{L("blog-page-title", $lang)}</title>
+</svelte:head>
 
 <section id="blog-section" class="grid page-g w-100 page-max-w-smaller t-a-c" in:fly={TRANSITION_PAGE}>
 	<div class="grid g-v-d">
