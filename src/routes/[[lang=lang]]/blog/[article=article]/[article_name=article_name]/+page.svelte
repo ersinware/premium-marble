@@ -33,11 +33,12 @@
 <style>
 	.content {
 		margin-top: 1rem;
+        max-width: calc(50rem - var(--main-h-padding) * 2);
 	}
 
-    .smaller-section-title {
-        line-height: 2rem;
-    }
+	.smaller-section-title {
+		line-height: 2rem;
+	}
 
 	@media (min-width: 47.5001em) {
 		#poster-img {

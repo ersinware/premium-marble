@@ -36,7 +36,7 @@
 	</div>
 
 	<p class="modal-text small-modal-text-max-w m-h-auto">
-		Kullanıcılarımızın önerilerini dikkate alıyor ve deneyiminizi daha da güzelleştirmek istiyoruz.
+		Müşterilerimizin önerilerini dikkate alıyor ve deneyiminizi daha da güzelleştirmek istiyoruz.
 	</p>
 
 	<TextArea

@@ -12,7 +12,7 @@
 			<h1 class="section-title">Premium Mermer</h1>
 
 			<p id="contact-desccription-text" class="section-text small-screen-t-a-c">
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis veniam consequuntur quasi voluptas.
+				İster soru sormanız, ister bir projeyi tartışmanız, ister sadece merhaba demeniz için buradayız. 
 			</p>
 
 			<button class="nude-button small-button" on:click={onContactClick}>BİZE YAZIN</button>
@@ -147,7 +147,7 @@
 
 		#map-wrapper {
 			max-width: 37.5rem;
-			aspect-ratio: 16/19;
+			aspect-ratio: 16/18;
 		}
 	}
 

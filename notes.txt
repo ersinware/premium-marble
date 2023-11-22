@@ -2,25 +2,19 @@ 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
 
 //
 
-tasarımı komple gözden geçir
-
-//
-
-fotoğrafları ayarla
-text'leri ayarla
-
 mail içeriğini tasarla
 formdan gerçek mail hesabına göndersin
 
 tüm projeyi dillere bağla
 
+SEO
+    notları gözden geçir, buraya not al yapılacakları
+    dosyaları doğru isimlendir
+    title, description ve alt
 //
 
 language-switcher touchable olduğu zaman yapmadın
     touchable ayrı, hoverable ayrı yap
-
-responsive image yap
-lazy image yap
 
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
@@ -29,12 +23,17 @@ gerçek telefonda test et
 
 //
 
-TODO: cPanel server zaten compress yapıyor mu?
+tasarımı komple gözden geçir
+
+cPanel server zaten compress yapıyor mu?
     sanırım evet
 
+SEO 
+    sitemap yaz
+
 optimizasyon için can-mese projesindeki notlara bak
-    SEO
-        dosyaları doğru isimlendir
+    responsive image yap
+    lazy image yap
     preload
         fonts, images vb.
     preconnect
@@ -51,5 +50,5 @@ slider kodunu komple düzenle
     slider'ı infinite yap
     hızını input'a göre ayarlamaya çalış
     y ekseninde kaydırmaya başladığında x ekseninde, x ekseninde kaydırmaya başladığında y ekseninde kaydırılmasın
-    
+
 static adapter yap

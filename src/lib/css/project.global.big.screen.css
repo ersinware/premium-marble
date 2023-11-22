@@ -11,6 +11,12 @@
         font-weight: 600;
     }
 
+    .small-section-title {
+        font-size: .9rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+    }
+
     .section-text {
         font-size: .85rem;
     }
