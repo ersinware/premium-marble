@@ -53,12 +53,14 @@
 
 		if (showArrows === "alwaysShow") return;
 
-		showArrows = 1;
-		setTimeout(() => {
-			if (showArrows === true) return;
+		// showArrows = 1;
+		// setTimeout(() => {
+		// 	if (showArrows === true) return;
 
-			showArrows = false;
-		}, 2500);
+		// 	showArrows = false;
+		// }, 2500);
+
+        showArrows = true
 	}
 
 	async function recalculate(command) {
@@ -245,7 +247,7 @@
 	}
 
 	.indicator {
-		width: 1.5rem;
+		width: 1.25rem;
 		height: 0.25rem;
 
 		background-color: var(--text-color-unimportant);
@@ -282,7 +284,7 @@
 			padding: 0.75rem;
 
 			background-color: var(--accent-color);
-			fill: white;
+			fill: var(--navigation-arrow-color);
 
 			border-radius: 50%;
 

@@ -48,7 +48,7 @@ const content = `<p class="section-text">
 const articlesTR = new Map([
     ['mermer-secerken-nelere-dikkat-etmelisiniz', {
         name: 'Mermer Seçerken Nelere Dikkat Etmelisiniz?',
-        imageName: '/b1.jpg',
+        imageName: '/2.jpeg',
         summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
         content,
     }],
@@ -66,7 +66,7 @@ const articlesTR = new Map([
     }],
     ['mermerin-dünyamızdaki-yeri-ve-tarihçesi', {
         name: 'Mermerin Dünyamızdaki Yeri ve Tarihçesi',
-        imageName: '/b4.jpg',
+        imageName: '/37925.jpg',
         summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
         content
     }],
@@ -81,7 +81,7 @@ const articlesTR = new Map([
 const articlesEN = new Map([
     ['what-should-you-pay-care-for-when-choosing-marble', {
         name: 'What Should You Pay Attention to When Choosing Marble?',
-        imageName: '/b1.jpg',
+        imageName: '/2.jpeg',
         summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
         content,
     }],
@@ -99,7 +99,7 @@ const articlesEN = new Map([
     }],
     ['the-place-and-history-of-marble-in-our-world', {
         name: 'The Place and History of Marble in Our World',
-        imageName: '/b4.jpg',
+        imageName: '/37925.jpg',
         summary: 'Atque ut placeat porro ipsam rem error! Vel voluptas neque, veniam perspiciatis nam, eos est in placeat ut ipsa, quidem et molestias',
         content
     }],

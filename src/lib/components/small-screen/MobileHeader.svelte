@@ -30,7 +30,10 @@
 			/>
 		</svg>
 
-		<div id="mobile-header-logo" class="third-background-color b-r-d" />
+		<picture class="d-contents">
+			<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
+			<img id="mobile-header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+		</picture>
 	</div>
 </header>
 
@@ -38,13 +41,13 @@
 	@media (max-width: 65em) {
 		#mobile-header {
 			height: var(--mobile-header-height);
-            background-color: var(--header-background-color);
+			background-color: var(--header-background-color);
 
 			backdrop-filter: blur(1rem);
 		}
 
 		#mobile-header-content {
-			border-bottom: var(--divider-color) .5px solid;
+			border-bottom: var(--divider-color) 0.5px solid;
 		}
 
 		#mobile-header-menu-icon {
@@ -54,8 +57,9 @@
 		}
 
 		#mobile-header-logo {
-			width: 7rem;
-			height: 2.5rem;
+			border: none;
+			max-height: 100%;
+			max-width: 10rem;
 		}
 
 		@media (hover: hover) {

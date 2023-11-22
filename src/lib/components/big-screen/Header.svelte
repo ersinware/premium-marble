@@ -39,7 +39,10 @@
 
 <header id="header" class="p-f t-0 w-100 for-big-screen" in:fly={TRANSITION_PAGE}>
 	<div id="header-content" class="b-box p-r grid j-c-c a-i-c w-100-minus-padding-h max-w h-100 m-h-auto">
-		<img id="header-logo" src="/logo-small.jpeg" alt="Premium Mermer Logo" />
+		<picture class="d-contents">
+			<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
+			<img id="header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+		</picture>
 
 		<section class="header-links flex g-2dot5">
 			{#each new Array(linkObjects.length / 2) as _, index}
@@ -146,7 +149,7 @@
 
 		#header-logo {
 			border: none;
-			max-height: calc(var(--header-height) * .4);
+			max-height: calc(var(--header-height) * 0.4);
 		}
 
 		.languages-container {

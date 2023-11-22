@@ -6,7 +6,7 @@
     padding-left: .1rem;
     padding-right: .1rem;
 
-    color: var(--text-color-unimportant);
+    color: var(--accent-color);
     background-color: var(--input-label-background-color, var(--background-color));
 
     font-family: Montserrat, sans-serif;
@@ -23,14 +23,14 @@
 }
 
 .input-text {
-    line-height: 1rem;
+    line-height: 1.25rem;
 
     margin-top: .25rem;
-
-    font-family: Montserrat, sans-serif;
-    letter-spacing: .025rem;
+    
+    font-size: 0.85rem;
 
     border: solid 1px var(--divider-color);
+
     transition: color .25s ease-in-out, border .25s ease-in-out;
 }
 
@@ -110,13 +110,13 @@ input.empty.input-text:not(.focus)+.input-label {
 
     textarea.input-text {
         /* (input-text height - .input-text line height) / 2 */
-        padding: .75rem 1rem;
+        padding: 1rem 1rem;
         min-width: 18rem;
     }
 
     textarea.empty.input-text:not(.focus)+.input-label {
         /* (input-text height - .input-text line height) / 2 */
-        top: .75rem;
+        top: 1rem;
     }
 
     :is(.valid.input-text, .focus.input-text, .invalid.input-text)+.input-label {

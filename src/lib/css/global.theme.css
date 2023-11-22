@@ -9,6 +9,8 @@ body {
     --accent-color: orange;
     --accent-color-darker: darkorange;
 
+    --navigation-arrow-color: white;
+
     --title-color: rgb(24, 24, 24);
     --text-color: rgb(48, 48, 48);
     --secondary-text-color: rgb(72, 72, 72);
@@ -87,6 +89,8 @@ body {
         --tooltip-background-color-default: rgb(48, 48, 48);
         --accent-color: orange;
         --accent-color-darker: darkorange;
+
+        --navigation-arrow-color: rgb(231, 231, 231);
 
         --title-color: rgb(231, 231, 231);
         --text-color: rgb(215, 215, 215);

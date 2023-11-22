@@ -128,7 +128,8 @@
 	function build(_navigationCommand) {
 		calculate();
 
-		if (_navigationCommand === "show") setTimeout(() => (navigationCommand = _navigationCommand), 1000);
+		// if (_navigationCommand === "show") setTimeout(() => (navigationCommand = _navigationCommand), 1000);
+		if (_navigationCommand === "show") navigationCommand = _navigationCommand
 		else navigationCommand = _navigationCommand;
 	}
 

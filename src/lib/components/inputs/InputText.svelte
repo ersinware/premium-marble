@@ -183,7 +183,7 @@
 			value={value ?? ""}
 			disabled={disable}
 			enterkeyhint={enterKeyHint ?? "next"}
-			class="input-text b-box w-100 t-a-c f-w-600 {inputClasses ?? ''}"
+			class="input-text b-box w-100 t-a-c {inputClasses ?? ''}"
 			class:focus
 			class:empty
 			class:valid={validInVisual}

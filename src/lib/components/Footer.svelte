@@ -13,8 +13,8 @@
 		{ name: L("homepage", $lang), link: getLocalizedLink("", $lang) },
 		{ name: L("products", $lang), link: getLocalizedLink("products", $lang) },
 		{ name: L("blog", $lang), link: getLocalizedLink("blog", $lang) },
-		{ name: L("about-us", $lang), link: getLocalizedLink("hakkımızda", $lang) },
-		{ name: L("contact", $lang), link: getLocalizedLink("iletişim", $lang) },
+		{ name: L("about-us", $lang), link: getLocalizedLink("about-us", $lang) },
+		{ name: L("contact", $lang), link: getLocalizedLink("contact", $lang) },
 	];
 
 	onMount(_onMount);
@@ -34,8 +34,11 @@
 
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
 	<div id="footer-content" class="grid page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
-		<article class="flex f-column g-2 small-screen-a-i-c">
-			<div id="footer-logo" class="b-r-d" />
+		<article class="flex f-column g-1dot5 small-screen-a-i-c">
+			<picture class="d-contents">
+				<source class="d-contents" srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
+				<img id="footer-logo" src="/logo.png" alt="Premimum Mermer Logo" />
+			</picture>
 
 			<p class="article-text small-screen-t-a-c">
 				Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi
@@ -107,16 +110,16 @@
 
 <style>
 	#footer-logo {
-		width: 12.5rem;
-		height: 5rem;
+		max-width: 14rem;
+		margin-top: -1.25rem;
 
-		background-color: var(--third-background-color);
+		border: none;
 	}
 
 	.contact-item-icon {
-        width: 1.5rem;
+		width: 1.5rem;
 		min-width: 1.5rem;
-		height: 1.25rem;
+		height: 1.4rem;
 
 		fill: var(--accent-color);
 	}
@@ -137,7 +140,6 @@
 			margin-top: 0.15rem;
 			margin-bottom: 1rem;
 			margin-left: -1.6rem;
-
 		}
 	}
 
@@ -147,8 +149,8 @@
 			gap: calc(var(--main-v-padding) * 1.5);
 		}
 
-        #footer-pages {
-            margin-top: .25rem;
-        }
+		#footer-pages {
+			margin-top: 0.25rem;
+		}
 	}
 </style>

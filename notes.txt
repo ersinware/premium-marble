@@ -2,14 +2,15 @@ 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
 
 //
 
-logoyu ekle
-
 tasarımı komple gözden geçir
-    modal'ların tasarımını gözden geçir    
-    indicator'lerin boyutu?
-    arrow'lar, dark mode'da tam beyaz olmasın
 
 //
+
+fotoğrafları ayarla
+text'leri ayarla
+
+mail içeriğini tasarla
+formdan gerçek mail hesabına göndersin
 
 tüm projeyi dillere bağla
 
@@ -26,8 +27,6 @@ offline olduğu durumu test et
 
 gerçek telefonda test et
 
-formdan gerçek mail hesabına göndersin
-
 //
 
 TODO: cPanel server zaten compress yapıyor mu?
@@ -35,6 +34,7 @@ TODO: cPanel server zaten compress yapıyor mu?
 
 optimizasyon için can-mese projesindeki notlara bak
     SEO
+        dosyaları doğru isimlendir
     preload
         fonts, images vb.
     preconnect
@@ -44,9 +44,12 @@ optimizasyon için can-mese projesindeki notlara bak
     kullanılmayan static dosyaları sil
         precache'de yükleniyor onlar
 
+service worker her şeyi cache'lesin
+
 slider kodunu komple düzenle
     animasyonla gelmiyor navigation component
     slider'ı infinite yap
     hızını input'a göre ayarlamaya çalış
     y ekseninde kaydırmaya başladığında x ekseninde, x ekseninde kaydırmaya başladığında y ekseninde kaydırılmasın
     
+static adapter yap

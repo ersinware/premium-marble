@@ -11,11 +11,10 @@
 			<h2 class="section-title">Premium Mermer</h2>
 
 			<p class="section-text">
-				Fabrikamız; Silifke’nin ilk mermer fabrikası olarak 2005 yılında Küçük Sanayi Sitesinde faaliyete geçmiş, 2011
-				yılında Silifke Organize Sanayi Bölgesine taşınmış ve kendi mülkiyetinde faaliyetlerine devam etmektedir. 26.000
-				m² arazi üzerinde 3000 m² kapalı alanda çalışmalarını sürdüren Şimşek Mermer, işinde deneyimli personelleri ve
-				son sistem makineler ile Silifke‘de çıkarılan mermer çeşitlerini işleyip ihracat yaparak, hem Silifke hem de
-				ülke ekonomisine katkı sağlamaktadır.
+				2005 yılında Silifke'nin ilk mermer fabrikası olarak faaliyete geçen firmamız, 2011 yılında Silifke Organize
+				Sanayi Bölgesi'ne taşındı. 26.000 m² arazi üzerinde 3000 m² kapalı alanda çalışan Premium Mermer, deneyimli
+				kadrosu ve son teknoloji makineleri ile Silifke'den çıkan mermer çeşitlerini işleyip ihracat yaparak hem bölge
+				hem de ülke ekonomisine katkı sağlamaktadır.
 			</p>
 		</div>
 
@@ -29,14 +28,14 @@
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
 			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-				<img src="/h2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+				<img src="/a-s-2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 			</div>
 
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
 				<h2 class="section-title">18 Yıllık Deneyim</h2>
 
 				<p class="section-text">
-					Silifke’nin köklü mermer fabrikalarından olan Şimşek Mermer Fabrikası, kurulduğu yıldan bu yana kalitesini
+					Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, kurulduğu yıldan bu yana kalitesini
 					yükseltmiş ve yükseltmeye devam etmektedir. Her türlü mermer çeşitlerini istenilen ölçü ve ebatlarda işleyen
 					fabrikamızda, müşterilerimizin özel istekleri de yerine getirilmektedir.
 				</p>
@@ -46,7 +45,7 @@
 
 	<div id="statistics-wrapper" class="grid w-100 m-h-auto big-screen-page-max-w small-screen-max-w-100">
 		<article class="flex f-column a-i-c g-1 p-d secondary-background-color b-r-d t-a-c">
-			<svg class="statistic-item-icon" style:width="2.1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+			<svg class="statistic-item-icon" style:width="1.95rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
 				><path
 					d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
 				/></svg
@@ -93,7 +92,7 @@
 
 			<div class="statistic-item-texts grid g-dot25">
 				<div class="statistic-item-text-number f-w-600">18</div>
-				<div class="section-text">Yıllık Tecrübe</div>
+				<div class="section-text">Yıllık Deneyim</div>
 			</div>
 		</article>
 	</div>
@@ -106,11 +105,10 @@
 				<h2 class="section-title">Kalitenin Simgesi</h2>
 
 				<p class="section-text">
-					Premium Mermer olarak bizler, hatasız üretim ve zamanında teslimat gerçekleştiririz. Mevcut durumumuzu
-					korumakla yetinmeyip her noktada sürekli iyileşmeyi temel felsefemiz olarak belirleriz. Personel kalifikasyonu
-					için sürekli eğitim faaliyetleri yürütürüz. Ülke ve şirket gelişimine katkı sağlamak amacıyla ihracatta
-					yerimiz daima ön sıralardadır. Kalitenin bir tesadüf olmadığına inanıyoruz. Markamız kalitemizin simgesidir ve
-					bu, geleceğe attığımız imzadır görüşünü benimsiyoruz.
+					Premium Mermer olarak, hatasız üretim ve zamanında teslimat prensiplerimizle ön plana çıkıyoruz. Sürekli
+					iyileşmeyi temel felsefemiz olarak benimseyerek personel kalifikasyonu için düzenli eğitim faaliyetleri
+					yürütüyoruz. İhracatta ön sıralarda yer alarak ülke ve şirket gelişimine katkıda bulunuyoruz. Kalitemiz,
+					markamızın simgesidir ve bu, geleceğe attığımız imzadır.
 				</p>
 
 				<div id="about-us-buttons" class="flex g-h-d small-screen-j-c-c">
@@ -120,7 +118,7 @@
 			</div>
 
 			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-				<img src="/h3.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+				<img src="/a-s-3.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 			</div>
 		</article>
 	</div>
@@ -129,19 +127,16 @@
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
 		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-			<img style:filter="brightness(1.5)" src="/h4.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+			<img src="/handshake-2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="section-title">Müşteri Memnuniyeti</h2>
+			<h2 class="section-title">Daima Yenilikçi</h2>
 
 			<p class="section-text">
-				Müşterilerimizin değişen ve gelişen şartlarını göz önüne alarak ihtiyaç ve beklentilerini doğru algılayıp
-				istenilen şekilde, zamanında karşılayarak müşteri memnuniyetini sağlamak, Sektörümüzle ilgili teknolojik
-				gelişmeleri takip ederek üretim ve hizmetlerimizde en gelişmiş teknikleri kullanmak, Maliyetleri optimum
-				seviyeye çekmek ve kalitesi verimliliği ve rekabet gücü yüksek kuruluş olmak, Çevreye saygılı, iş ve işçi
-				güvenliğini temel alan, yasal mevzuat şartlarına uygun olarak üretim yapmak bilinci ile çalışmalarımızı
-				sürdürmekteyiz.
+				Müşterilerimizin değişen ihtiyaç ve beklentilerini doğru algılayarak zamanında karşılamak, sektördeki teknolojik
+				gelişmeleri takip ederek en gelişmiş teknikleri kullanmak, maliyetleri optimum seviyeye çekmek ve çevreye
+				saygılı bir şekilde iş ve işçi güvenliğini temel alan üretim yapma bilinciyle çalışmalarımızı sürdürüyoruz.
 			</p>
 		</div>
 	</article>
@@ -163,8 +158,8 @@
 	}
 
 	.statistic-item-icon {
-		width: 2.5rem;
-		height: 2.5rem;
+		width: 2.25rem;
+		height: 2.25rem;
 		fill: var(--accent-color);
 	}
 
@@ -195,7 +190,7 @@
 
 		#about-us-buttons {
 			margin-top: -0.5rem;
-            flex-wrap: wrap;
+			flex-wrap: wrap;
 		}
 
 		.img-wrapper {
