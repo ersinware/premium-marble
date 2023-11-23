@@ -41,7 +41,9 @@
 	<div id="header-content" class="b-box p-r grid j-c-c a-i-c w-100-minus-padding-h max-w h-100 m-h-auto">
 		<picture class="d-contents">
 			<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
-			<img id="header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+			<a href={getLocalizedLink("", $lang)}>
+				<img id="header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+			</a>
 		</picture>
 
 		<section class="header-links flex g-2dot5">

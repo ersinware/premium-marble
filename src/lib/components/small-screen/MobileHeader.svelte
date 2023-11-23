@@ -1,12 +1,25 @@
 <script>
-	import { performRippleEffectAndWait } from "$lib/js/client/util.client";
+	import { goto } from "$app/navigation";
+	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
+	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { openLeftMenu } from "$lib/js/client/util.left.menus.client";
 	import LeftMenu from "./LeftMenu.svelte";
+
+	const lang = getStore("lang");
 
 	async function onMenuClick(event) {
 		await performRippleEffectAndWait(event);
 
 		openLeftMenu({ id: "left-menu", component: LeftMenu });
+	}
+
+	async function onLogoClick(event) {
+		event.preventDefault();
+
+		const href = event.currentTarget.href;
+		await performRippleEffectAndWait(event);
+
+		goto(href);
 	}
 </script>
 
@@ -32,7 +45,9 @@
 
 		<picture class="d-contents">
 			<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
-			<img id="mobile-header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+			<a href={getLocalizedLink("", $lang)} on:click={onLogoClick}>
+				<img id="mobile-header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+			</a>
 		</picture>
 	</div>
 </header>

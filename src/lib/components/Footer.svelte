@@ -20,7 +20,7 @@
 	onMount(_onMount);
 
 	function _onMount() {
-		for (const link of document.body.querySelectorAll("#footer-pages a"))
+		for (const link of document.body.querySelectorAll("#footer a"))
 			link.addEventListener("click", async (event) => {
 				event.preventDefault();
 
@@ -37,7 +37,9 @@
 		<article class="flex f-column g-1dot25 small-screen-a-i-c">
 			<picture class="d-contents">
 				<source class="d-contents" srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
-				<img id="footer-logo" src="/logo.png" alt="Premimum Mermer Logo" />
+				<a href={getLocalizedLink("", $lang)}>
+					<img id="footer-logo" src="/logo.png" alt="Premimum Mermer Logo" />
+				</a>
 			</picture>
 
 			<p class="article-text small-screen-t-a-c">
@@ -153,9 +155,8 @@
 			margin-top: 0.25rem;
 		}
 
-        
 		#footer-pages-t-hint {
-			margin-bottom: .5rem;
+			margin-bottom: 0.5rem;
 		}
 	}
 </style>

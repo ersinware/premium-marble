@@ -13,7 +13,7 @@
 
 <section class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
 	<article
-		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column small-screen-a-i-c small-screen-g-v-d o-hidden"
+		class="flex max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
 	>
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
 			<h2 class="section-title">Premium Mermer</h2>
@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-			<img src="/h1.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+			<img src="/h11.jpeg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
 		</div>
 	</article>
 
@@ -132,7 +132,7 @@
 	</div>
 
 	<article
-		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
+		class="flex max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
 	>
 		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 			<img src="/handshake-2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />

@@ -22,3 +22,9 @@ export function randomID() {
 
     return random() + random() + "-" + random() + "-" + random() + "-" + random() + "-" + random() + random() + random();
 }
+
+export function capitalizeFirstLetter(string) {
+    if (!string) return;
+
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}

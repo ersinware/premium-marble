@@ -33,5 +33,5 @@ export async function sendMail(html) {
             },
         });
 
-    return await transport.sendMail({ from: PROJECT_MAIL_ADDRESS, to: 'ekaraer97@gmail.com', subject: 'İletişim Formu | premiummermer.com.tr', html });
+    return await transport.sendMail({ from: PROJECT_MAIL_ADDRESS, to: 'info@premiummermer.com.tr', subject: 'İletişim Formu | premiummermer.com.tr', html });
 }

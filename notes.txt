@@ -2,34 +2,23 @@ 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
 
 //
 
-mail içeriğini tasarla
-formdan gerçek mail hesabına göndersin
-
 tüm projeyi dillere bağla
+
+harita işini hallet
+
+cpanel'e yükle
+
+//
 
 SEO
     notları gözden geçir, buraya not al yapılacakları
     dosyaları doğru isimlendir
     description ve alt
-//
-
-language-switcher touchable olduğu zaman yapmadın
-    touchable ayrı, hoverable ayrı yap
-
-offline olduğu durumu test et
-    tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
-
-gerçek telefonda test et
-
-//
-
-tasarımı komple gözden geçir
-
-cPanel server zaten compress yapıyor mu?
-    sanırım evet
-
-SEO 
     sitemap yaz
+
+hata sayfası yap
+
+//
 
 optimizasyon için can-mese projesindeki notlara bak
     responsive image yap
@@ -43,12 +32,27 @@ optimizasyon için can-mese projesindeki notlara bak
     kullanılmayan static dosyaları sil
         precache'de yükleniyor onlar
 
+//
+
 service worker her şeyi cache'lesin
+
+language-switcher touchable olduğu zaman yapmadın
+    touchable ayrı, hoverable ayrı yap
+
+offline olduğu durumu test et
+    tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
+
+cPanel server zaten compress yapıyor mu?
+    sanırım evet
+
+//
 
 slider kodunu komple düzenle
     animasyonla gelmiyor navigation component
     slider'ı infinite yap
     hızını input'a göre ayarlamaya çalış
     y ekseninde kaydırmaya başladığında x ekseninde, x ekseninde kaydırmaya başladığında y ekseninde kaydırılmasın
+
+//
 
 static adapter yap
