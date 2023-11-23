@@ -4,7 +4,7 @@
 	import { getStore } from "$lib/js/client/util.client";
 	import { fly } from "svelte/transition";
 
-    const lang = getStore('lang')
+	const lang = getStore("lang");
 </script>
 
 <svelte:head>
@@ -25,37 +25,93 @@
 	<div id="products-wrapper" class="grid">
 		<div class="product-wrapper grid g-1 t-a-c">
 			<div class="hoverable-image-wrapper o-hidden b-r-d">
-				<img src="/p1.jpg" alt="" class="article-image hoverable-image b-r-d" />
+				<img src="/ürünler/silifke-bej-mermer.jpg" alt="" class="article-image hoverable-image b-r-d" />
 			</div>
 			<div class="product-name section-text">Silifke Bej Mermer</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
 			<div class="hoverable-image-wrapper o-hidden b-r-d">
-				<img src="/p2.jpg" alt="" class="article-image hoverable-image b-r-d" />
+				<img src="/ürünler/crema-siva.jpg" alt="" class="article-image hoverable-image b-r-d" />
 			</div>
 			<div class="product-name section-text">Crema Siva</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
 			<div class="hoverable-image-wrapper o-hidden b-r-d">
-				<img src="/p3.jpg" alt="" class="article-image hoverable-image b-r-d" />
+				<img src="/ürünler/crema-taurus.jpg" alt="" class="article-image hoverable-image b-r-d" />
 			</div>
 			<div class="product-name section-text">Crema Taurus</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
 			<div class="hoverable-image-wrapper o-hidden b-r-d">
-				<img src="/p4.jpg" alt="" class="article-image hoverable-image b-r-d" />
+				<img src="/ürünler/cremera-mermer.jpg" alt="" class="article-image hoverable-image b-r-d" />
 			</div>
 			<div class="product-name section-text">Cremera Mermer</div>
 		</div>
 
-        	<div class="product-wrapper grid g-1 t-a-c">
+		<div class="product-wrapper grid g-1 t-a-c">
 			<div class="hoverable-image-wrapper o-hidden b-r-d">
-				<img src="/p5.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+				<img src="/ürünler/dark-emprador.jpeg" alt="" class="article-image hoverable-image b-r-d" />
 			</div>
 			<div class="product-name section-text">Dark Emprador</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/amasya-beji.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Amasya Beji</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/bulut-grisi.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Bulut Grisi</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/dark-night-marble.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Dark Night Marble</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/patlatma-beyaz.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Patlatma Beyaz</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/şerit-traverten.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Şerit Traverten</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/uludağ-siyah.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Uludağ Siyah</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/venicart-traverten.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Venicart Traverten</div>
+		</div>
+
+		<div class="product-wrapper grid g-1 t-a-c">
+			<div class="hoverable-image-wrapper o-hidden b-r-d">
+				<img src="/ürünler/yağmur-yeşili.jpeg" alt="" class="article-image hoverable-image b-r-d" />
+			</div>
+			<div class="product-name section-text">Yağmur Yeşili</div>
 		</div>
 	</div>
 </section>

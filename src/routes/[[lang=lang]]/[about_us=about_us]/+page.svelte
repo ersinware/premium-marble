@@ -43,9 +43,9 @@
 				<h2 class="section-title">18 Yıllık Deneyim</h2>
 
 				<p class="section-text">
-					Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, kurulduğu yıldan bu yana kalitesini
-					yükseltmiş ve yükseltmeye devam etmektedir. Her türlü mermer çeşitlerini istenilen ölçü ve ebatlarda işleyen
-					fabrikamızda, müşterilerimizin özel istekleri de yerine getirilmektedir.
+					Premium Mermer Fabrikası, kurulduğu yıldan bu yana kalitesini yükseltmiş ve yükseltmeye devam etmektedir. Her
+					türlü mermer çeşitlerini istenilen ölçü ve ebatlarda işleyen fabrikamızda, müşterilerimizin özel istekleri de
+					yerine getirilmektedir.
 				</p>
 			</div>
 		</article>
