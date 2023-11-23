@@ -107,7 +107,7 @@
 			class="w-h-100 b-r-d"
 			title="Premium Mermer"
 			referrerpolicy="no-referrer-when-downgrade"
-			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBYINml0NowfOv_d8MGuqtlSlFU2Xy16tM&q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCkMAuc2rTJVirtgWZVBt_1_WQ2Uyxgfu4&q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()"
 		/>
 	</div>
 </section>
