@@ -2,11 +2,15 @@ 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
 
 //
 
-tüm projeyi dillere bağla
-
-harita işini hallet
+yeni ürünleri ekle
+hakkımızda yazılarını değiştir
 
 cpanel'e yükle
+    harita??
+
+tüm projeyi dillere bağla
+
+yayınla
 
 //
 
@@ -23,14 +27,16 @@ hata sayfası yap
 optimizasyon için can-mese projesindeki notlara bak
     responsive image yap
     lazy image yap
+    kullanılmayan static dosyaları sil
+        precache'de yükleniyor onlar
     preload
         fonts, images vb.
     preconnect
     CSP, CORS vb.
     javascript devredışı bırakıldığı durum
     projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
-    kullanılmayan static dosyaları sil
-        precache'de yükleniyor onlar
+    cPanel server zaten compress yapıyor mu?
+        sanırım evet
 
 //
 
@@ -42,8 +48,6 @@ language-switcher touchable olduğu zaman yapmadın
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
 
-cPanel server zaten compress yapıyor mu?
-    sanırım evet
 
 //
 
