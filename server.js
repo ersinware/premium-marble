@@ -12,17 +12,17 @@ const app = express(),
 
 app
     .options("*", cors(corsOptions))
-    // .use(cors(corsOptions))
-    // .use(
-    //     helmet({
-    //         contentSecurityPolicy: false,
-    //         crossOriginEmbedderPolicy: { policy: "require-corp" },
-    //         referrerPolicy: { policy: "strict-origin-when-cross-origin" },
-    //         strictTransportSecurity: { preload: true },
-    //         xDnsPrefetchControl: { allow: true },
-    //         xFrameOptions: { action: "deny" },
-    //     })
-    // )
+    .use(cors(corsOptions))
+    .use(
+        helmet({
+            contentSecurityPolicy: false,
+            crossOriginEmbedderPolicy: { policy: "credentialless" },
+            referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+            strictTransportSecurity: { preload: true },
+            xDnsPrefetchControl: { allow: true },
+            xFrameOptions: { action: "deny" },
+        })
+    )
     .get("/api/image/:imageName", sendImage)
     .use("/", express.static("static", { immutable: true, maxAge: 31556926000, index: false }))
     .use(handler);
