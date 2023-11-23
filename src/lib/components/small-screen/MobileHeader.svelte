@@ -43,12 +43,12 @@
 			/>
 		</svg>
 
-		<picture class="d-contents">
-			<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
-			<a href={getLocalizedLink("", $lang)} on:click={onLogoClick}>
+		<a href={getLocalizedLink("", $lang)} on:click={onLogoClick}>
+			<picture class="d-contents">
+				<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
 				<img id="mobile-header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
-			</a>
-		</picture>
+			</picture>
+		</a>
 	</div>
 </header>
 

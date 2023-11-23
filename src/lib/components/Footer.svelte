@@ -35,12 +35,12 @@
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
 	<div id="footer-content" class="grid page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
 		<article class="flex f-column g-1dot25 small-screen-a-i-c">
-			<picture class="d-contents">
-				<source class="d-contents" srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
-				<a href={getLocalizedLink("", $lang)}>
+			<a href={getLocalizedLink("", $lang)}>
+				<picture class="d-contents">
+					<source class="d-contents" srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
 					<img id="footer-logo" src="/logo.png" alt="Premimum Mermer Logo" />
-				</a>
-			</picture>
+				</picture>
+			</a>
 
 			<p class="article-text small-screen-t-a-c">
 				Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi

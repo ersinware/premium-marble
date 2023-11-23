@@ -39,12 +39,13 @@
 
 <header id="header" class="p-f t-0 w-100 for-big-screen" in:fly={TRANSITION_PAGE}>
 	<div id="header-content" class="b-box p-r grid j-c-c a-i-c w-100-minus-padding-h max-w h-100 m-h-auto">
-		<picture class="d-contents">
-			<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
-			<a href={getLocalizedLink("", $lang)}>
+		<a href={getLocalizedLink("", $lang)}>
+			<picture class="d-contents">
+				<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
+
 				<img id="header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
-			</a>
-		</picture>
+			</picture>
+		</a>
 
 		<section class="header-links flex g-2dot5">
 			{#each new Array(linkObjects.length / 2) as _, index}
