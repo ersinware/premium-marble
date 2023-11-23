@@ -16,11 +16,11 @@ app
     .use(
         helmet({
             contentSecurityPolicy: false,
-            crossOriginEmbedderPolicy: { policy: "credentialless" },
             referrerPolicy: { policy: "strict-origin-when-cross-origin" },
             strictTransportSecurity: { preload: true },
             xDnsPrefetchControl: { allow: true },
             xFrameOptions: { action: "deny" },
+            crossOriginEmbedderPolicy: { policy: "unsafe-none" },
         })
     )
     .get("/api/image/:imageName", sendImage)
