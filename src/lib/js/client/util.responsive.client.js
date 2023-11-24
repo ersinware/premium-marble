@@ -211,6 +211,16 @@ export function getMediaQueryForResponsiveImage(media) {
         }) and (min-width: ${media.minWidth / 16}em) and (max-width: ${media.maxWidth / 16}em)`;
 }
 
+export function getMediaQueryForResponsiveImageForDarkMode(media) {
+    return `(-webkit-min-device-pixel-ratio: ${media.density - 1 + 0.01}) and (-webkit-max-device-pixel-ratio: ${media.density
+        }) and (min-width: ${media.minWidth / 16}em) and (max-width: ${media.maxWidth / 16}em) and (prefers-color-scheme: dark)`;
+} 
+
+export function getMediaQueryForResponsiveImageForNotDarkMode(media) {
+    return `(-webkit-min-device-pixel-ratio: ${media.density - 1 + 0.01}) and (-webkit-max-device-pixel-ratio: ${media.density
+        }) and (min-width: ${media.minWidth / 16}em) and (max-width: ${media.maxWidth / 16}em) and (not (prefers-color-scheme: dark))`;
+}
+
 export function getLinkForResponsiveImage(imageName, media, updatedAt, onceRatio = true) {
     let link = "/api/image" + "/" + imageName + "?density=" + media.density + "&width=" + media.photoWidth;
 
@@ -219,4 +229,29 @@ export function getLinkForResponsiveImage(imageName, media, updatedAt, onceRatio
     if (updatedAt) link += "&updated-at=" + updatedAt;
 
     return link;
+}
+
+
+export function addIntersectionObserver(node, onIntersect, threshold) {
+    const observer = new IntersectionObserver(
+        entries => onObserved(entries, onIntersect),
+        { threshold: threshold ?? 0 }
+    )
+    observer.observe(node)
+
+    return observer
+}
+
+export function removeIntersectionObserver(observer) {
+    if (observer)
+        observer.disconnect()
+}
+
+function onObserved(entries, onIntersect) {
+    for (const entry of entries)
+        if (entry.isIntersecting) {
+            onIntersect()
+
+            return
+        }
 }

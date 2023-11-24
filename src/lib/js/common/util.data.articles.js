@@ -3,7 +3,8 @@ import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 const articlesTR = new Map([
     ['mermer-secerken-nelere-dikkat-etmelisiniz', {
         name: 'Mermer Seçerken Nelere Dikkat Etmelisiniz?',
-        imageName: '/2.jpeg',
+        posterImageName: 'what-should-you-pay-care-for-when-choosing-marble-poster',
+        imageName: 'what-should-you-pay-care-for-when-choosing-marble',
         summary: 'Mermer seçerken dikkatli olmak, uzun vadeli memnuniyet ve estetik bir görünüm sağlamak açısından kritiktir.',
         content: `
             <p class="section-text">
@@ -70,7 +71,8 @@ const articlesTR = new Map([
     }],
     ['mermer-nasıl-temizlenmeli', {
         name: 'Mermer Nasıl Temizlenmeli?',
-        imageName: '/b2.jpg',
+        posterImageName: 'how-to-clean-marble-poster',
+        imageName: 'how-to-clean-marble',
         summary: 'Mermer yüzeylerinizin güzelliğini korumak için uygun temizlik önemlidir. Mermer, lüks ve zarif bir malzeme olmasına rağmen, görünümünü ve dayanıklılığını korumak için özel bakım gerektirir.',
         content: `
             <p class="section-text">
@@ -131,7 +133,8 @@ const articlesTR = new Map([
     }],
     ['mermer-bakımı-nasıl-yapılmalı', {
         name: 'Mermer Bakımı Nasıl Yapılmalı?',
-        imageName: '/b3.jpg',
+        posterImageName: 'how-to-care-for-marble-poster',
+        imageName: 'how-to-care-for-marble',
         summary: 'Mermer yüzeylerin güzelliğini korumak için düzenli bakım önemlidir. Mermer, zarif görünümünü sürdürebilmek için özel bakım gerektiren lüks bir malzemedir.',
         content: `
             <p class="section-text">
@@ -191,7 +194,8 @@ const articlesTR = new Map([
     }],
     ['mermerin-dünyamızdaki-yeri-ve-tarihçesi', {
         name: 'Mermerin Dünyamızdaki Yeri ve Tarihçesi',
-        imageName: '/37925.jpg',
+        posterImageName: 'the-place-and-history-of-marble-in-our-world-poster',
+        imageName: 'the-place-and-history-of-marble-in-our-world',
         summary: 'Mermer, hem pratik uygulamalar hem de kültürel önemi açısından yüzyıllardır dünyamızda önemli bir yer tutmaktadır',
         content: `
             <p class="section-text">
@@ -247,7 +251,8 @@ const articlesTR = new Map([
     }],
     ["türkiye'nin-mermer-potansiyeli", {
         name: "Türkiye'nin Mermer Potansiyeli",
-        imageName: '/h2.jpg',
+        posterImageName: "turkey's-marble-potential-poster",
+        imageName: "turkey's-marble-potential",
         summary: ' Türkiye, zengin doğal kaynaklarıyla tanınan bir ülkedir ve bu zenginliklerin arasında yer alan önemli bir hazinesi de mermer potansiyelidir.',
         content: `
             <p class="section-text">
@@ -307,7 +312,8 @@ const articlesTR = new Map([
 const articlesEN = new Map([
     ['what-should-you-pay-care-for-when-choosing-marble', {
         name: 'What Should You Pay Attention to When Choosing Marble?',
-        imageName: '/2.jpeg',
+        posterImageName: 'what-should-you-pay-care-for-when-choosing-marble-poster',
+        imageName: 'what-should-you-pay-care-for-when-choosing-marble',
         summary: 'Being careful when choosing marble is critical for long - term satisfaction and an aesthetic look.',
         content: `
             <p class="section-text">
@@ -382,7 +388,8 @@ const articlesEN = new Map([
     }],
     ['how-to-clean-marble', {
         name: 'How to Clean Marble?',
-        imageName: '/b2.jpg',
+        posterImageName: 'how-to-clean-marble-poster',
+        imageName: 'how-to-clean-marble',
         summary: 'When it comes to maintaining the beauty of your marble surfaces, proper cleaning is essential.',
         content: `
             <p class="section-text">
@@ -442,7 +449,8 @@ const articlesEN = new Map([
     }],
     ['how-to-care-for-marble', {
         name: 'How to Care for Marble?',
-        imageName: '/b3.jpg',
+        posterImageName: 'how-to-care-for-marble-poster',
+        imageName: 'how-to-care-for-marble',
         summary: ' Proper maintenance is essential to preserve the beauty and longevity of marble surfaces. Marble is a luxurious material that requires specific care to maintain its elegant appearance.',
         content: `
             <p class="section-text">
@@ -502,7 +510,8 @@ const articlesEN = new Map([
     }],
     ['the-place-and-history-of-marble-in-our-world', {
         name: 'The Place and History of Marble in Our World',
-        imageName: '/37925.jpg',
+        posterImageName: 'the-place-and-history-of-marble-in-our-world-poster',
+        imageName: 'the-place-and-history-of-marble-in-our-world',
         summary: 'Marble has held a significant place in our world for centuries, both in terms of its practical applications and its cultural significance.',
         content: `
             <p class="section-text">
@@ -558,7 +567,8 @@ const articlesEN = new Map([
     }],
     ["turkey's-marble-potential", {
         name: "Turkey's Marble Potential",
-        imageName: '/h2.jpg',
+        posterImageName: "turkey's-marble-potential-poster",
+        imageName: "turkey's-marble-potential",
         summary: 'Turkey is renowned for its rich natural resources, and one of its standout treasures is its vast marble potential.',
         content: `
             <p class="section-text">

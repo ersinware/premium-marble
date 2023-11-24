@@ -53,14 +53,17 @@
 
 		if (showArrows === "alwaysShow") return;
 
-		// showArrows = 1;
+		showArrows = 1;
 		// setTimeout(() => {
 		// 	if (showArrows === true) return;
 
 		// 	showArrows = false;
 		// }, 2500);
 
-        showArrows = true
+		await waitFor(2500);
+		if (showArrows === true) return;
+
+		showArrows = false;
 	}
 
 	async function recalculate(command) {
@@ -201,7 +204,9 @@
 		height: var(--wrapperHeight, 0.25rem);
 		margin-top: var(--indicatorsWrapperMarginTop, 3rem);
 
-		transition: margin-top 0.5s, height 0.5s;
+		transition:
+			margin-top 0.5s,
+			height 0.5s;
 	}
 
 	.wrapper.wrapperNoMarginTop {
@@ -309,7 +314,7 @@
 			background-color: var(--accent-color);
 		}
 
-        .activeIndicator:hover {
+		.activeIndicator:hover {
 			background-color: var(--accent-color-darker);
 		}
 	}

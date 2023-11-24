@@ -32,6 +32,8 @@ const tr = new Map([
 
     ['pages', "SAYFALAR"],
     ['language', "DİL"],
+
+    ['not-found', "Sayfa Bulunamadı"],
 ])
 
 const en = new Map([
@@ -64,6 +66,9 @@ const en = new Map([
 
     ['pages', "PAGES"],
     ['language', "LANGUAGE"],
+
+    ['not-found', "Not Found"],
+
 ])
 
 const languages = { tr, en }

@@ -2,14 +2,17 @@ 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
 
 //
 
-hakkımızda yazılarını değiştir
+logoları responsive ve lazy yap
+    left menu'deki logoyu responsive yap
+    footer'daki logoyu lazy yap
 
-cpanel'e yükle
-    harita??
+//
+
+favicon ayarla
 
 tüm projeyi dillere bağla
 
-yayınla
+cpanel'e yükle, yayınla
 
 //
 
@@ -19,19 +22,15 @@ SEO
     description ve alt
     sitemap yaz
 
-hata sayfası yap
-
 //
 
 optimizasyon için can-mese projesindeki notlara bak
-    responsive image yap
-    lazy image yap
-    kullanılmayan static dosyaları sil
-        precache'de yükleniyor onlar
     preload
-        fonts, images vb.
+        fonts
+            projede kullanılan fontları tespit edip sadece onları yükle
+            subsetle ve woff2 yap
     preconnect
-    CSP, CORS vb.
+        map
     javascript devredışı bırakıldığı durum
     projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
     cPanel server zaten compress yapıyor mu?
@@ -46,7 +45,7 @@ language-switcher touchable olduğu zaman yapmadın
 
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
-
+    lazy image offline işine bak
 
 //
 

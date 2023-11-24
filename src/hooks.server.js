@@ -1,11 +1,11 @@
-import { minify } from 'html-minifier';
-import { init as initLocalization } from './lib/js/server/localization/localization.constants.util.server';
 import { getLocalizedURL, init as initLocalizationUtil } from '$lib/js/common/localization/localization.util.common';
 import { getPaths } from '$lib/js/common/util.common';
-import { getLanguageByHeader } from '$lib/js/server/localization/localization.util.server';
-import { redirect } from '@sveltejs/kit';
 import { paths, searchParams, searchValues } from '$lib/js/server/localization/localization.constants.server';
+import { getLanguageByHeader } from '$lib/js/server/localization/localization.util.server';
 import { initMail } from '$lib/js/server/util.mail.server';
+import { redirect } from '@sveltejs/kit';
+import { minify } from 'html-minifier';
+import { init as initLocalization } from './lib/js/server/localization/localization.constants.util.server';
 
 const minificationOptions = {
     collapseBooleanAttributes: true,

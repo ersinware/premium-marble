@@ -1,8 +1,15 @@
 <script>
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { LOGO_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffect } from "$lib/js/client/util.client";
+	import {
+		getLinkForResponsiveImage,
+		getMediaQueryForResponsiveImage,
+		getMediaQueryForResponsiveImageForDarkMode,
+		getMediaQueryForResponsiveImageForNotDarkMode,
+	} from "$lib/js/client/util.responsive.client";
 	import { onMount } from "svelte";
 	import { cubicInOut } from "svelte/easing";
 	import { fly } from "svelte/transition";
@@ -37,13 +44,49 @@
 	}
 </script>
 
+<svelte:head>
+	{#each LOGO_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-logo-s-dark", media, undefined)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImageForDarkMode(media)}
+		/>
+	{/each}
+
+	{#each LOGO_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-logo-s", media, undefined)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImageForNotDarkMode(media)}
+		/>
+	{/each}
+</svelte:head>
+
 <header id="header" class="p-f t-0 w-100 for-big-screen" in:fly={TRANSITION_PAGE}>
 	<div id="header-content" class="b-box p-r grid j-c-c a-i-c w-100-minus-padding-h max-w h-100 m-h-auto">
-		<a href={getLocalizedLink("", $lang)}>
+		<a id="header-logo-wrapper" href={getLocalizedLink("", $lang)}>
 			<picture class="d-contents">
-				<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
+				{#each LOGO_MEDIA_DATA as media}
+					<source
+						class="d-contents"
+						media={getMediaQueryForResponsiveImageForDarkMode(media)}
+						srcset={getLinkForResponsiveImage("premium-mermer-logo-s-dark", media, undefined)}
+					/>
+				{/each}
 
-				<img id="header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+				{#each LOGO_MEDIA_DATA as media}
+					<source
+						class="d-contents"
+						media={getMediaQueryForResponsiveImage(media)}
+						srcset={getLinkForResponsiveImage("premium-mermer-logo-s", media, undefined)}
+					/>
+				{/each}
+
+				<img id="header-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
 			</picture>
 		</a>
 
@@ -148,6 +191,10 @@
 			grid-template-columns: 1fr 0fr 1fr;
 
 			border-bottom: var(--divider-color) 0.5px solid;
+		}
+
+		#header-logo-wrapper {
+			width: max-content;
 		}
 
 		#header-logo {

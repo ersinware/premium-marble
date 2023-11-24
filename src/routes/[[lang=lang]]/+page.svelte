@@ -1,10 +1,14 @@
 <script>
 	import { goto } from "$app/navigation";
+	import LazyImage from "$lib/components/LazyImage.svelte";
 	import Slider from "$lib/components/slider/Slider.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectForButtonAndWait } from "$lib/js/client/util.client";
+	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
+	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
+	import { SECTION_IMAGE_MEDIA_DATA, SLIDER_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
 
@@ -23,10 +27,22 @@
 				goto(href);
 			});
 	}
+
+    
 </script>
 
 <svelte:head>
 	<title>{L("homepage-page-title", $lang)}</title>
+
+	{#each SLIDER_IMAGE_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-slider-marble-one", media, undefined, false)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImage(media)}
+		/>
+	{/each}
 </svelte:head>
 
 <section id="homepage" class="flex f-column page-g w-100 max-w" in:fly={TRANSITION_PAGE}>
@@ -35,7 +51,17 @@
 			<article id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
 				<article class="b-box slider-item p-h-d">
 					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/11.jpg" class="hoverable-image w-h-100" alt="" />
+						<picture class="d-contents">
+							{#each SLIDER_IMAGE_MEDIA_DATA as media}
+								<source
+									class="d-contents"
+									media={getMediaQueryForResponsiveImage(media)}
+									srcset={getLinkForResponsiveImage("premium-mermer-slider-marble-one", media, undefined, false)}
+								/>
+							{/each}
+
+							<img class="hoverable-image w-h-100" src="/not-found.svg" alt="Premium Mermer" />
+						</picture>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Mermerin Eşsiz Zerafeti</h2>
@@ -48,8 +74,15 @@
 				</article>
 
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/3.jpeg" class="w-h-100" alt="" />
+					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<LazyImage
+							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+							classes="hoverable-image w-h-100 m-h-auto b-r-d"
+							alt="Premium Mermer"
+							imageName="premium-mermer-slider-marble-two"
+							mediaData={SLIDER_IMAGE_MEDIA_DATA}
+							onceRatio={false}
+						/>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Taşın Ahengini Hissedin</h2>
@@ -62,8 +95,15 @@
 				</article>
 
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content w-h-100 max-w m-h-auto b-r-d o-hidden">
-						<img src="/6.jpeg" class="w-h-100" alt="" />
+					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+						<LazyImage
+							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+							classes="hoverable-image w-h-100 m-h-auto b-r-d"
+							alt="Premium Mermer"
+							imageName="premium-mermer-slider-marble-three"
+							mediaData={SLIDER_IMAGE_MEDIA_DATA}
+							onceRatio={false}
+						/>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
 							<h2 class="slider-text-title f-w-600">Şıklık Yeniden Tanımlanıyor</h2>
@@ -144,7 +184,15 @@
 			</div>
 
 			<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-				<img src="/h3.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+				<LazyImage
+					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+					classes="hoverable-image w-h-100 m-h-auto b-r-d"
+					alt="Premium Mermer"
+					imageName="premium-mermer-one"
+					mediaData={SECTION_IMAGE_MEDIA_DATA}
+					onceRatio={false}
+                    loadingLevel={2}
+				/>
 			</div>
 		</article>
 	</div>
@@ -153,7 +201,14 @@
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
 		<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-			<img src="/2.jpeg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+			<LazyImage
+				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+				classes="hoverable-image w-h-100 m-h-auto b-r-d"
+				alt="Premium Mermer"
+				imageName="premium-mermer-two"
+				mediaData={SECTION_IMAGE_MEDIA_DATA}
+				onceRatio={false}
+			/>
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
@@ -184,7 +239,15 @@
 			</div>
 
 			<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-				<img src="/marble-metro-station.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+				<LazyImage
+					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+					classes="hoverable-image w-h-100 m-h-auto b-r-d"
+					alt="Premium Mermer"
+					imageName="premium-mermer-three"
+					mediaData={SECTION_IMAGE_MEDIA_DATA}
+					onceRatio={false}
+                    loadingLevel={2}
+				/>
 			</div>
 		</article>
 	</div>
@@ -193,7 +256,14 @@
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
 		<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-			<img src="/handshake-2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+			<LazyImage
+				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+				classes="hoverable-image w-h-100 m-h-auto b-r-d"
+				alt="Premium Mermer"
+				imageName="premium-mermer-four"
+				mediaData={SECTION_IMAGE_MEDIA_DATA}
+				onceRatio={false}
+			/>
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">

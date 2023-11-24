@@ -76,7 +76,13 @@ async function changeLang(newLang) {
 
 function setNewURL(newLang) {
     const _url = get(url)
-    let newURL = getLocalizedURL(getPaths(decodeURI(_url.pathname)), decodeURI(_url.searchParams), newLang)
+
+    let newURL
+    try {
+        newURL = getLocalizedURL(getPaths(decodeURI(_url.pathname)), decodeURI(_url.searchParams), newLang)
+    } catch (error) {
+
+    }
 
     if (newURL === '/')
         newURL = ''

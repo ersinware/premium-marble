@@ -3,6 +3,13 @@
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { openLeftMenu } from "$lib/js/client/util.left.menus.client";
+	import {
+		getLinkForResponsiveImage,
+		getMediaQueryForResponsiveImage,
+		getMediaQueryForResponsiveImageForDarkMode,
+		getMediaQueryForResponsiveImageForNotDarkMode,
+	} from "$lib/js/client/util.responsive.client.js";
+	import { MOBILE_HEADER_LOGO_MEDIA_DATA } from "./../../js/client/constants.media.data.client.js";
 	import LeftMenu from "./LeftMenu.svelte";
 
 	const lang = getStore("lang");
@@ -22,6 +29,28 @@
 		goto(href);
 	}
 </script>
+
+<svelte:head>
+	{#each MOBILE_HEADER_LOGO_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-logo-mobile-header-dark", media, undefined)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImageForDarkMode(media)}
+		/>
+	{/each}
+
+	{#each MOBILE_HEADER_LOGO_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-logo-mobile-header", media, undefined)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImageForNotDarkMode(media)}
+		/>
+	{/each}
+</svelte:head>
 
 <header id="mobile-header" class="p-f t-0 p-c-h flex j-c-c w-100 for-small-screen">
 	<div id="mobile-header-content" class="w-100-minus-padding-h flex f-s-b a-i-c h-100">
@@ -45,8 +74,23 @@
 
 		<a href={getLocalizedLink("", $lang)} on:click={onLogoClick}>
 			<picture class="d-contents">
-				<source class="d-contents" srcset="/logo-s-dark.png" media="(prefers-color-scheme: dark)" />
-				<img id="mobile-header-logo" src="/logo-s.png" alt="Premimum Mermer Logo" />
+				{#each MOBILE_HEADER_LOGO_MEDIA_DATA as media}
+					<source
+						class="d-contents"
+						media={getMediaQueryForResponsiveImageForDarkMode(media)}
+						srcset={getLinkForResponsiveImage("premium-mermer-logo-mobile-header-dark", media, undefined)}
+					/>
+				{/each}
+
+				{#each MOBILE_HEADER_LOGO_MEDIA_DATA as media}
+					<source
+						class="d-contents"
+						media={getMediaQueryForResponsiveImage(media)}
+						srcset={getLinkForResponsiveImage("premium-mermer-logo-mobile-header", media, undefined)}
+					/>
+				{/each}
+
+				<img id="mobile-header-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
 			</picture>
 		</a>
 	</div>

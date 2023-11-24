@@ -1,11 +1,13 @@
 <script>
 	import { goto } from "$app/navigation";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { BIG_LOGO_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, onContactClick, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
+	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage, getMediaQueryForResponsiveImageForDarkMode } from '$lib/js/client/util.responsive.client.js';
 
 	const lang = getStore("lang");
 
@@ -30,15 +32,32 @@
 				goto(href);
 			});
 	}
+
+	console.log(BIG_LOGO_MEDIA_DATA);
 </script>
 
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
 	<div id="footer-content" class="grid page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
 		<article class="flex f-column g-1dot25 small-screen-a-i-c">
-			<a href={getLocalizedLink("", $lang)}>
+			<a id="footer-logo-wrapper" href={getLocalizedLink("", $lang)}>
 				<picture class="d-contents">
-					<source class="d-contents" srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
-					<img id="footer-logo" src="/logo.png" alt="Premimum Mermer Logo" />
+					{#each BIG_LOGO_MEDIA_DATA as media}
+						<source
+							class="d-contents"
+							media={getMediaQueryForResponsiveImageForDarkMode(media)}
+							srcset={getLinkForResponsiveImage("premium-mermer-logo-dark", media, undefined)}
+						/>
+					{/each}
+
+					{#each BIG_LOGO_MEDIA_DATA as media}
+						<source
+							class="d-contents"
+							media={getMediaQueryForResponsiveImage(media)}
+							srcset={getLinkForResponsiveImage("premium-mermer-logo", media, undefined)}
+						/>
+					{/each}
+
+					<img id="footer-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
 				</picture>
 			</a>
 
@@ -111,6 +130,10 @@
 </footer>
 
 <style>
+	#footer-logo-wrapper {
+		width: max-content;
+	}
+
 	#footer-logo {
 		max-width: 14rem;
 		margin-top: -1.25rem;

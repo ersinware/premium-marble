@@ -1,7 +1,11 @@
 <script>
+	import LazyImage from "$lib/components/LazyImage.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore } from "$lib/js/client/util.client";
+	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
+	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
+	import { SECTION_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { fly } from "svelte/transition";
 
 	const lang = getStore("lang");
@@ -9,25 +13,54 @@
 
 <svelte:head>
 	<title>{L("about-us-page-title", $lang)}</title>
+
+	{#each SECTION_IMAGE_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-about-us-one", media, undefined, false)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImage(media)}
+		/>
+	{/each}
+
+	{#each SECTION_IMAGE_MEDIA_DATA as media}
+		<link
+			rel="preload"
+			href={getLinkForResponsiveImage("premium-mermer-about-us-two", media, undefined, false)}
+			as="image"
+			type="image/webp"
+			media={getMediaQueryForResponsiveImage(media)}
+		/>
+	{/each}
 </svelte:head>
 
 <section class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
 	<article
-		class="flex max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
+		class="flex w-100 max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
 	>
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
 			<h2 class="section-title">Premium Mermer</h2>
 
 			<p class="section-text">
-				2005 yılında Silifke'nin ilk mermer fabrikası olarak faaliyete geçen firmamız, 2011 yılında Silifke Organize
-				Sanayi Bölgesi'ne taşındı. 26.000 m² arazi üzerinde 3000 m² kapalı alanda çalışan Premium Mermer, deneyimli
-				kadrosu ve son teknoloji makineleri ile Silifke'den çıkan mermer çeşitlerini işleyip ihracat yaparak hem bölge
-				hem de ülke ekonomisine katkı sağlamaktadır.
+				26.000 m² arazi üzerinde 3000 m² kapalı alanda çalışan Premium Mermer, deneyimli kadrosu ve son teknoloji
+				makineleri ile Silifke'den çıkan mermer çeşitlerini işleyip ihracat yaparak hem bölge hem de ülke ekonomisine
+				katkı sağlamaktadır.
 			</p>
 		</div>
 
 		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-			<img src="/h11.jpeg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+			<picture class="d-contents">
+				{#each SECTION_IMAGE_MEDIA_DATA as media}
+					<source
+						class="d-contents"
+						media={getMediaQueryForResponsiveImage(media)}
+						srcset={getLinkForResponsiveImage("premium-mermer-about-us-one", media, undefined, false)}
+					/>
+				{/each}
+
+				<img class="hoverable-image w-h-100 m-h-auto b-r-d" src="/not-found.svg" alt="Premium Mermer" />
+			</picture>
 		</div>
 	</article>
 
@@ -36,16 +69,26 @@
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
 			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-				<img src="/a-s-2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+				<picture class="d-contents">
+					{#each SECTION_IMAGE_MEDIA_DATA as media}
+						<source
+							class="d-contents"
+							media={getMediaQueryForResponsiveImage(media)}
+							srcset={getLinkForResponsiveImage("premium-mermer-about-us-two", media, undefined, false)}
+						/>
+					{/each}
+
+					<img class="hoverable-image w-h-100 m-h-auto b-r-d" src="/not-found.svg" alt="Premium Mermer" />
+				</picture>
 			</div>
 
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
 				<h2 class="section-title">18 Yıllık Deneyim</h2>
 
 				<p class="section-text">
-					Premium Mermer Fabrikası, kurulduğu yıldan bu yana kalitesini yükseltmiş ve yükseltmeye devam etmektedir. Her
-					türlü mermer çeşitlerini istenilen ölçü ve ebatlarda işleyen fabrikamızda, müşterilerimizin özel istekleri de
-					yerine getirilmektedir.
+					Premium Mermer, perakende ve toptan satıştan gelen geniş tecrübesiyle müşteri taleplerine eksiksiz bir şekilde
+					yanıt veriyor. Kurulduğu yıldan bu yana kalitesini sürekli olarak artıran fabrikamız, her türlü mermer
+					çeşidini istenilen ölçü ve ebatlarda işleyerek müşterilerimizin özel isteklerini karşılamaktadır.
 				</p>
 			</div>
 		</article>
@@ -118,24 +161,34 @@
 					yürütüyoruz. İhracatta ön sıralarda yer alarak ülke ve şirket gelişimine katkıda bulunuyoruz. Kalitemiz,
 					markamızın simgesidir ve bu, geleceğe attığımız imzadır.
 				</p>
-
-				<div id="about-us-buttons" class="flex g-h-d small-screen-j-c-c">
-					<a href="/document.pdf" target="_blank" class="nude-button small-button">UYGUNLUK BELGEMİZ</a>
-					<a href="/certificate.jpg" target="_blank" class="nude-button small-button">SERTİFİKAMIZ</a>
-				</div>
 			</div>
 
 			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-				<img src="/a-s-3.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+				<LazyImage
+					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+					classes="hoverable-image w-h-100 m-h-auto b-r-d"
+					alt="Premium Mermer"
+					imageName="premium-mermer-about-us-three"
+					mediaData={SECTION_IMAGE_MEDIA_DATA}
+					onceRatio={false}
+                    loadingLevel={2}
+				/>
 			</div>
 		</article>
 	</div>
 
 	<article
-		class="flex max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
+		class="flex w-100 max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
 	>
 		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
-			<img src="/handshake-2.jpg" alt="" class="hoverable-image w-h-100 m-h-auto b-r-d" />
+			<LazyImage
+				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+				classes="hoverable-image w-h-100 m-h-auto b-r-d"
+				alt="Premium Mermer"
+				imageName="premium-mermer-about-us-four"
+				mediaData={SECTION_IMAGE_MEDIA_DATA}
+				onceRatio={false}
+			/>
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
@@ -151,7 +204,6 @@
 </section>
 
 <style>
-	img,
 	#statistics-wrapper {
 		--grid-item-min-width: 10rem;
 		--grid-layout-gap: var(--main-h-padding);
@@ -194,11 +246,6 @@
 
 		.section-texts {
 			max-width: calc(42.5rem - var(--main-h-padding) * 2);
-		}
-
-		#about-us-buttons {
-			margin-top: -0.5rem;
-			flex-wrap: wrap;
 		}
 
 		.img-wrapper {

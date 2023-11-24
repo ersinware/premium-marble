@@ -1,8 +1,12 @@
 <script>
 	import { goto } from "$app/navigation";
+	import LazyImage from "$lib/components/LazyImage.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { SMALL_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
+	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
+	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
 	import { getLocalizedURL } from "$lib/js/common/localization/localization.util.common";
 	import { getPaths } from "$lib/js/common/util.common";
 	import { articles } from "$lib/js/common/util.data.articles";
@@ -28,6 +32,20 @@
 
 <svelte:head>
 	<title>{L("blog-page-title", $lang)}</title>
+
+	{#each articles.get($lang).entries() as [key, value], index}
+		{#if index < 4}
+			{#each SMALL_IMAGE_MEDIA_DATA as media}
+				<link
+					rel="preload"
+					href={getLinkForResponsiveImage(value.imageName, media, undefined)}
+					as="image"
+					type="image/webp"
+					media={getMediaQueryForResponsiveImage(media)}
+				/>
+			{/each}
+		{/if}
+	{/each}
 </svelte:head>
 
 <section id="blog-section" class="grid page-g w-100 page-max-w-smaller t-a-c" in:fly={TRANSITION_PAGE}>
@@ -41,13 +59,37 @@
 	</div>
 
 	<article id="articles-wrapper" class="grid">
-		{#each articles.get($lang).entries() as [key, value]}
+		{#each articles.get($lang).entries() as [key, value], index}
 			<a
 				href={getLocalizedURL(getPaths(`blog/article/${key}`), undefined, $lang)}
 				class="article-wrapper hoverable-image-wrapper grid t-a-c"
 			>
 				<div class="b-r-d o-hidden">
-					<img src={value.imageName} alt="" class="article-image hoverable-image b-r-d" />
+					{#if index < 4}
+						<picture class="d-contents">
+							{#each SMALL_IMAGE_MEDIA_DATA as media}
+								<source
+									class="d-contents"
+									media={getMediaQueryForResponsiveImage(media)}
+									srcset={getLinkForResponsiveImage(value.imageName, media, undefined)}
+								/>
+							{/each}
+
+							<img
+								class="article-image hoverable-image b-r-d"
+								src="/not-found.svg"
+								alt="{value.name} | Premium Mermer"
+							/>
+						</picture>
+					{:else}
+						<LazyImage
+							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+							classes="article-image hoverable-image b-r-d"
+							alt="{value.name} | Premium Mermer"
+							imageName={value.imageName}
+							mediaData={SMALL_IMAGE_MEDIA_DATA}
+						/>
+					{/if}
 				</div>
 
 				<div>

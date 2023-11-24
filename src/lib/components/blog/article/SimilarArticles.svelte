@@ -1,7 +1,10 @@
 <script>
 	import { goto } from "$app/navigation";
 	import { page } from "$app/stores";
+	import LazyImage from "$lib/components/LazyImage.svelte";
+	import { SMALL_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
+	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
 	import { getLocalizedPath, getLocalizedURL } from "$lib/js/common/localization/localization.util.common";
 	import { getPaths } from "$lib/js/common/util.common";
 	import { articles } from "$lib/js/common/util.data.articles";
@@ -51,7 +54,14 @@
 					class="article-wrapper hoverable-image-wrapper grid t-a-c"
 				>
 					<div class="b-r-d o-hidden">
-						<img src={value.imageName} alt="" class="article-image hoverable-image b-r-d" />
+						<LazyImage
+							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+							classes="article-image hoverable-image b-r-d"
+							alt="{value.name} | Premium Mermer"
+							imageName={value.imageName}
+							mediaData={SMALL_IMAGE_MEDIA_DATA}
+                            loadingLevel={2}
+						/>
 					</div>
 
 					<div>

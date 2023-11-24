@@ -1,5 +1,8 @@
 <script>
-	import { page } from "$app/stores";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getStore } from "$lib/js/client/util.client";
+
+	const lang = getStore("lang");
 </script>
 
-<h1>{$page.error.message}</h1>
+<h1 class="section-title">{L("not-found", $lang)}</h1>
