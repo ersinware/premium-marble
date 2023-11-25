@@ -54,7 +54,7 @@
 					href={getLocalizedURL(getPaths(`blog/article/${key}`), undefined, $lang)}
 					class="article-wrapper hoverable-image-wrapper grid t-a-c"
 				>
-					<div class="b-r-d o-hidden">
+					<div class="img-wrapper b-r-d o-hidden">
 						{#key value.imageName}
 							<LazyImage
 								mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}

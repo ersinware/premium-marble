@@ -174,6 +174,14 @@ export const MOBILE_HEADER_LOGO_MEDIA_DATA = constructMediaDataLinear({
     maxWidth: 1040,
 })
 
+export const LEFT_MENU_LOGO_MEDIA_DATA = constructMediaDataLinear({
+    maxPixelDensity: 5,
+    breakpointCount: 1,
+    photoMaxWidth: 210,
+    photoMinWidth: 210,
+    maxWidth: 1040,
+})
+
 export function constructMediaDataLinear({
     maxPixelDensity,
     breakpointCount,

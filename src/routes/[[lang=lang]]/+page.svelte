@@ -50,7 +50,7 @@
 		<Slider absoluteIndicators>
 			<article id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<picture class="d-contents">
 							{#each SLIDER_IMAGE_MEDIA_DATA as media}
 								<source
@@ -74,7 +74,7 @@
 				</article>
 
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<LazyImage
 							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 							classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -95,7 +95,7 @@
 				</article>
 
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
 						<LazyImage
 							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 							classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -183,7 +183,7 @@
 				<a href={getLocalizedLink("products", $lang)} class="button small-button small-screen-m-h-auto">ÜRÜNLERİMİZ</a>
 			</div>
 
-			<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+			<div class="section-img-wrapper img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -200,7 +200,7 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+		<div class="section-img-wrapper img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 			<LazyImage
 				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 				classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -238,7 +238,7 @@
 				<a href={getLocalizedLink("blog", $lang)} class="button small-button small-screen-m-h-auto">MAKALELER</a>
 			</div>
 
-			<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+			<div class="section-img-wrapper img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -255,7 +255,7 @@
 	<article
 		class="flex big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d o-hidden"
 	>
-		<div class="section-img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
+		<div class="section-img-wrapper img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 			<LazyImage
 				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 				classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -301,12 +301,7 @@
 
 		background-color: var(--slider-item-text-wrapper-background-color);
 
-		border: 1px solid var(--divider-color);
 		border-radius: calc(var(--border-radius) - 0.25rem);
-	}
-
-	.slider-item-content {
-		border: 1px solid var(--divider-color);
 	}
 
 	.slider-text-title {

@@ -102,14 +102,6 @@
 	<article id="contact-page-second-divider" class="h-divider" style:margin-top=".75rem" style:margin-bottom="1rem" />
 
 	<div id="map-wrapper" class="w-h-100">
-		<!-- <iframe
-			id="map"
-			class="w-h-100 b-r-d"
-			title="Premium Mermer"
-			referrerpolicy="no-referrer-when-downgrade"
-			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCkMAuc2rTJVirtgWZVBt_1_WQ2Uyxgfu4&q=Tosmurlu,%20%C5%9Eim%C5%9Fek%20Mermer%20Fabr.,%2033940%20Silifke/Mersin%20MErsin+()"
-		/> -->
-
 		<iframe
 			id="map"
 			class="w-h-100 b-r-d"

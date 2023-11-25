@@ -4,6 +4,7 @@
 		addIntersectionObserver,
 		getLinkForResponsiveImage,
 		getMediaQueryForResponsiveImage,
+		getMediaQueryForResponsiveImageForDarkMode,
 		removeIntersectionObserver,
 	} from "$lib/js/client/util.responsive.client";
 	import {
@@ -14,7 +15,8 @@
 	import { onDestroy, onMount } from "svelte";
 	import { scale } from "svelte/transition";
 
-	export let mode,
+	export let id,
+		mode,
 		style,
 		classes,
 		alt,
@@ -25,7 +27,8 @@
 		command,
 		noTransition,
 		noLoadingAnimation,
-        loadingLevel = 1
+		loadingLevel = 1,
+		forDarkMode;
 
 	let img, src, observer, loading, loaded, offlineHandled;
 
@@ -59,7 +62,7 @@
 		if (loaded || loading) return;
 
 		for (const media of mediaData) {
-			const mql = window.matchMedia(getMediaQueryForResponsiveImage(media)),
+			const mql = window.matchMedia(getMediaQuery(media)),
 				controller = new AbortController(),
 				{ signal } = controller;
 
@@ -110,10 +113,15 @@
 	function removeAllMQListeners() {
 		for (let i = 0; i < mqListeners.length; i++) mqListeners.pop().abort();
 	}
+
+	function getMediaQuery(media) {
+		return forDarkMode ? getMediaQueryForResponsiveImageForDarkMode(media) : getMediaQueryForResponsiveImage(media);
+	}
 </script>
 
 {#if noTransition}
 	<img
+		id={id ?? ""}
 		style={style ?? ""}
 		class={classes ?? ""}
 		class:loading-1={!noLoadingAnimation && !loaded}
@@ -124,6 +132,7 @@
 {:else}
 	{#key src}
 		<img
+			id={id ?? ""}
 			style={style ?? ""}
 			class={classes ?? ""}
 			class:loading-1={loadingLevel === 1 && !noLoadingAnimation && !loaded}

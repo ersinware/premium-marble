@@ -116,7 +116,6 @@
 		}
 
 		#mobile-header-logo {
-			border: none;
 			max-height: 100%;
 			max-width: 10rem;
 		}

@@ -2,12 +2,6 @@ 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
 
 //
 
-logoları responsive ve lazy yap
-    left menu'deki logoyu responsive yap
-    footer'daki logoyu lazy yap
-
-//
-
 SEO
     notları gözden geçir, buraya not al yapılacakları
     dosyaları doğru isimlendir
@@ -35,8 +29,6 @@ optimizasyon için can-mese projesindeki notlara bak
         sanırım evet
 
 //
-
-image'lerde, border'ı, hoverable-image-wrapper'a ver
 
 service worker her şeyi cache'lesin
 

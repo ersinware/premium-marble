@@ -177,6 +177,10 @@ body {
     background-color: var(--background-color);
 }
 
+.img-wrapper {
+    border: 1px solid var(--divider-color);
+}
+
 @keyframes loading-1 {
     0% {
         background-color: var(--secondary-background-color);

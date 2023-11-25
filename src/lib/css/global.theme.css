@@ -78,6 +78,10 @@ body {
     --switch-hover-circle-color: rgba(0, 0, 0, 0.09);
 }
 
+.for-dark-mode {
+    display: none;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         --background-color: rgb(24, 24, 24);
@@ -161,5 +165,13 @@ body {
 
     img {
         filter: brightness(0.9);
+    }
+
+    .for-light-mode {
+        display: none;
+    }
+
+    .for-dark-mode {
+        display: revert;
     }
 }

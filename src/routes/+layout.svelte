@@ -34,6 +34,7 @@
 	import { yieldToMain } from "$lib/js/common/util.common";
 	import { onMount } from "svelte";
 	import Lamp from "./../lib/components/Lamp.svelte";
+	import { LEFT_MENU_LOGO_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 
 	export let data;
 

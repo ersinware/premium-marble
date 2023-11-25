@@ -32,7 +32,7 @@
 <section class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
 	{#key article.posterImageName}
 		<div class="flex f-column g-v-d w-100 page-max-w m-h-auto t-a-c" in:fly={TRANSITION_PAGE}>
-			<div id="article-poster-image-wrapper" class="hoverable-image-wrapper o-hidden b-r-d">
+			<div id="article-poster-image-wrapper" class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<picture class="d-contents">
 					{#each ARTICLE_POSTER_IMAGE_MEDIA_DATA as media}
 						<source
@@ -70,9 +70,6 @@
 
 	.smaller-section-title {
 		line-height: 2rem;
-	}
-	#article-poster-image-wrapper {
-		border: 1px solid var(--divider-color);
 	}
 
 	@media (min-width: 47.5001em) {

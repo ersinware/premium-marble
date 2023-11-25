@@ -68,7 +68,7 @@
 
 	<div id="products-wrapper" class="grid">
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<picture class="d-contents">
 					{#each SMALL_IMAGE_MEDIA_DATA as media}
 						<source
@@ -85,7 +85,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<picture class="d-contents">
 					{#each SMALL_IMAGE_MEDIA_DATA as media}
 						<source
@@ -102,7 +102,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<picture class="d-contents">
 					{#each SMALL_IMAGE_MEDIA_DATA as media}
 						<source
@@ -119,7 +119,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<picture class="d-contents">
 					{#each SMALL_IMAGE_MEDIA_DATA as media}
 						<source
@@ -136,7 +136,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -150,7 +150,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -163,7 +163,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -176,7 +176,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -189,7 +189,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -202,7 +202,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -216,7 +216,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -224,12 +224,13 @@
 					imageName="crema-siva"
 					mediaData={SMALL_IMAGE_MEDIA_DATA}
 				/>
-				<div class="product-name section-text">Crema Siva</div>
 			</div>
+            
+            <div class="product-name section-text">Crema Siva</div>
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"
@@ -242,7 +243,7 @@
 		</div>
 
 		<div class="product-wrapper grid g-1 t-a-c">
-			<div class="hoverable-image-wrapper o-hidden b-r-d">
+			<div class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="article-image hoverable-image b-r-d"

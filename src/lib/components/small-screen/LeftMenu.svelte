@@ -1,10 +1,12 @@
 <script>
 	import { goto } from "$app/navigation";
 	import { LEFT_MENU_TRANSITION_DURATION } from "$lib/js/client/constants.client";
+	import { BIG_LOGO_MEDIA_DATA, LEFT_MENU_LOGO_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { closeLastLeftMenu } from "$lib/js/client/util.left.menus.client";
+	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage, getMediaQueryForResponsiveImageForDarkMode } from "$lib/js/client/util.responsive.client";
 	import { waitFor } from "$lib/js/common/util.common";
 	import { onMount } from "svelte";
 
@@ -49,8 +51,23 @@
 
 <article id="left-menu" class="p-r flex f-column g-v-d">
 	<picture class="d-contents">
-		<source class="d-contents" srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
-		<img id="left-menu-logo" src="/logo.png" alt="Premimum Mermer Logo" />
+		{#each LEFT_MENU_LOGO_MEDIA_DATA as media}
+			<source
+				class="d-contents"
+				media={getMediaQueryForResponsiveImageForDarkMode(media)}
+				srcset={getLinkForResponsiveImage("premium-mermer-logo-left-menu-dark", media, undefined)}
+			/>
+		{/each}
+
+		{#each LEFT_MENU_LOGO_MEDIA_DATA as media}
+			<source
+				class="d-contents"
+				media={getMediaQueryForResponsiveImage(media)}
+				srcset={getLinkForResponsiveImage("premium-mermer-logo-left-menu", media, undefined)}
+			/>
+		{/each}
+
+		<img id="left-menu-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
 	</picture>
 
 	<section class="menu-items flex f-column g-v-d">
@@ -189,10 +206,11 @@
 
 <style>
 	#left-menu-logo {
-		border: none;
 		max-width: 15rem;
 		margin-top: -1.5rem;
 		margin-bottom: -1.25rem;
+
+		aspect-ratio: 210/114;
 	}
 
 	.menu-icon {

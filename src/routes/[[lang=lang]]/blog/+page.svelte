@@ -62,9 +62,9 @@
 		{#each articles.get($lang).entries() as [key, value], index}
 			<a
 				href={getLocalizedURL(getPaths(`blog/article/${key}`), undefined, $lang)}
-				class="article-wrapper hoverable-image-wrapper grid t-a-c"
+				class="article-wrapper  hoverable-image-wrapper grid t-a-c"
 			>
-				<div class="b-r-d o-hidden">
+				<div class="img-wrapper b-r-d o-hidden">
 					{#if index < 4}
 						<picture class="d-contents">
 							{#each SMALL_IMAGE_MEDIA_DATA as media}

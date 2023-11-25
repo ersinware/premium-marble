@@ -189,7 +189,6 @@
 
 		#header-content {
 			grid-template-columns: 1fr 0fr 1fr;
-
 			border-bottom: var(--divider-color) 0.5px solid;
 		}
 
@@ -198,7 +197,6 @@
 		}
 
 		#header-logo {
-			border: none;
 			max-height: calc(var(--header-height) * 0.4);
 		}
 

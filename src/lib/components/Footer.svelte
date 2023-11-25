@@ -10,8 +10,10 @@
 		getMediaQueryForResponsiveImage,
 		getMediaQueryForResponsiveImageForDarkMode,
 	} from "$lib/js/client/util.responsive.client.js";
+	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
+	import LazyImage from "./LazyImage.svelte";
 
 	const lang = getStore("lang");
 
@@ -40,27 +42,26 @@
 
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
 	<div id="footer-content" class="grid page-max-w page-p-v-d p-h-d m-h-auto small-screen-j-i-c">
-		<article class="flex f-column g-1dot25 small-screen-a-i-c">
+		<article class="flex f-column g-1dot5 small-screen-a-i-c">
 			<a id="footer-logo-wrapper" href={getLocalizedLink("", $lang)}>
-				<picture class="d-contents">
-					{#each BIG_LOGO_MEDIA_DATA as media}
-						<source
-							class="d-contents"
-							media={getMediaQueryForResponsiveImageForDarkMode(media)}
-							srcset={getLinkForResponsiveImage("premium-mermer-logo-dark", media, undefined)}
-						/>
-					{/each}
+				<LazyImage
+					classes="w-100 for-light-mode"
+					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+					alt="Premium Mermer Logo"
+					imageName="premium-mermer-logo"
+					mediaData={BIG_LOGO_MEDIA_DATA}
+					noLoadingAnimation
+				/>
 
-					{#each BIG_LOGO_MEDIA_DATA as media}
-						<source
-							class="d-contents"
-							media={getMediaQueryForResponsiveImage(media)}
-							srcset={getLinkForResponsiveImage("premium-mermer-logo", media, undefined)}
-						/>
-					{/each}
-
-					<img id="footer-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
-				</picture>
+				<LazyImage
+					classes="w-100 for-dark-mode"
+					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+					alt="Premium Mermer Logo"
+					imageName="premium-mermer-logo-dark"
+					mediaData={BIG_LOGO_MEDIA_DATA}
+					noLoadingAnimation
+					forDarkMode
+				/>
 			</a>
 
 			<p class="article-text small-screen-t-a-c">
@@ -133,14 +134,8 @@
 
 <style>
 	#footer-logo-wrapper {
-		width: max-content;
-	}
-
-	#footer-logo {
 		max-width: 14rem;
 		margin-top: -1.25rem;
-
-		border: none;
 	}
 
 	.contact-item-icon {
@@ -156,6 +151,10 @@
 			grid-template-columns: 6fr auto 2fr 1fr;
 
 			gap: var(--page-g);
+		}
+
+		#footer-logo-wrapper {
+			aspect-ratio: 224/122;
 		}
 
 		#footer-pages {
@@ -174,6 +173,10 @@
 		#footer-content {
 			max-width: min(25rem, 75%);
 			gap: calc(var(--main-v-padding) * 1.5);
+		}
+
+		#footer-logo-wrapper {
+			aspect-ratio: 196/107;
 		}
 
 		#footer-pages {
