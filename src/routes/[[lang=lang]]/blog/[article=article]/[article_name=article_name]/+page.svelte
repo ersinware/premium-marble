@@ -42,7 +42,12 @@
 						/>
 					{/each}
 
-					<img class="hoverable-image w-h-100 b-r-d" src="/not-found.svg" alt="{article.name} | Premium Mermer" />
+					<img
+						
+						class="hoverable-image w-h-100 b-r-d"
+						src="/not-found.svg"
+						alt="{article.name} | Premium Mermer"
+					/>
 				</picture>
 			</div>
 
@@ -65,6 +70,9 @@
 
 	.smaller-section-title {
 		line-height: 2rem;
+	}
+	#article-poster-image-wrapper {
+		border: 1px solid var(--divider-color);
 	}
 
 	@media (min-width: 47.5001em) {

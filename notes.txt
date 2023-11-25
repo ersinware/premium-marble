@@ -36,6 +36,8 @@ optimizasyon için can-mese projesindeki notlara bak
 
 //
 
+image'lerde, border'ı, hoverable-image-wrapper'a ver
+
 service worker her şeyi cache'lesin
 
 language-switcher touchable olduğu zaman yapmadın
