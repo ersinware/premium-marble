@@ -24,6 +24,7 @@
 		similarArticles = [];
 		similarArticles.push(keys[(currentIndex + 1) % keys.length]);
 		similarArticles.push(keys[(currentIndex + 2) % keys.length]);
+		similarArticles = similarArticles;
 	}
 
 	onMount(_onMount);
@@ -54,14 +55,16 @@
 					class="article-wrapper hoverable-image-wrapper grid t-a-c"
 				>
 					<div class="b-r-d o-hidden">
-						<LazyImage
-							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
-							classes="article-image hoverable-image b-r-d"
-							alt="{value.name} | Premium Mermer"
-							imageName={value.imageName}
-							mediaData={SMALL_IMAGE_MEDIA_DATA}
-                            loadingLevel={2}
-						/>
+						{#key value.imageName}
+							<LazyImage
+								mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
+								classes="article-image hoverable-image b-r-d"
+								alt="{value.name} | Premium Mermer"
+								imageName={value.imageName}
+								mediaData={SMALL_IMAGE_MEDIA_DATA}
+								loadingLevel={2}
+							/>
+						{/key}
 					</div>
 
 					<div>

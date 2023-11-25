@@ -8,19 +8,17 @@ logoları responsive ve lazy yap
 
 //
 
-favicon ayarla
-
-tüm projeyi dillere bağla
-
-cpanel'e yükle, yayınla
-
-//
-
 SEO
     notları gözden geçir, buraya not al yapılacakları
     dosyaları doğru isimlendir
     description ve alt
     sitemap yaz
+
+favicon ayarla
+
+tüm projeyi dillere bağla
+
+cpanel'e yükle, yayınla
 
 //
 

@@ -2,7 +2,7 @@
 	import { page } from "$app/stores";
 	import SimilarArticles from "$lib/components/blog/article/SimilarArticles.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
-	import { ARTICLE_POSTER_IMAGE_MEDIA_DATA, SMALL_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
+	import { ARTICLE_POSTER_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
@@ -13,13 +13,11 @@
 	const lang = getStore("lang");
 
 	$: article = articles.get($lang).get(getLocalizedPath($page.params.article_name, $lang));
-
-	console.log(ARTICLE_POSTER_IMAGE_MEDIA_DATA);
 </script>
 
 <svelte:head>
 	<title>{article.name} | {L("app-name", $lang)}</title>
-    
+
 	{#each ARTICLE_POSTER_IMAGE_MEDIA_DATA as media}
 		<link
 			rel="preload"
@@ -70,15 +68,13 @@
 	}
 
 	@media (min-width: 47.5001em) {
-		#article-poster-image-wrapper,
-		#poster-img {
+		#article-poster-image-wrapper {
 			aspect-ratio: 16/10;
 		}
 	}
 
 	@media (max-width: 47.5em) {
-		#article-poster-image-wrapper,
-		#poster-img {
+		#article-poster-image-wrapper {
 			aspect-ratio: 16/18;
 		}
 	}

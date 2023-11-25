@@ -5,9 +5,13 @@
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, onContactClick, performRippleEffectAndWait } from "$lib/js/client/util.client";
+	import {
+		getLinkForResponsiveImage,
+		getMediaQueryForResponsiveImage,
+		getMediaQueryForResponsiveImageForDarkMode,
+	} from "$lib/js/client/util.responsive.client.js";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
-	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage, getMediaQueryForResponsiveImageForDarkMode } from '$lib/js/client/util.responsive.client.js';
 
 	const lang = getStore("lang");
 
@@ -32,8 +36,6 @@
 				goto(href);
 			});
 	}
-
-	console.log(BIG_LOGO_MEDIA_DATA);
 </script>
 
 <footer id="footer" class="secondary-background-color w-100vw" in:fly={TRANSITION_PAGE}>
