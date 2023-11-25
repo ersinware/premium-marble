@@ -29,37 +29,34 @@
 	{/each}
 </svelte:head>
 
-<section class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
+<section in:fly={TRANSITION_PAGE}>
 	{#key article.posterImageName}
-		<div class="flex f-column g-v-d w-100 page-max-w m-h-auto t-a-c" in:fly={TRANSITION_PAGE}>
-			<div id="article-poster-image-wrapper" class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
-				<picture class="d-contents">
-					{#each ARTICLE_POSTER_IMAGE_MEDIA_DATA as media}
-						<source
-							class="d-contents"
-							media={getMediaQueryForResponsiveImage(media)}
-							srcset={getLinkForResponsiveImage(article.posterImageName, media, undefined, false)}
-						/>
-					{/each}
+		<div class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
+			<div class="flex f-column g-v-d w-100 page-max-w m-h-auto t-a-c">
+				<div id="article-poster-image-wrapper" class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
+					<picture class="d-contents">
+						{#each ARTICLE_POSTER_IMAGE_MEDIA_DATA as media}
+							<source
+								class="d-contents"
+								media={getMediaQueryForResponsiveImage(media)}
+								srcset={getLinkForResponsiveImage(article.posterImageName, media, undefined, false)}
+							/>
+						{/each}
 
-					<img
-						
-						class="hoverable-image w-h-100 b-r-d"
-						src="/not-found.svg"
-						alt="{article.name} | Premium Mermer"
-					/>
-				</picture>
+						<img class="hoverable-image w-h-100 b-r-d" src="/not-found.svg" alt="{article.name} | Premium Mermer" />
+					</picture>
+				</div>
+
+				<div class="content grid g-v-d page-max-w-smaller m-h-auto">
+					<h1 class="smaller-section-title f-w-600">{article.name}</h1>
+
+					{@html article.content}
+				</div>
 			</div>
 
-			<div class="content grid g-v-d page-max-w-smaller m-h-auto">
-				<h1 class="smaller-section-title f-w-600">{article.name}</h1>
-
-				{@html article.content}
-			</div>
+			<SimilarArticles />
 		</div>
 	{/key}
-
-	<SimilarArticles />
 </section>
 
 <style>

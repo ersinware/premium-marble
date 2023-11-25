@@ -8,9 +8,10 @@ SEO
     description ve alt
     sitemap yaz
 
-favicon ayarla
 
 tüm projeyi dillere bağla
+
+favicon ayarla
 
 cpanel'e yükle, yayınla
 
