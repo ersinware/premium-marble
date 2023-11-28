@@ -27,8 +27,6 @@
 				goto(href);
 			});
 	}
-
-    
 </script>
 
 <svelte:head>
@@ -50,7 +48,9 @@
 		<Slider absoluteIndicators>
 			<article id="slider-homepage" class="slider-content flex w-100 b-r-d o-hidden">
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div
+						class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden"
+					>
 						<picture class="d-contents">
 							{#each SLIDER_IMAGE_MEDIA_DATA as media}
 								<source
@@ -74,7 +74,9 @@
 				</article>
 
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div
+						class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden"
+					>
 						<LazyImage
 							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 							classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -82,6 +84,7 @@
 							imageName="premium-mermer-slider-marble-two"
 							mediaData={SLIDER_IMAGE_MEDIA_DATA}
 							onceRatio={false}
+                            loadingLevel={2}
 						/>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
@@ -95,7 +98,9 @@
 				</article>
 
 				<article class="b-box slider-item p-h-d">
-					<div class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden">
+					<div
+						class="b-box p-r slider-item-content img-wrapper hoverable-image-wrapper w-h-100 max-w m-h-auto b-r-d o-hidden"
+					>
 						<LazyImage
 							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 							classes="hoverable-image w-h-100 m-h-auto b-r-d"
@@ -103,6 +108,7 @@
 							imageName="premium-mermer-slider-marble-three"
 							mediaData={SLIDER_IMAGE_MEDIA_DATA}
 							onceRatio={false}
+                            loadingLevel={2}
 						/>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
@@ -191,7 +197,7 @@
 					imageName="premium-mermer-one"
 					mediaData={SECTION_IMAGE_MEDIA_DATA}
 					onceRatio={false}
-                    loadingLevel={2}
+					loadingLevel={2}
 				/>
 			</div>
 		</article>
@@ -246,7 +252,7 @@
 					imageName="premium-mermer-three"
 					mediaData={SECTION_IMAGE_MEDIA_DATA}
 					onceRatio={false}
-                    loadingLevel={2}
+					loadingLevel={2}
 				/>
 			</div>
 		</article>

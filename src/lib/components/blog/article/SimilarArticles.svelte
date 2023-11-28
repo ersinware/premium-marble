@@ -42,7 +42,7 @@
 	}
 </script>
 
-<section id="similar-articles" class="b-box grid g-v-d full-width page-p-t p-h-d t-a-c secondary-background-color">
+<section id="similar-articles" class="b-box grid full-width page-p-t p-h-d t-a-c secondary-background-color">
 	<div class="grid g-v-d page-max-w-smaller m-h-auto">
 		<h2 class="smaller-section-title f-w-600">Benzer Makaleler</h2>
 
@@ -84,6 +84,7 @@
 <style>
 	#similar-articles {
 		margin-bottom: calc(var(--page-g) * -1);
+        gap: calc(var(--page-g) / 2.5);
 	}
 
 	#similar-articles-content {

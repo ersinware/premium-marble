@@ -5,11 +5,6 @@
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, onContactClick, performRippleEffectAndWait } from "$lib/js/client/util.client";
-	import {
-		getLinkForResponsiveImage,
-		getMediaQueryForResponsiveImage,
-		getMediaQueryForResponsiveImageForDarkMode,
-	} from "$lib/js/client/util.responsive.client.js";
 	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
@@ -30,12 +25,14 @@
 	function _onMount() {
 		for (const link of document.body.querySelectorAll("#footer a"))
 			link.addEventListener("click", async (event) => {
+				if (event.currentTarget.target === "_blank") return;
+
 				event.preventDefault();
 
 				const href = event.currentTarget.href;
 				await performRippleEffectAndWait(event);
 
-				goto(href);
+				// goto(href);
 			});
 	}
 </script>
@@ -112,7 +109,7 @@
 				>
 
 				<div>
-					<a href="mailto:info@premiummermer.com.tr" class="contact-item-content-text article-text"
+					<a href="mailto:info@premiummermer.com.tr" target="_blank" class="contact-item-content-text article-text"
 						>info@premiummermer.com.tr</a
 					>
 					<button class="contact-item-content-text article-text link-button" on:click={onContactClick}

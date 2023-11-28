@@ -2,12 +2,46 @@ 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
 
 //
 
-SEO
-    notları gözden geçir, buraya not al yapılacakları
-    dosyaları doğru isimlendir
-    description ve alt
-    sitemap yaz
+firefox'ta test et
+    slider'da problem var
+    image'lerin oranları korumasına bak
+        article_name oranı korumuyor -> chrome'da da
+        slider'dakiler de
+    console'a da bak
 
+safari'de de test et
+
+//
+
+
+SEO
+    avoid:
+        Allowing your 404 pages to be indexed in search engines (make sure that your web server is configured to give a 404 HTTP status code or—in the case of JavaScript-based sites—include the noindex tag when non-existent pages are requested).
+    seo notes'daki 'multilingual sites' kısmına bak
+    sitemap
+        image sitemap?
+    add structured data
+        seo notes'daki 'some important structured data types' kısma bak
+        https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=tr
+    seo notes'daki 'canonicalization' kısmına bak
+    Create unique, accurate page titles
+    Use the meta description tag
+        <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
+
+        Accurately summarize the page content
+        Use unique descriptions for each page
+
+        The meta description doesn't just have to be in sentence format; it's also a great place to include information about the page. For example, news or blog postings can list the author, date of publication, or byline information. This can give potential visitors very relevant information that might not be displayed in the snippet otherwise. 
+        Similarly, product pages might have the key bits of information—price, age, manufacturer—scattered throughout a page. A good meta description can bring all this data together.
+
+        For example, the following meta description provides detailed information about a book, and information is clearly tagged and separated:
+
+        <meta name="description" content="Written by A.N. Author, Illustrated by V. Gogh, Price: $17.99, Length: 784 pages">
+    Use the alt attribute
+    seo notes'daki 'byline dates' kısmına bak
+    seo notes'daki 'local business' kısmına bak
+
+//
 
 tüm projeyi dillere bağla
 
