@@ -32,7 +32,7 @@
 				const href = event.currentTarget.href;
 				await performRippleEffectAndWait(event);
 
-				// goto(href);
+				goto(href);
 			});
 	}
 </script>

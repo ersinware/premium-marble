@@ -24,7 +24,7 @@ SEO
         seo notes'daki 'some important structured data types' kısma bak
         https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=tr
     seo notes'daki 'canonicalization' kısmına bak
-    Create unique, accurate page titles
+    Create unique, accurate page titles-
     Use the meta description tag
         <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
 
