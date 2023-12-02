@@ -29,9 +29,9 @@
 	{/each}
 </svelte:head>
 
-<section in:fly={TRANSITION_PAGE}>
+<section class="w-100" in:fly={TRANSITION_PAGE}>
 	{#key article.posterImageName}
-		<div class="grid page-g w-100" in:fly={TRANSITION_PAGE}>
+		<div class="flex f-column page-g" in:fly={TRANSITION_PAGE}>
 			<div class="flex f-column g-v-d w-100 page-max-w m-h-auto t-a-c">
 				<div id="article-poster-image-wrapper" class="img-wrapper hoverable-image-wrapper o-hidden b-r-d">
 					<picture class="d-contents">
@@ -43,7 +43,12 @@
 							/>
 						{/each}
 
-						<img class="hoverable-image w-h-100 b-r-d" src="/not-found.svg" alt="{article.name} | Premium Mermer" />
+						<img
+							id="article-poster-image"
+							class="hoverable-image w-h-100 b-r-d"
+							src="/not-found.svg"
+							alt="{article.name} | Premium Mermer"
+						/>
 					</picture>
 				</div>
 
@@ -70,12 +75,14 @@
 	}
 
 	@media (min-width: 47.5001em) {
+		#article-poster-image,
 		#article-poster-image-wrapper {
 			aspect-ratio: 16/10;
 		}
 	}
 
 	@media (max-width: 47.5em) {
+		#article-poster-image,
 		#article-poster-image-wrapper {
 			aspect-ratio: 16/18;
 		}
