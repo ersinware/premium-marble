@@ -53,8 +53,7 @@
 		<h1 class="section-title">Makaleler</h1>
 
 		<p class="section-text m-h-auto">
-			Premium Mermer, mermerin zarafetini ve dayanıklılığını sizlere sunan bir dünya markasıdır. Blog sayfasında,
-			mermerle ilgili her şeyi keşfetmek ve sektördeki en son gelişmeleri öğrenmek için doğru yerdesiniz.
+			{L('blog-description', $lang)}
 		</p>
 	</div>
 

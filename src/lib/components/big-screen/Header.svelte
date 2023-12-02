@@ -86,7 +86,7 @@
 					/>
 				{/each}
 
-				<img id="header-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
+				<img id="header-logo" src="/not-found.svg" alt={L('app-name-logo', $lang)} />
 			</picture>
 		</a>
 

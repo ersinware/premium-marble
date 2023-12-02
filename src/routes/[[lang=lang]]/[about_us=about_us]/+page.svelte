@@ -40,12 +40,10 @@
 		class="flex w-100 max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
 	>
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="section-title">Premium Mermer</h2>
+			<h2 class="section-title">{L("app-name", $lang)}</h2>
 
 			<p class="section-text">
-				26.000 m² arazi üzerinde 3000 m² kapalı alanda çalışan Premium Mermer, deneyimli kadrosu ve son teknoloji
-				makineleri ile Silifke'den çıkan mermer çeşitlerini işleyip ihracat yaparak hem bölge hem de ülke ekonomisine
-				katkı sağlamaktadır.
+				{L("about-us-description-one", $lang)}
 			</p>
 		</div>
 
@@ -59,7 +57,7 @@
 					/>
 				{/each}
 
-				<img class="hoverable-image w-h-100 m-h-auto b-r-d" src="/not-found.svg" alt="Premium Mermer" />
+				<img class="hoverable-image w-h-100 m-h-auto b-r-d" src="/not-found.svg" alt={L("app-name", $lang)} />
 			</picture>
 		</div>
 	</article>
@@ -78,18 +76,13 @@
 						/>
 					{/each}
 
-					<img class="hoverable-image w-h-100 m-h-auto b-r-d" src="/not-found.svg" alt="Premium Mermer" />
+					<img class="hoverable-image w-h-100 m-h-auto b-r-d" src="/not-found.svg" alt={L("app-name", $lang)} />
 				</picture>
 			</div>
 
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-				<h2 class="section-title">18 Yıllık Deneyim</h2>
-
-				<p class="section-text">
-					Premium Mermer, perakende ve toptan satıştan gelen geniş tecrübesiyle müşteri taleplerine eksiksiz bir şekilde
-					yanıt veriyor. Kurulduğu yıldan bu yana kalitesini sürekli olarak artıran fabrikamız, her türlü mermer
-					çeşidini istenilen ölçü ve ebatlarda işleyerek müşterilerimizin özel isteklerini karşılamaktadır.
-				</p>
+				<h2 class="section-title">{L("about-us-title-two", $lang)}</h2>
+				<p class="section-text">{L("about-us-description-two", $lang)}</p>
 			</div>
 		</article>
 	</div>
@@ -104,7 +97,7 @@
 
 			<div class="statistic-item-texts grid g-dot25">
 				<div class="statistic-item-text-number f-w-600">224</div>
-				<div class="section-text">Proje Tecrübesi</div>
+				<div class="section-text">{L("project-experience", $lang)}</div>
 			</div>
 		</article>
 
@@ -117,7 +110,7 @@
 
 			<div class="statistic-item-texts grid g-dot25">
 				<div class="statistic-item-text-number f-w-600">15</div>
-				<div class="section-text">Farklı Ülke</div>
+				<div class="section-text">{L("different-countries", $lang)}</div>
 			</div>
 		</article>
 
@@ -130,7 +123,7 @@
 
 			<div class="statistic-item-texts grid g-dot25">
 				<div class="statistic-item-text-number f-w-600">26.000</div>
-				<div class="section-text">m² Alan</div>
+				<div class="section-text">{L("meter-square-area", $lang)}</div>
 			</div>
 		</article>
 
@@ -143,7 +136,7 @@
 
 			<div class="statistic-item-texts grid g-dot25">
 				<div class="statistic-item-text-number f-w-600">18</div>
-				<div class="section-text">Yıllık Deneyim</div>
+				<div class="section-text">{L("for-years-experience", $lang)}</div>
 			</div>
 		</article>
 	</div>
@@ -153,38 +146,32 @@
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-				<h2 class="section-title">Kalitenin Simgesi</h2>
-
-				<p class="section-text">
-					Premium Mermer olarak, hatasız üretim ve zamanında teslimat prensiplerimizle ön plana çıkıyoruz. Sürekli
-					iyileşmeyi temel felsefemiz olarak benimseyerek personel kalifikasyonu için düzenli eğitim faaliyetleri
-					yürütüyoruz. İhracatta ön sıralarda yer alarak ülke ve şirket gelişimine katkıda bulunuyoruz. Kalitemiz,
-					markamızın simgesidir ve bu, geleceğe attığımız imzadır.
-				</p>
+				<h2 class="section-title">{L("about-us-title-three", $lang)}</h2>
+				<p class="section-text">{L("about-us-description-three", $lang)}</p>
 			</div>
 
 			<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="hoverable-image w-h-100 m-h-auto b-r-d"
-					alt="Premium Mermer"
+					alt={L("app-name", $lang)}
 					imageName="premium-mermer-about-us-three"
 					mediaData={SECTION_IMAGE_MEDIA_DATA}
 					onceRatio={false}
-                    loadingLevel={2}
+					loadingLevel={2}
 				/>
 			</div>
 		</article>
 	</div>
 
 	<article
-		class="flex w-100 max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d"
+		class="flex w-100 max-w o-hidden big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column-reverse small-screen-a-i-c small-screen-g-v-d"
 	>
 		<div class="img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 			<LazyImage
 				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 				classes="hoverable-image w-h-100 m-h-auto b-r-d"
-				alt="Premium Mermer"
+				alt={L('app-name', $lang)}
 				imageName="premium-mermer-about-us-four"
 				mediaData={SECTION_IMAGE_MEDIA_DATA}
 				onceRatio={false}
@@ -192,13 +179,8 @@
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="section-title">Daima Yenilikçi</h2>
-
-			<p class="section-text">
-				Müşterilerimizin değişen ihtiyaç ve beklentilerini doğru algılayarak zamanında karşılamak, sektördeki teknolojik
-				gelişmeleri takip ederek en gelişmiş teknikleri kullanmak, maliyetleri optimum seviyeye çekmek ve çevreye
-				saygılı bir şekilde iş ve işçi güvenliğini temel alan üretim yapma bilinciyle çalışmalarımızı sürdürüyoruz.
-			</p>
+			<h2 class="section-title">{L("about-us-title-four", $lang)}</h2>
+				<p class="section-text">{L("about-us-description-four", $lang)}</p>
 		</div>
 	</article>
 </section>

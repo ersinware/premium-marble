@@ -25,7 +25,7 @@
 		onceRatio = true,
 		mediaData,
 		command,
-		noTransition,
+		noTransition = true,
 		noLoadingAnimation,
 		loadingLevel = 1,
 		forDarkMode;

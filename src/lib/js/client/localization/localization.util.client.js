@@ -40,7 +40,7 @@ async function onLangChange(newLang) {
     await changeLang(newLang)
     await waitFor(500)
 
-    showSnackbar({ content: L('onLangChange', newLang) }, 2500)
+    showSnackbar({ content: L('on-lang-change', newLang) }, 2500)
 }
 
 /* with _changeURL parameter, user can choose to change URL itself

@@ -44,7 +44,7 @@
 				<LazyImage
 					classes="w-100 for-light-mode"
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
-					alt="Premium Mermer Logo"
+					alt={L('app-name-logo', $lang)}
 					imageName="premium-mermer-logo"
 					mediaData={BIG_LOGO_MEDIA_DATA}
 					noLoadingAnimation
@@ -53,7 +53,7 @@
 				<LazyImage
 					classes="w-100 for-dark-mode"
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
-					alt="Premium Mermer Logo"
+					alt={L('app-name-logo', $lang)}
 					imageName="premium-mermer-logo-dark"
 					mediaData={BIG_LOGO_MEDIA_DATA}
 					noLoadingAnimation
@@ -62,8 +62,7 @@
 			</a>
 
 			<p class="article-text small-screen-t-a-c">
-				Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi
-				kullanarak, doğaya zarar vermeden kaliteli mermer üretimi yapıyor.
+				{L('footer-description', $lang)}
 			</p>
 		</article>
 
@@ -78,8 +77,8 @@
 				>
 
 				<address>
-					<p class="contact-item-content-text article-text">Organize Sanayi Bölgesi</p>
-					<p class="contact-item-content-text article-text">4. Cadde, No: 1</p>
+					<p class="contact-item-content-text article-text">{L('footer-address-one', $lang)}</p>
+					<p class="contact-item-content-text article-text">{L('footer-address-two', $lang)}</p>
 					<p class="contact-item-content-text article-text">Silifke, Mersin</p>
 				</address>
 			</div>
@@ -113,14 +112,14 @@
 						>info@premiummermer.com.tr</a
 					>
 					<button class="contact-item-content-text article-text link-button" on:click={onContactClick}
-						>İletişim Formu</button
+						>{L('contact-form', $lang)}</button
 					>
 				</div>
 			</div>
 		</article>
 
 		<article id="footer-pages" class="flex f-column g-dot5 t-a-c">
-			<p id="footer-pages-t-hint" class="t-hint nowrap unimportant-text-color">SİTE HARİTASI</p>
+			<p id="footer-pages-t-hint" class="t-hint nowrap unimportant-text-color">{L('sitemap', $lang)}</p>
 
 			{#each linkObjects as linkObject}
 				<a href={linkObject.link} class="link-button article-text">{linkObject.name}</a>

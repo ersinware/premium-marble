@@ -1,4 +1,5 @@
 <script>
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { closeLastModal, openModal } from "$lib/js/client/util.modals.client.common";
 	import { formatThoughts, onValidityChange, validateThoughts } from "$lib/js/client/util.validations.client";
@@ -6,7 +7,8 @@
 	import ContactModalTwo from "./ContactModalTwo.svelte";
 
 	const arrFormValid = new Array(1),
-		holder = getStore("holder");
+		holder = getStore("holder"),
+		lang = getStore("lang");
 
 	let formValid, form;
 
@@ -31,21 +33,21 @@
 	bind:this={form}
 >
 	<div>
-		<h2 class="modal-title">Önerilerinizi Merak <br /> Ediyoruz</h2>
+		<h2 class="modal-title">{@html L("contact-modal-one-title", $lang)}</h2>
 		<div class="t-hint modal-t-hint unimportant-text-color">1/3</div>
 	</div>
 
 	<p class="modal-text small-modal-text-max-w m-h-auto">
-		Müşterilerimizin önerilerini dikkate alıyor ve deneyiminizi daha da güzelleştirmek istiyoruz.
+		{L("contact-modal-one-description", $lang)}
 	</p>
 
 	<TextArea
 		wrapperClasses="small-modal-input-max-w"
 		type="text"
-		title="DÜŞÜNCELERİNİZ"
+		title={L("input-title-thoughts", $lang)}
 		name="thoughts"
 		value={$holder.thoughts}
-		tText="En az 10, en fazla 500 karakter olmalı"
+		tText={L("input-validation-text-thoughts", $lang)}
 		rows={13}
 		format={formatThoughts}
 		validate={validateThoughts}
@@ -54,7 +56,9 @@
 	/>
 
 	<div class="modal-buttons flex j-c-c modal-buttons-g">
-		<button type="button" class="nude-button modal-button modal-negative-button" on:click={onCancel}> VAZGEÇ </button>
+		<button type="button" class="nude-button modal-button modal-negative-button" on:click={onCancel}
+			>{L("cancel", $lang)}</button
+		>
 
 		<button
 			type="button"
@@ -63,7 +67,7 @@
 			on:click={onContinue}
 			class:disabled-nude-button={!formValid}
 		>
-			DEVAM ET
+			{L("continue", $lang)}
 		</button>
 	</div>
 </form>

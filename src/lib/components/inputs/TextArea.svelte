@@ -1,5 +1,6 @@
 <script>
 	import Tooltip from "$lib/components/Tooltip.svelte";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { areEqualStrings } from "$lib/js/client/util.inputs.client";
 	import { waitFor } from "$lib/js/common/util.common";
@@ -21,7 +22,8 @@
 		enterKeyHint,
 		rows;
 
-	const bigScreen = getStore("bigScreen");
+	const bigScreen = getStore("bigScreen"),
+		lang = getStore("lang");
 
 	let focus,
 		exitedOnce,
@@ -165,7 +167,7 @@
 		/>
 
 		<label class="input-label p-none p-a p-c-h f-w-800" for={name}>
-			{title}{optional ? " - TERCİHEN" : ""}
+			{title}{optional ? " - " + L("optional", $lang) : ""}
 		</label>
 	</div>
 </Tooltip>

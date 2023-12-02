@@ -4,6 +4,7 @@
 		MODAL_PROGRESS_BAR_NAVIGATED_TRANSITION_DURATION,
 		MODAL_TRANSITION_DURATION,
 	} from "$lib/js/client/constants.client";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { getStore, performRippleEffect, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { closeAllModals } from "$lib/js/client/util.modals.client.common";
 	import { showSnackbar } from "$lib/js/client/util.snackbars.client";
@@ -20,7 +21,8 @@
 
 	const arrFormValid = new Array(2),
 		holder = getStore("holder"),
-		dontInterruptModal = getStore("dontInterruptModal");
+		dontInterruptModal = getStore("dontInterruptModal"),
+		lang = getStore("lang");
 
 	let formValid, form, state;
 
@@ -64,7 +66,7 @@
 		await waitFor(MODAL_TRANSITION_DURATION);
 
 		showSnackbar({
-			content: "Mesajınız başarıyla iletildi. Size geri dönüş yapacağız.",
+			content: L('delivered-successfuly', $lang),
 			backgroundColor: "var(--positive-color)",
 		});
 	}
@@ -74,7 +76,7 @@
 		await waitFor(MODAL_PROGRESS_BAR_NAVIGATED_TRANSITION_DURATION);
 
 		showSnackbar({
-			content: error ?? "Bir hata oluştu. Daha sonra tekrar deneyin.",
+			content: error ?? L('error-occured', $lang),
 			backgroundColor: "var(--error-color)",
 		});
 
@@ -89,20 +91,20 @@
 	<Progress bind:state forModal />
 
 	<div>
-		<h2 class="modal-title">İletişim Bilgileriniz</h2>
+		<h2 class="modal-title">{L("contact-modal-three-title", $lang)}</h2>
 		<div class="t-hint modal-t-hint unimportant-text-color">3/3</div>
 	</div>
 
 	<p class="modal-text small-modal-text-max-w m-h-auto">
-		Mesajınıza geri dönüş yapabilmemiz için iletişim bilgileriniz gerekli.
+		{L("contact-modal-three-description", $lang)}
 	</p>
 
 	<InputText
 		type="email"
-		title="E-POSTA ADRESİNİZ"
+		title={L("input-title-email", $lang)}
 		name="email"
 		value={$holder.email}
-		tText="xxx@xxx.com formatında olmalı"
+		tText={L("input-validation-text-email", $lang)}
 		validate={validateEmailAddress}
 		bind:disable={$dontInterruptModal}
 		bind:valid={arrFormValid[0]}
@@ -110,10 +112,10 @@
 
 	<InputText
 		type="tel"
-		title="TELEFONUNUZ"
+		title={L("input-title-phone", $lang)}
 		name="phone"
 		value={$holder.phone}
-		tText="5xx xxx xxx xx formatında olmalı"
+		tText={L("input-validation-text-phone", $lang)}
 		format={formatPhoneNumber}
 		validate={validatePhoneNumber}
 		enterKeyHint="done"
@@ -130,7 +132,7 @@
 			class:disabled-nude-button={$dontInterruptModal}
 			on:click={onCancel}
 		>
-			VAZGEÇ
+			{L("cancel", $lang)}
 		</button>
 
 		<button
@@ -140,7 +142,7 @@
 			class="nude-button modal-button modal-positive-button"
 			on:click={onSend}
 		>
-			GÖNDER
+			{L("send", $lang)}
 		</button>
 	</div>
 </form>

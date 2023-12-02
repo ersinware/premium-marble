@@ -1,5 +1,8 @@
 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
 
+hakkımızda foto üstte duruyo mobilde
+    diğer sayfaları da kontrol et
+
 //
 
 firefox'ta test et
@@ -12,7 +15,6 @@ firefox'ta test et
 safari'de de test et
 
 //
-
 
 SEO
     avoid:
@@ -43,14 +45,6 @@ SEO
 
 //
 
-tüm projeyi dillere bağla
-
-favicon ayarla
-
-cpanel'e yükle, yayınla
-
-//
-
 optimizasyon için can-mese projesindeki notlara bak
     preload
         fonts
@@ -64,6 +58,8 @@ optimizasyon için can-mese projesindeki notlara bak
         sanırım evet
 
 //
+
+favicon ayarla
 
 service worker her şeyi cache'lesin
 

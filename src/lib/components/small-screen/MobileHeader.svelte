@@ -1,5 +1,6 @@
 <script>
 	import { goto } from "$app/navigation";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client.js";
 	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { openLeftMenu } from "$lib/js/client/util.left.menus.client";
@@ -90,7 +91,7 @@
 					/>
 				{/each}
 
-				<img id="mobile-header-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
+				<img id="mobile-header-logo" src="/not-found.svg" alt={L('app-name-logo', $lang)} />
 			</picture>
 		</a>
 	</div>

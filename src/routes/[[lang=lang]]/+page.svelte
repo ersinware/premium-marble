@@ -60,14 +60,13 @@
 								/>
 							{/each}
 
-							<img class="hoverable-image w-h-100" src="/not-found.svg" alt="Premium Mermer" />
+							<img class="hoverable-image w-h-100" src="/not-found.svg" alt={L("app-name", $lang)} />
 						</picture>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
-							<h2 class="slider-text-title f-w-600">Mermerin Eşsiz Zerafeti</h2>
+							<h2 class="slider-text-title f-w-600">{L("slider-item-title-one", $lang)}</h2>
 							<p class="slider-text-content article-text">
-								Doğadan ilham alarak işlediğimiz mermer, mekânlarınıza eşsiz bir zerafet katıyor, estetik anlayışınızı
-								yeniden tanımlıyoruz.
+								{L("slider-item-description-one", $lang)}
 							</p>
 						</article>
 					</div>
@@ -84,14 +83,13 @@
 							imageName="premium-mermer-slider-marble-two"
 							mediaData={SLIDER_IMAGE_MEDIA_DATA}
 							onceRatio={false}
-                            loadingLevel={2}
+							loadingLevel={2}
 						/>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
-							<h2 class="slider-text-title f-w-600">Taşın Ahengini Hissedin</h2>
+							<h2 class="slider-text-title f-w-600">{L("slider-item-title-two", $lang)}</h2>
 							<p class="slider-text-content article-text">
-								Her bir mermer bloğu, getirdiği benzersiz ahengiyle sizi etkisi altına alacak. Taşın dokunuşunu
-								hissedin, uyumu yakalayın.
+								{L("slider-item-description-two", $lang)}
 							</p>
 						</article>
 					</div>
@@ -104,18 +102,17 @@
 						<LazyImage
 							mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 							classes="hoverable-image w-h-100 m-h-auto b-r-d"
-							alt="Premium Mermer"
+							alt={L("app-name", $lang)}
 							imageName="premium-mermer-slider-marble-three"
 							mediaData={SLIDER_IMAGE_MEDIA_DATA}
 							onceRatio={false}
-                            loadingLevel={2}
+							loadingLevel={2}
 						/>
 
 						<article class="slider-text-wrapper p-a grid g-1dot25 p-d">
-							<h2 class="slider-text-title f-w-600">Şıklık Yeniden Tanımlanıyor</h2>
+							<h2 class="slider-text-title f-w-600">{L("slider-item-title-three", $lang)}</h2>
 							<p class="slider-text-content article-text">
-								Mutfaklarınıza modern bir dokunuş katmak için tasarladığımız ürünler, şıklığı tamamen yeniden
-								tanımlıyor.
+								{L("slider-item-description-three", $lang)}
 							</p>
 						</article>
 					</div>
@@ -136,9 +133,9 @@
 			>
 
 			<div class="texts-after-icons grid g-dot5">
-				<p class="title-of-icon section-text f-w-500">Son Sistem Makineler</p>
+				<p class="title-of-icon section-text f-w-500">{L("text-with-icon-title-one", $lang)}</p>
 				<p class="text-of-icon article-text">
-					Doğadan çıkardığımız mermerleri son teknolojiyi kullanarak, doğaya zarar vermeden üretim yapıyoruz.
+					{L("text-with-icon-description-one", $lang)}
 				</p>
 			</div>
 		</div>
@@ -151,9 +148,9 @@
 			>
 
 			<div class="texts-after-icons grid g-dot5">
-				<p class="title-of-icon section-text f-w-500">Deneyimli Ekip</p>
+				<p class="title-of-icon section-text f-w-500">{L("text-with-icon-title-two", $lang)}</p>
 				<p class="text-of-icon article-text">
-					Alanında uzman ekibimizin özverili çalışmaları neticesinde kaliteden ödün vermiyoruz.
+					{L("text-with-icon-description-two", $lang)}
 				</p>
 			</div>
 		</div>
@@ -166,9 +163,9 @@
 			>
 
 			<div class="texts-after-icons grid g-dot5">
-				<p class="title-of-icon section-text f-w-500">Müşteri Memnuniyeti</p>
+				<p class="title-of-icon section-text f-w-500">{L("text-with-icon-title-three", $lang)}</p>
 				<p class="text-of-icon article-text">
-					Sürdürülebilir başarılar için müşterilerimizin memnuniyetini ön planda tutmak için elimizden geleni yapıyoruz.
+					{L("text-with-icon-description-three", $lang)}
 				</p>
 			</div>
 		</div>
@@ -179,21 +176,21 @@
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-				<h2 class="section-title">Premium Mermer</h2>
-
+				<h2 class="section-title">{L("homepage-section-title-one", $lang)}</h2>
 				<p class="section-text">
-					Doğadan ilham alarak tasarlanan her bir blok, modern tasarım ve geleneksel işçilikle birleşerek mekânlarınıza
-					benzersiz bir dokunuş katıyor. Zengin seçeneklerimizle tarzınıza uygun çözümler sunuyoruz.
+					{L("homepage-section-description-one", $lang)}
 				</p>
 
-				<a href={getLocalizedLink("products", $lang)} class="button small-button small-screen-m-h-auto">ÜRÜNLERİMİZ</a>
+				<a href={getLocalizedLink("products", $lang)} class="button small-button small-screen-m-h-auto"
+					>{L("homepage-section-button-one", $lang)}</a
+				>
 			</div>
 
 			<div class="section-img-wrapper img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="hoverable-image w-h-100 m-h-auto b-r-d"
-					alt="Premium Mermer"
+					alt={L("app-name", $lang)}
 					imageName="premium-mermer-one"
 					mediaData={SECTION_IMAGE_MEDIA_DATA}
 					onceRatio={false}
@@ -210,7 +207,7 @@
 			<LazyImage
 				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 				classes="hoverable-image w-h-100 m-h-auto b-r-d"
-				alt="Premium Mermer"
+				alt={L("app-name", $lang)}
 				imageName="premium-mermer-two"
 				mediaData={SECTION_IMAGE_MEDIA_DATA}
 				onceRatio={false}
@@ -218,14 +215,14 @@
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="section-title">Mermerin Ötesinde</h2>
-
+			<h2 class="section-title">{L("homepage-section-title-two", $lang)}</h2>
 			<p class="section-text">
-				Premium Mermer, uzun yıllara dayanan deneyimiyle öne çıkan bir kuruluştur. Modern tasarım anlayışımız,
-				geleneksel zanaat becerileriyle buluşarak; zarafet, dayanıklılık ve estetiği bir arada sunuyor.
+				{L("homepage-section-description-two", $lang)}
 			</p>
 
-			<a href={getLocalizedLink("about-us", $lang)} class="button small-button small-screen-m-h-auto">HAKKIMIZDA</a>
+			<a href={getLocalizedLink("about-us", $lang)} class="button small-button small-screen-m-h-auto"
+				>{L("homepage-section-button-two", $lang)}</a
+			>
 		</div>
 	</article>
 
@@ -234,21 +231,21 @@
 			class="flex max-w big-screen-f-s-b big-screen-g-h-d big-screen-a-i-c big-screen-m-h-auto small-screen-f-column small-screen-a-i-c small-screen-g-v-d small-screen-o-hidden"
 		>
 			<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-				<h2 class="section-title">Bilgi ve İlham Kaynağı</h2>
-
+				<h2 class="section-title">{L("homepage-section-title-three", $lang)}</h2>
 				<p class="section-text">
-					Mermer dünyasının nabzını tutan firmamız, sektöre dair değerli içgörüleri ve ilham verici tasarım önerilerini
-					sizinle buluşturuyor. Yeniliklere dair bilgileri keşfedin.
+					{L("homepage-section-description-three", $lang)}
 				</p>
 
-				<a href={getLocalizedLink("blog", $lang)} class="button small-button small-screen-m-h-auto">MAKALELER</a>
+				<a href={getLocalizedLink("blog", $lang)} class="button small-button small-screen-m-h-auto"
+					>{L("homepage-section-button-three", $lang)}</a
+				>
 			</div>
 
 			<div class="section-img-wrapper img-wrapper hoverable-image-wrapper w-100 o-hidden b-r-d">
 				<LazyImage
 					mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 					classes="hoverable-image w-h-100 m-h-auto b-r-d"
-					alt="Premium Mermer"
+					alt={L("app-name", $lang)}
 					imageName="premium-mermer-three"
 					mediaData={SECTION_IMAGE_MEDIA_DATA}
 					onceRatio={false}
@@ -265,7 +262,7 @@
 			<LazyImage
 				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 				classes="hoverable-image w-h-100 m-h-auto b-r-d"
-				alt="Premium Mermer"
+				alt={L("app-name", $lang)}
 				imageName="premium-mermer-four"
 				mediaData={SECTION_IMAGE_MEDIA_DATA}
 				onceRatio={false}
@@ -273,14 +270,14 @@
 		</div>
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
-			<h2 class="section-title">Düşünceleriniz, Değerli</h2>
-
+			<h2 class="section-title">{L("homepage-section-title-four", $lang)}</h2>
 			<p class="section-text">
-				Müşterilerimizin memnuniyeti bizim için önceliktir. İster soru sormanız, ister bir projeyi tartışmanız, ister
-				sadece merhaba demeniz için buradayız. Sizden haber almak için sabırsızlanıyoruz.
+				{L("homepage-section-description-four", $lang)}
 			</p>
 
-			<a href={getLocalizedLink("contact", $lang)} class="button small-button small-screen-m-h-auto">BİZE ULAŞIN</a>
+			<a href={getLocalizedLink("contact", $lang)} class="button small-button small-screen-m-h-auto"
+				>{L("homepage-section-button-four", $lang)}</a
+			>
 		</div>
 	</article>
 </section>

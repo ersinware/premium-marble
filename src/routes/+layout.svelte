@@ -22,6 +22,7 @@
 	import "$lib/css/project.specific.global.big.screen.css";
 	import "$lib/css/project.specific.global.css";
 	import "$lib/css/project.specific.global.small.screen.css";
+	import { L } from "$lib/js/client/localization/localization.translations.data.client";
 	import { init as initLocalizationUtilClient } from "$lib/js/client/localization/localization.util.client.js";
 	import { createStore, getStore, init as initUtil } from "$lib/js/client/util.client.js";
 	import { init as initInputsUtil } from "$lib/js/client/util.inputs.client";
@@ -34,7 +35,6 @@
 	import { yieldToMain } from "$lib/js/common/util.common";
 	import { onMount } from "svelte";
 	import Lamp from "./../lib/components/Lamp.svelte";
-	import { LEFT_MENU_LOGO_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 
 	export let data;
 
@@ -44,6 +44,7 @@
 		animateFooter = true;
 
 	const url = getStore("url"),
+		lang = getStore("lang"),
 		navigationState = getStore("navigationState"),
 		dontInterruptModal = getStore("dontInterruptModal");
 
@@ -134,14 +135,14 @@
 		switch (event.data.type) {
 			case ERROR_NO_INTERNET_CONNECTION:
 				showSnackbar({
-					content: "İnternet bağlantınız koptu. Bazı fonksiyonlar çalışmayabilir.",
+					content: L("connection-lost", $lang),
 					backgroundColor: "var(--error-color)",
 				});
 
 				break;
 			case ONLINE_BACK:
 				showSnackbar({
-					content: "Tekrar çevrimiçi oldunuz.",
+					content: L("online-back", $lang),
 					backgroundColor: "green",
 				});
 		}

@@ -67,7 +67,7 @@
 			/>
 		{/each}
 
-		<img id="left-menu-logo" src="/not-found.svg" alt="Premium Mermer Logo" />
+		<img id="left-menu-logo" src="/not-found.svg" alt={L('app-name-logo', $lang)} />
 	</picture>
 
 	<section class="menu-items flex f-column g-v-d">
