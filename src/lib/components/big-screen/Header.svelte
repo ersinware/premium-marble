@@ -14,6 +14,7 @@
 	import { cubicInOut } from "svelte/easing";
 	import { fly } from "svelte/transition";
 	import LanguageSwitcher from "./LanguageSwitcher.svelte";
+	import { getLocalizedPath } from "$lib/js/common/localization/localization.util.common";
 
 	const lang = getStore("lang"),
 		url = getStore("url");
@@ -23,7 +24,7 @@
 	$: linkObjects = [
 		{ name: L("homepage", $lang), link: getLocalizedLink("", $lang) },
 		{ name: L("products", $lang), link: getLocalizedLink("products", $lang) },
-		// { name: L("blog", $lang), link: getLocalizedLink("blog", $lang) },
+		// { name: L("news", $lang), link: getLocalizedLink("news", $lang) },
 		{ name: L("about-us", $lang), link: getLocalizedLink("hakkımızda", $lang) },
 		{ name: L("contact", $lang), link: getLocalizedLink("iletişim", $lang) },
 	];
@@ -102,11 +103,11 @@
 			{/each}
 
 			<a
-				href={getLocalizedLink("blog", $lang)}
+				href={getLocalizedLink("news", $lang)}
 				class="header-link nowrap"
-				class:active-header-link={decodeURI($url.pathname).includes("/blog")}
+				class:active-header-link={decodeURI($url.pathname).includes(getLocalizedPath('news', $lang))}
 			>
-				{L("blog", $lang)}
+				{L("news", $lang)}
 			</a>
 
 			{#each new Array(linkObjects.length / 2) as _, index}

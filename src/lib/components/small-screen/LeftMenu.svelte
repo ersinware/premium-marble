@@ -7,6 +7,7 @@
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { closeLastLeftMenu } from "$lib/js/client/util.left.menus.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage, getMediaQueryForResponsiveImageForDarkMode } from "$lib/js/client/util.responsive.client";
+	import { getLocalizedPath } from "$lib/js/common/localization/localization.util.common";
 	import { waitFor } from "$lib/js/common/util.common";
 	import { onMount } from "svelte";
 
@@ -16,7 +17,7 @@
 	$: localizedLinks = [
 		getLocalizedLink("", $lang),
 		getLocalizedLink("products", $lang),
-		getLocalizedLink("blog", $lang),
+		getLocalizedLink("news", $lang),
 		getLocalizedLink("hakkımızda", $lang),
 		getLocalizedLink("iletişim", $lang),
 	];
@@ -104,7 +105,7 @@
 		<a
 			href={localizedLinks[2]}
 			class="menu-item flex g-1 a-i-c pointer"
-			class:active-menu-item={decodeURI($url.pathname).includes("/blog")}
+			class:active-menu-item={decodeURI($url.pathname).includes(getLocalizedPath('news', $lang))}
 		>
 			<svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
 				><path
@@ -112,7 +113,7 @@
 				/></svg
 			>
 
-			<div class="menu-text">{L("blog", $lang)}</div>
+			<div class="menu-text">{L("news", $lang)}</div>
 		</a>
 
 		<a

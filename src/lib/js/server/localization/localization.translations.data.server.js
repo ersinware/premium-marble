@@ -7,8 +7,7 @@ export const localizedPaths = new Map([
     [PUBLIC_DEFAULT_LANGUAGE, [
         { name: '' },
         { name: 'ürünler' },
-        { name: 'blog' },
-        { name: 'makale' },
+        { name: 'haberler' },
         { name: 'hakkımızda' },
         { name: 'iletişim' },
     ]],
@@ -16,8 +15,7 @@ export const localizedPaths = new Map([
     ['en', [
         { name: 'en' },
         { name: 'products' },
-        { name: 'blog' },
-        { name: 'article' },
+        { name: 'news' },
         { name: 'about-us' },
         { name: 'contact' },
     ]]
@@ -27,5 +25,5 @@ export const localizedPaths = new Map([
 
 for (const key of localizedPaths.keys()) {
     for (const articleLink of articles.get(key).keys())
-        localizedPaths.get(key).push({ name: articleLink })
+        localizedPaths.get(key).push({ name: articleLink, parentPath: 'news' })
 }

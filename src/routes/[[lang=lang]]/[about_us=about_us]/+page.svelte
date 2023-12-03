@@ -7,12 +7,20 @@
 	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
 	import { SECTION_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { fly } from "svelte/transition";
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
+	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
+	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
 
 	const lang = getStore("lang");
 </script>
 
 <svelte:head>
 	<title>{L("about-us-page-title", $lang)}</title>
+
+    <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("about-us", "", PUBLIC_DEFAULT_LANGUAGE)} />
+	{#each arrLangs as lang}
+		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL("about-us", "", lang)} />
+	{/each}
 
 	{#each SECTION_IMAGE_MEDIA_DATA as media}
 		<link

@@ -1,14 +1,16 @@
 <script>
 	import { goto } from "$app/navigation";
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import LazyImage from "$lib/components/LazyImage.svelte";
 	import Slider from "$lib/components/slider/Slider.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { SECTION_IMAGE_MEDIA_DATA, SLIDER_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
-	import { getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
+	import { getFullLocalizedURL, getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectForButtonAndWait } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
 	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
-	import { SECTION_IMAGE_MEDIA_DATA, SLIDER_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
+	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
 	import { onMount } from "svelte";
 	import { fly } from "svelte/transition";
 
@@ -31,6 +33,11 @@
 
 <svelte:head>
 	<title>{L("homepage-page-title", $lang)}</title>
+
+	<link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("", "", PUBLIC_DEFAULT_LANGUAGE)} />
+	{#each arrLangs as lang}
+		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL("", "", lang)} />
+	{/each}
 
 	{#each SLIDER_IMAGE_MEDIA_DATA as media}
 		<link
@@ -236,7 +243,7 @@
 					{L("homepage-section-description-three", $lang)}
 				</p>
 
-				<a href={getLocalizedLink("blog", $lang)} class="button small-button small-screen-m-h-auto"
+				<a href={getLocalizedLink("news", $lang)} class="button small-button small-screen-m-h-auto"
 					>{L("homepage-section-button-three", $lang)}</a
 				>
 			</div>

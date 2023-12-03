@@ -1,11 +1,14 @@
 <script>
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import LazyImage from "$lib/components/LazyImage.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { SMALL_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
 	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
+	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
 	import { fly } from "svelte/transition";
 
 	const lang = getStore("lang"),
@@ -28,6 +31,11 @@
 
 <svelte:head>
 	<title>{L("products-page-title", $lang)}</title>
+
+    <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("products", "", PUBLIC_DEFAULT_LANGUAGE)} />
+	{#each arrLangs as lang}
+		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL("products", "", lang)} />
+	{/each}
 
 	{#each new Array(4) as _, index}
 		{#each SMALL_IMAGE_MEDIA_DATA as media}

@@ -10,20 +10,19 @@ import { getPaths, waitFor } from "$lib/js/common/util.common";
 import { get } from "svelte/store";
 import { showSnackbar } from "../util.snackbars.client";
 import { L } from "./localization.translations.data.client";
+import { page } from "$app/stores";
 
 const arrWhenLanguageChange = new Map()
 
 let
     lang,
     url,
-    origin,
     langFirstTime = true,
     changeURL = true
 
-export function init(_lang, _url, _origin) {
+export function init(_lang, _url) {
     lang = _lang
     url = _url
-    origin = _origin
 
     lang.subscribe(onLangChange)
 }
@@ -117,4 +116,11 @@ export function getLocalizedLink(path, lang) {
         return `/${getLocalizedPath(path, lang)}`
 
     return `/${getLocalizedPath(lang, lang)}/${getLocalizedPath(path, lang)}`
+}
+
+export function getFullLocalizedURL(path, search, lang) {
+    const origin = get(page).url.origin,
+        _url = new URL(path + '/' + search, origin)
+        
+    return origin + getLocalizedURL(getPaths(decodeURI(_url.pathname)), _url.searchParams, lang)
 }

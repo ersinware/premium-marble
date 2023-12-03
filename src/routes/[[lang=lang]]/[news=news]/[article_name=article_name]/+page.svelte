@@ -1,11 +1,14 @@
 <script>
 	import { page } from "$app/stores";
-	import SimilarArticles from "$lib/components/blog/article/SimilarArticles.svelte";
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
+	import SimilarArticles from "$lib/components/news/article/SimilarArticles.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { ARTICLE_POSTER_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
+	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
 	import { getLocalizedPath } from "$lib/js/common/localization/localization.util.common";
 	import { articles } from "$lib/js/common/util.data.articles";
 	import { fly } from "svelte/transition";
@@ -17,6 +20,19 @@
 
 <svelte:head>
 	<title>{article.name} | {L("app-name", $lang)}</title>
+
+	<link
+		rel="alternate"
+		hreflang="x-default"
+		href={getFullLocalizedURL(`news/${$page.params.article_name}`, "", PUBLIC_DEFAULT_LANGUAGE)}
+	/>
+	{#each arrLangs as lang}
+		<link
+			rel="alternate"
+			hreflang={lang}
+			href={getFullLocalizedURL(`news/${$page.params.article_name}`, "", lang)}
+		/>
+	{/each}
 
 	{#each ARTICLE_POSTER_IMAGE_MEDIA_DATA as media}
 		<link

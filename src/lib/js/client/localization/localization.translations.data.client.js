@@ -19,13 +19,13 @@ const tr = new Map([
 
     ['homepage', "Anasayfa"],
     ['products', "Ürünler"],
-    ['blog', "Blog"],
+    ['news', "Haberler"],
     ['about-us', "Hakkımızda"],
     ['contact', "İletişim"],
 
     ['homepage-page-title', "Anasayfa | Premium Mermer"],
     ['products-page-title', "Ürünler | Premium Mermer"],
-    ['blog-page-title', "Blog | Premium Mermer"],
+    ['news-page-title', "Haberler | Premium Mermer"],
     ['about-us-page-title', "Hakkımızda | Premium Mermer"],
     ['contact-page-title', "İletişim | Premium Mermer"],
 
@@ -87,7 +87,7 @@ const tr = new Map([
     ['crema-taurus', "Crema Taurus"],
     ['cremera-marble', "Cremera Marble"],
 
-    ['blog-description', "Premium Mermer, mermerin zarafetini ve dayanıklılığını sizlere sunan bir dünya markasıdır. Blog sayfasında, mermerle ilgili her şeyi keşfetmek ve sektördeki en son gelişmeleri öğrenmek için doğru yerdesiniz."],
+    ['news-description', "Premium Mermer, mermerin zarafetini ve dayanıklılığını sizlere sunan bir dünya markasıdır. Haberler sayfasında, mermerle ilgili her şeyi keşfetmek ve sektördeki en son gelişmeleri öğrenmek için doğru yerdesiniz."],
 
     ['contact-description', "İster soru sormanız, ister bir projeyi tartışmanız, ister sadece merhaba demeniz için buradayız."],
     ['write-to-us', "BİZE YAZIN"],
@@ -160,13 +160,13 @@ const en = new Map([
 
     ['homepage', "Homepage"],
     ['products', "Products"],
-    ['blog', "Blog"],
+    ['news', "News"],
     ['about-us', "About Us"],
     ['contact', "Contact"],
 
     ['homepage-page-title', "Homepage | Premium Marble"],
     ['products-page-title', "Products | Premium Marble"],
-    ['blog-page-title', "Blog | Premium Mermer"],
+    ['news-page-title', "News | Premium Mermer"],
     ['about-us-page-title', "About Us | Premium Marble"],
     ['contact-page-title', "Contact | Premium Marble"],
 
@@ -228,7 +228,7 @@ const en = new Map([
     ['crema-taurus', "Crema Taurus"],
     ['cremera-marble', "Cremera Marble"],
 
-    ['blog-description', "Premium Marble is a global brand that offers the elegance and durability of marble.You are in the right place on the blog page to explore everything about marble and stay updated on the latest developments in the industry."],
+    ['news-description', "Premium Marble is a global brand that offers the elegance and durability of marble.You are in the right place on the News page to explore everything about marble and stay updated on the latest developments in the industry."],
 
     ['contact-description', "Whether you have questions, want to discuss a project, or just want to say hello, we are here for you."],
     ['write-to-us', "WRITE TO US"],

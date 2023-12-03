@@ -1,12 +1,15 @@
 <script>
 	import { goto } from "$app/navigation";
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import LazyImage from "$lib/components/LazyImage.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { SMALL_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, performRippleEffectAndWait } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
 	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
+	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
 	import { getLocalizedURL } from "$lib/js/common/localization/localization.util.common";
 	import { getPaths } from "$lib/js/common/util.common";
 	import { articles } from "$lib/js/common/util.data.articles";
@@ -18,7 +21,7 @@
 	onMount(_onMount);
 
 	function _onMount() {
-		for (const link of document.body.querySelectorAll("#blog-section a"))
+		for (const link of document.body.querySelectorAll("#news-section a"))
 			link.addEventListener("click", async (event) => {
 				event.preventDefault();
 
@@ -31,7 +34,12 @@
 </script>
 
 <svelte:head>
-	<title>{L("blog-page-title", $lang)}</title>
+	<title>{L("news-page-title", $lang)}</title>
+
+    <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("news", "", PUBLIC_DEFAULT_LANGUAGE)} />
+	{#each arrLangs as lang}
+		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL("news", "", lang)} />
+	{/each}
 
 	{#each articles.get($lang).entries() as [key, value], index}
 		{#if index < 4}
@@ -48,19 +56,19 @@
 	{/each}
 </svelte:head>
 
-<section id="blog-section" class="grid page-g w-100 page-max-w-smaller t-a-c" in:fly={TRANSITION_PAGE}>
+<section id="news-section" class="grid page-g w-100 page-max-w-smaller t-a-c" in:fly={TRANSITION_PAGE}>
 	<div class="grid g-v-d">
-		<h1 class="section-title">Makaleler</h1>
+		<h1 class="section-title">{L('news', $lang)}</h1>
 
 		<p class="section-text m-h-auto">
-			{L('blog-description', $lang)}
+			{L('news-description', $lang)}
 		</p>
 	</div>
 
 	<article id="articles-wrapper" class="grid">
 		{#each articles.get($lang).entries() as [key, value], index}
 			<a
-				href={getLocalizedURL(getPaths(`blog/article/${key}`), undefined, $lang)}
+				href={getLocalizedURL(getPaths(`news/${key}`), undefined, $lang)}
 				class="article-wrapper  hoverable-image-wrapper grid t-a-c"
 			>
 				<div class="img-wrapper b-r-d o-hidden">

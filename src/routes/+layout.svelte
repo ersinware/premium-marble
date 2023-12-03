@@ -76,7 +76,7 @@
 		const bigScreen = getStore("bigScreen");
 
 		initLocalizationUtilCommon(data.paths, data.searchParams, data.searchValues);
-		initLocalizationUtilClient(getStore("lang"), url, $page.url.origin);
+		initLocalizationUtilClient(getStore("lang"), url);
 		initUtil(getStore("rippleTargetInfo"), dontInterruptModal);
 		initResponsiveUtil(getStore("touchable"), getStore("hoverable"), bigScreen);
 		initSnackbars(getStore("openSnackbars"), bigScreen);

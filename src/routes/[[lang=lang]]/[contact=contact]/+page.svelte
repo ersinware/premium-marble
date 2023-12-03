@@ -1,7 +1,10 @@
 <script>
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
 	import { getStore, onContactClick } from "$lib/js/client/util.client";
+	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
 	import { fly } from "svelte/transition";
 
 	const lang = getStore("lang");
@@ -9,6 +12,11 @@
 
 <svelte:head>
 	<title>{L("contact-page-title", $lang)}</title>
+
+    <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL('contact', "", PUBLIC_DEFAULT_LANGUAGE)} />
+	{#each arrLangs as lang}
+		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL('contact', "", lang)} />
+	{/each}
 </svelte:head>
 
 <section id="contact-wrapper" class="flex w-100 page-max-w small-screen-f-column" in:fly={TRANSITION_PAGE}>

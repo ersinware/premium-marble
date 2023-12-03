@@ -51,7 +51,7 @@
 				{@const value = articles.get($lang).get(key)}
 
 				<a
-					href={getLocalizedURL(getPaths(`blog/article/${key}`), undefined, $lang)}
+					href={getLocalizedURL(getPaths(`news/${key}`), undefined, $lang)}
 					class="article-wrapper hoverable-image-wrapper grid t-a-c"
 				>
 					<div class="img-wrapper b-r-d o-hidden">

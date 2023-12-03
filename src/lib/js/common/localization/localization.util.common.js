@@ -30,7 +30,7 @@ export function getLocalizedPaths(paths, lang) {
     let newPathname = ''
 
     for (let i = 0; i < paths.length; i++) {
-        const localizedPath = getLocalizedPath(paths[i], lang, () => paths[i - 1])
+        const localizedPath = getLocalizedPath(paths[i], lang)
         if (localizedPath)
             newPathname += '/' + localizedPath
     }
@@ -38,15 +38,10 @@ export function getLocalizedPaths(paths, lang) {
     return newPathname
 }
 
-export function getLocalizedPath(path, lang, getPreviousPath) {
+export function getLocalizedPath(path, lang) {
     const _path = paths.get(path)
-    if (!_path) {
-        if (getPreviousPath)
-            if (paths.get(getPreviousPath())?.get('dynamic'))
-                return path
-
+    if (!_path) 
         throw error(404, { message: 'unknown path' })
-    }
 
     return _path.get('lang') === lang ? path : _path.get(lang)
 }

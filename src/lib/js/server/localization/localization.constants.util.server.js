@@ -3,7 +3,7 @@ import { localizedPaths, localizedSearchParams, localizedSearchValues } from "$l
 
 export function init() {
     constructLangs()
-    constructTranslationTables(localizedPaths, paths)
+    constructTranslationTables(localizedPaths, paths, true)
     constructTranslationTables(localizedSearchParams, searchParams)
     constructTranslationTables(localizedSearchValues, searchValues)
 
@@ -18,11 +18,14 @@ function constructLangs() {
         langs.set(lang, { lang })
 }
 
-function constructTranslationTables(source, target) {
+function constructTranslationTables(source, target, checkForparentPath) {
     for (const [key, value] of source.entries())
         for (let i = 0; i < value.length; i++) {
             const content = new Map([['lang', key]]),
                 _value = value[i]
+
+            if (checkForparentPath && _value.parentPath)
+                content.set('parentPath', _value.parentPath)
 
             for (const [key2, value2] of source.entries()) {
                 if (key2 === key)

@@ -1,31 +1,33 @@
 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
 
-20.00: 75
+safari'de test et
 
-//
-
-firefox'ta test et
-    slider'da problem var
-    image'lerin oranları korumasına bak
-        article_name oranı korumuyor -> chrome'da da
-        slider'dakiler de
-    console'a da bak
-
-safari'de de test et
+sitemap kontrol et
+    önce xml
+    sonra kod
 
 //
 
 SEO
-    avoid:
-        Allowing your 404 pages to be indexed in search engines (make sure that your web server is configured to give a 404 HTTP status code or—in the case of JavaScript-based sites—include the noindex tag when non-existent pages are requested).
-    seo notes'daki 'multilingual sites' kısmına bak
     sitemap
         image sitemap?
     add structured data
         seo notes'daki 'some important structured data types' kısma bak
         https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=tr
-    seo notes'daki 'canonicalization' kısmına bak
-    Create unique, accurate page titles-
+
+    optimizasyon için can-mese projesindeki notlara bak
+        preload
+            fonts
+                projede kullanılan fontları tespit edip sadece onları yükle
+                subsetle ve woff2 yap
+        preconnect
+            map
+        javascript devredışı bırakıldığı durum
+        projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
+        cPanel server zaten compress yapıyor mu?
+            sanırım evet
+            
+    Create unique, accurate page titles
     Use the meta description tag
         <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
 
@@ -39,22 +41,8 @@ SEO
 
         <meta name="description" content="Written by A.N. Author, Illustrated by V. Gogh, Price: $17.99, Length: 784 pages">
     Use the alt attribute
-    seo notes'daki 'byline dates' kısmına bak
+
     seo notes'daki 'local business' kısmına bak
-
-//
-
-optimizasyon için can-mese projesindeki notlara bak
-    preload
-        fonts
-            projede kullanılan fontları tespit edip sadece onları yükle
-            subsetle ve woff2 yap
-    preconnect
-        map
-    javascript devredışı bırakıldığı durum
-    projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
-    cPanel server zaten compress yapıyor mu?
-        sanırım evet
 
 //
 

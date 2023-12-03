@@ -15,7 +15,7 @@
 	$: linkObjects = [
 		{ name: L("homepage", $lang), link: getLocalizedLink("", $lang) },
 		{ name: L("products", $lang), link: getLocalizedLink("products", $lang) },
-		{ name: L("blog", $lang), link: getLocalizedLink("blog", $lang) },
+		{ name: L("news", $lang), link: getLocalizedLink("news", $lang) },
 		{ name: L("about-us", $lang), link: getLocalizedLink("about-us", $lang) },
 		{ name: L("contact", $lang), link: getLocalizedLink("contact", $lang) },
 	];
