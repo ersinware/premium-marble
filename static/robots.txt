@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://premiummermer.com.tr/sitemap.xml

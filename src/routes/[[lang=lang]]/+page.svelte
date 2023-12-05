@@ -1,5 +1,6 @@
 <script>
 	import { goto } from "$app/navigation";
+	import { page } from "$app/stores";
 	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import LazyImage from "$lib/components/LazyImage.svelte";
 	import Slider from "$lib/components/slider/Slider.svelte";
@@ -33,6 +34,42 @@
 
 <svelte:head>
 	<title>{L("homepage-page-title", $lang)}</title>
+
+	{#if !$page.params.lang}
+		<script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": "https://www.premiummermer.com.tr/",
+            }
+		</script>
+	{/if}
+
+     {@html `
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+                "@type": "Corporation",
+                "url": "https://www.premiummermer.com.tr",
+                "logo": "https://www.premiummermer.com.tr/api/image/premium-mermer-logo?density=5&width=1120",
+                "name": "${L('app-name', $lang)}",
+                "description": "${L('corporation-description', $lang)}}",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "${L('street-address', $lang)}",
+                    "addressLocality": "Silifke",
+                    "addressCountry": "TR",
+                    "addressRegion": "Mersin",
+                    "postalCode": "33940"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "info@premiummermer.com.tr",
+                    "telephone": "+90 324 503 30 31"
+                }
+            }
+        </script>
+    `}
 
 	<link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("", "", PUBLIC_DEFAULT_LANGUAGE)} />
 	{#each arrLangs as lang}

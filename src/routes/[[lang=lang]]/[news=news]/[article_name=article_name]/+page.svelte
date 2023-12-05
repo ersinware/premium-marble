@@ -1,11 +1,11 @@
 <script>
 	import { page } from "$app/stores";
-	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
+	import { PUBLIC_DEFAULT_LANGUAGE, PUBLIC_HOST_ADDRESS, PUBLIC_LAST_MOD } from "$env/static/public";
 	import SimilarArticles from "$lib/components/news/article/SimilarArticles.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
-	import { ARTICLE_POSTER_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
+	import { ARTICLE_POSTER_IMAGE_MEDIA_DATA, SMALL_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
-	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
+	import { getFullLocalizedURL, getLocalizedLink } from "$lib/js/client/localization/localization.util.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
 	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
@@ -21,17 +21,57 @@
 <svelte:head>
 	<title>{article.name} | {L("app-name", $lang)}</title>
 
+	{@html `
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": "${article.name}",
+                "image": [
+                    "${PUBLIC_HOST_ADDRESS}${getLinkForResponsiveImage(article.imageName, SMALL_IMAGE_MEDIA_DATA[SMALL_IMAGE_MEDIA_DATA.length - 1], undefined)}"
+                ],
+                "datePublished": "${PUBLIC_LAST_MOD}",
+                "dateModified": "${PUBLIC_LAST_MOD}",
+                "author": [{
+                    "@type": "Organization",
+                    "name": "${L("app-name", $lang)}",
+                    "url": "https://premiummermer.com.tr"
+                }]
+            }
+	    </script>
+    `}
+
+
+    {@html `
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "${L('news', $lang)}",
+                        "item": "${PUBLIC_HOST_ADDRESS}${getLocalizedLink('news', $lang)}"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "${article.name}",
+                        "item": "${PUBLIC_HOST_ADDRESS}${getLocalizedLink('news', $lang)}/${getLocalizedPath($page.params.article_name, $lang)}"
+                    }
+                ]
+            }
+    </script>
+    `}
+
 	<link
 		rel="alternate"
 		hreflang="x-default"
 		href={getFullLocalizedURL(`news/${$page.params.article_name}`, "", PUBLIC_DEFAULT_LANGUAGE)}
 	/>
 	{#each arrLangs as lang}
-		<link
-			rel="alternate"
-			hreflang={lang}
-			href={getFullLocalizedURL(`news/${$page.params.article_name}`, "", lang)}
-		/>
+		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL(`news/${$page.params.article_name}`, "", lang)} />
 	{/each}
 
 	{#each ARTICLE_POSTER_IMAGE_MEDIA_DATA as media}

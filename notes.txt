@@ -1,32 +1,23 @@
 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
 
-safari'de test et
+yayınlarken, PUBLIC_HOST_ADDRESS değiştir
 
-sitemap kontrol et
-    önce xml
-    sonra kod
+safari'de test et
 
 //
 
-SEO
-    sitemap
-        image sitemap?
-    add structured data
-        seo notes'daki 'some important structured data types' kısma bak
-        https://developers.google.com/search/docs/appearance/structured-data/search-gallery?hl=tr
+Poppins Regular
+Poppins SemiBold
+Poppins Medium
+Poppins Bold
+Poppins Italic
+Montserrat ExtraBold
+Montserrat SemiBold
 
-    optimizasyon için can-mese projesindeki notlara bak
-        preload
-            fonts
-                projede kullanılan fontları tespit edip sadece onları yükle
-                subsetle ve woff2 yap
-        preconnect
-            map
-        javascript devredışı bırakıldığı durum
-        projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
-        cPanel server zaten compress yapıyor mu?
-            sanırım evet
+optimizasyon için can-mese projesindeki notlara bak
+    javascript devredışı bırakıldığı durum
             
+SEO
     Create unique, accurate page titles
     Use the meta description tag
         <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
@@ -42,20 +33,23 @@ SEO
         <meta name="description" content="Written by A.N. Author, Illustrated by V. Gogh, Price: $17.99, Length: 784 pages">
     Use the alt attribute
 
-    seo notes'daki 'local business' kısmına bak
-
 //
 
 favicon ayarla
 
-service worker her şeyi cache'lesin
-
 language-switcher touchable olduğu zaman yapmadın
     touchable ayrı, hoverable ayrı yap
+
+service worker her şeyi cache'lesin
 
 offline olduğu durumu test et
     tekrar online olduğunda ya da cache'lenmemiş sayfaya gittiğinde?
     lazy image offline işine bak
+
+cPanel server zaten compress yapıyor mu?
+    sanırım evet
+
+projeyi bitirdikten sonra, kullanılmayan css selector'ları sil
 
 //
 
@@ -68,3 +62,7 @@ slider kodunu komple düzenle
 //
 
 static adapter yap
+
+//
+
+seo notes'daki 'local business' kısmına bak

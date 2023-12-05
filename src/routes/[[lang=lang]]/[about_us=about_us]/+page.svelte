@@ -1,15 +1,15 @@
 <script>
+	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import LazyImage from "$lib/components/LazyImage.svelte";
 	import { TRANSITION_PAGE } from "$lib/js/client/constants.client";
+	import { SECTION_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
 	import { L } from "$lib/js/client/localization/localization.translations.data.client";
+	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
 	import { getStore } from "$lib/js/client/util.client";
 	import { getLinkForResponsiveImage, getMediaQueryForResponsiveImage } from "$lib/js/client/util.responsive.client";
 	import { MODE_LAZY_IMAGE_WHEN_VISIBLE } from "$lib/js/common/constants.common";
-	import { SECTION_IMAGE_MEDIA_DATA } from "$lib/js/client/constants.media.data.client";
-	import { fly } from "svelte/transition";
-	import { PUBLIC_DEFAULT_LANGUAGE } from "$env/static/public";
 	import { arrLangs } from "$lib/js/common/localization/localization.constants.common";
-	import { getFullLocalizedURL } from "$lib/js/client/localization/localization.util.client";
+	import { fly } from "svelte/transition";
 
 	const lang = getStore("lang");
 </script>
@@ -17,7 +17,7 @@
 <svelte:head>
 	<title>{L("about-us-page-title", $lang)}</title>
 
-    <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("about-us", "", PUBLIC_DEFAULT_LANGUAGE)} />
+	<link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("about-us", "", PUBLIC_DEFAULT_LANGUAGE)} />
 	{#each arrLangs as lang}
 		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL("about-us", "", lang)} />
 	{/each}
@@ -179,7 +179,7 @@
 			<LazyImage
 				mode={MODE_LAZY_IMAGE_WHEN_VISIBLE}
 				classes="hoverable-image w-h-100 m-h-auto b-r-d"
-				alt={L('app-name', $lang)}
+				alt={L("app-name", $lang)}
 				imageName="premium-mermer-about-us-four"
 				mediaData={SECTION_IMAGE_MEDIA_DATA}
 				onceRatio={false}
@@ -188,7 +188,7 @@
 
 		<div class="section-texts g-v-d flex f-column small-screen-t-a-c">
 			<h2 class="section-title">{L("about-us-title-four", $lang)}</h2>
-				<p class="section-text">{L("about-us-description-four", $lang)}</p>
+			<p class="section-text">{L("about-us-description-four", $lang)}</p>
 		</div>
 	</article>
 </section>

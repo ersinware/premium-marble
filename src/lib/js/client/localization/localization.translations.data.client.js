@@ -48,7 +48,7 @@ const tr = new Map([
     ['slider-item-description-three', "Mutfaklarınıza modern bir dokunuş katmak için tasarladığımız ürünler, şıklığı tamamen yeniden tanımlıyor."],
 
     ['text-with-icon-title-one', "Son Sistem Makineler"],
-    ['text-with-icon-description-one', "Mutfaklarınıza modern bir dokunuş katmak için tasarladığımız ürünler, şıklığı tamamen yeniden tanımlıyor."],
+    ['text-with-icon-description-one', "Doğadan çıkardığımız mermerleri son teknolojiyi kullanarak, doğaya zarar vermeden üretim yapıyoruz."],
     ['text-with-icon-title-two', "Deneyimli Ekip"],
     ['text-with-icon-description-two', "Alanında uzman ekibimizin özverili çalışmaları neticesinde kaliteden ödün vermiyoruz."],
     ['text-with-icon-title-three', "Müşteri Memnuniyeti"],
@@ -102,7 +102,7 @@ const tr = new Map([
     ['about-us-description-one', "26.000 m² arazi üzerinde 3000 m² kapalı alanda çalışan Premium Mermer, deneyimli kadrosu ve son teknoloji makineleri ile Silifke'den çıkan mermer çeşitlerini işleyip ihracat yaparak hem bölge hem de ülke ekonomisine katkı sağlamaktadır."],
 
     ['about-us-title-two', "18 Yıllık Deneyim"],
-    ['about-us-description-two', "Premium Mermer, perakende ve toptan satıştan gelen geniş tecrübesiyle müşteri taleplerine eksiksiz bir şekilde yanıt veriyor.Kurulduğu yıldan bu yana kalitesini sürekli olarak artıran fabrikamız, her türlü mermer çeşidini istenilen ölçü ve ebatlarda işleyerek müşterilerimizin özel isteklerini karşılamaktadır."],
+    ['about-us-description-two', "Premium Mermer, perakende ve toptan satıştan gelen geniş tecrübesiyle müşteri taleplerine eksiksiz bir şekilde yanıt veriyor. Kurulduğu yıldan bu yana kalitesini sürekli olarak artıran fabrikamız, her türlü mermer çeşidini istenilen ölçü ve ebatlarda işleyerek müşterilerimizin özel isteklerini karşılamaktadır."],
 
     ['project-experience', "Proje Tecrübesi"],
     ['different-countries', "Farklı Ülke"],
@@ -141,6 +141,9 @@ const tr = new Map([
 
     ['delivered-successfuly', "Mesajınız başarıyla iletildi. Size geri dönüş yapacağız."],
     ['error-occured', "Bir hata oluştu. Daha sonra tekrar deneyin."],
+
+    ['corporation-description', "Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi kullanarak, doğaya zarar vermeden kaliteli mermer üretimi yapıyor."],
+    ['street-address', "4. Cadde, No: 1"],
 ])
 
 const en = new Map([
@@ -283,6 +286,9 @@ const en = new Map([
 
     ['delivered-successfuly', "Your message has been successfully delivered. We will get back to you."],
     ['error-occured', "An error occurred. Please try again later."],
+
+    ['corporation-description', "Premium Marble Factory, a longstanding marble facility in Silifke, has been producing quality marble since 2005, using the latest technology and prioritizing environmental sustainability."],
+    ['street-address', "4th Avenue, No: 1"],
 ])
 
 const languages = { tr, en }

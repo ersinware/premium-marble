@@ -117,8 +117,6 @@
 		});
 
 		mount();
-
-		console.timeEnd("slider initialization");
 	}
 
 	function _onDestroy() {

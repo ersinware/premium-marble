@@ -24,19 +24,18 @@ async function getEntireURL() {
 
     let theEntire = ''
     for (const [key, value] of paths.entries()) {
-        if (value.get('parentPath'))
+        const parentPath = value.get('parentPath')
+        if (parentPath) {
+            const localizedParentPath = getLocalizedPath(parentPath, value.get('lang'))
+            theEntire += getURL([
+                { pathKey: localizedParentPath, path: paths.get(localizedParentPath) },
+                { pathKey: key, path: paths.get(key) }
+            ])
+
             continue
+        }
 
         theEntire += getURL([{ pathKey: key, path: value }])
-    }
-
-    for (const [pathKey, path] of paths.entries()) {
-        const parentPath = path.get('parentPath')
-        if (!parentPath)
-            continue
-
-        const parentPathKey = getLocalizedPath(parentPath, path.get('lang'))
-        theEntire += getURL([{ pathKey: parentPathKey, path: paths.get(parentPathKey) }, { pathKey, path: paths.get(pathKey) }])
     }
 
     console.timeEnd('getEntireURL')

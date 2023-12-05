@@ -42,7 +42,7 @@ export async function handle({ event, resolve }) {
 
     console.log(pathname + event.url.search);
 
-    if (firstPath && (firstPath.includes('sitemap') || firstPath === 'api'))
+    if (firstPath && (firstPath === 'api' || (firstPath.includes('sitemap'))))
         return await resolve(event)
 
     event.locals.lang = getLang(event)
