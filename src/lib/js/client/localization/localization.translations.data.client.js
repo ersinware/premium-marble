@@ -55,7 +55,7 @@ const tr = new Map([
     ['text-with-icon-description-three', "Sürdürülebilir başarılar için müşterilerimizin memnuniyetini ön planda tutmak için elimizden geleni yapıyoruz."],
 
     ['homepage-section-title-one', "Premium Mermer"],
-    ['homepage-section-description-one', "Doğadan ilham alarak tasarlanan her bir blok, modern tasarım ve geleneksel işçilikle birleşerek mekânlarınıza benzersiz bir dokunuş katıyor.Zengin seçeneklerimizle tarzınıza uygun çözümler sunuyoruz."],
+    ['homepage-section-description-one', "Doğadan ilham alarak tasarlanan her bir blok, modern tasarım ve geleneksel işçilikle birleşerek mekânlarınıza benzersiz bir dokunuş katıyor. Zengin seçeneklerimizle tarzınıza uygun çözümler sunuyoruz."],
     ['homepage-section-button-one', "ÜRÜNLERİMİZ"],
 
     ['homepage-section-title-two', "Mermerin Ötesinde"],
@@ -63,11 +63,11 @@ const tr = new Map([
     ['homepage-section-button-two', "HAKKIMIZDA"],
 
     ['homepage-section-title-three', "Bilgi ve İlham Kaynağı"],
-    ['homepage-section-description-three', "Mermer dünyasının nabzını tutan firmamız, sektöre dair değerli içgörüleri ve ilham verici tasarım önerilerini sizinle buluşturuyor.Yeniliklere dair bilgileri keşfedin."],
+    ['homepage-section-description-three', "Mermer dünyasının nabzını tutan firmamız, sektöre dair değerli içgörüleri ve ilham verici tasarım önerilerini sizinle buluşturuyor. Yeniliklere dair bilgileri keşfedin."],
     ['homepage-section-button-three', "MAKALELER"],
 
     ['homepage-section-title-four', "Düşünceleriniz, Değerli"],
-    ['homepage-section-description-four', "Müşterilerimizin memnuniyeti bizim için önceliktir. İster soru sormanız, ister bir projeyi tartışmanız, ister sadece merhaba demeniz için buradayız.Sizden haber almak için sabırsızlanıyoruz."],
+    ['homepage-section-description-four', "Müşterilerimizin memnuniyeti bizim için önceliktir. İster soru sormanız, ister bir projeyi tartışmanız, ister sadece merhaba demeniz için buradayız. Sizden haber almak için sabırsızlanıyoruz."],
     ['homepage-section-button-four', "BİZE ULAŞIN"],
 
     ['products', "Ürünlerimiz"],
@@ -110,7 +110,7 @@ const tr = new Map([
     ['for-years-experience', "Yıllık Deneyim"],
 
     ['about-us-title-three', "Kalitenin Simgesi"],
-    ['about-us-description-three', "Premium Mermer olarak, hatasız üretim ve zamanında teslimat prensiplerimizle ön plana çıkıyoruz. Sürekli iyileşmeyi temel felsefemiz olarak benimseyerek personel kalifikasyonu için düzenli eğitim faaliyetleri yürütüyoruz.İhracatta ön sıralarda yer alarak ülke ve şirket gelişimine katkıda bulunuyoruz.Kalitemiz, markamızın simgesidir ve bu, geleceğe attığımız imzadır."],
+    ['about-us-description-three', "Premium Mermer olarak, hatasız üretim ve zamanında teslimat prensiplerimizle ön plana çıkıyoruz. Sürekli iyileşmeyi temel felsefemiz olarak benimseyerek personel kalifikasyonu için düzenli eğitim faaliyetleri yürütüyoruz. İhracatta ön sıralarda yer alarak ülke ve şirket gelişimine katkıda bulunuyoruz.Kalitemiz, markamızın simgesidir ve bu, geleceğe attığımız imzadır."],
     ['about-us-title-four', "Daima Yenilikçi"],
     ['about-us-description-four', "Müşterilerimizin değişen ihtiyaç ve beklentilerini doğru algılayarak zamanında karşılamak, sektördeki teknolojik gelişmeleri takip ederek en gelişmiş teknikleri kullanmak, maliyetleri optimum seviyeye çekmek ve çevreye saygılı bir şekilde iş ve işçi güvenliğini temel alan üretim yapma bilinciyle çalışmalarımızı sürdürüyoruz."],
 
@@ -231,7 +231,7 @@ const en = new Map([
     ['crema-taurus', "Crema Taurus"],
     ['cremera-marble', "Cremera Marble"],
 
-    ['news-description', "Premium Marble is a global brand that offers the elegance and durability of marble.You are in the right place on the News page to explore everything about marble and stay updated on the latest developments in the industry."],
+    ['news-description', "Premium Marble is a global brand that offers the elegance and durability of marble. You are in the right place on the News page to explore everything about marble and stay updated on the latest developments in the industry."],
 
     ['contact-description', "Whether you have questions, want to discuss a project, or just want to say hello, we are here for you."],
     ['write-to-us', "WRITE TO US"],
