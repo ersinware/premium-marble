@@ -159,14 +159,6 @@ b {
 }
 
 @font-face {
-    font-family: Poppins;
-    font-weight: 800;
-    font-display: swap;
-
-    src: url(/fonts/Poppins-ExtraBold.woff2);
-}
-
-@font-face {
     font-family: Montserrat;
     font-weight: 600;
     font-display: swap;

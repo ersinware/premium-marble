@@ -23,7 +23,7 @@ const tr = new Map([
     ['about-us', "Hakkımızda"],
     ['contact', "İletişim"],
 
-    ['homepage-page-title', "Anasayfa | Premium Mermer"],
+    ['homepage-page-title', "Premium Mermer"],
     ['products-page-title', "Ürünler | Premium Mermer"],
     ['news-page-title', "Haberler | Premium Mermer"],
     ['about-us-page-title', "Hakkımızda | Premium Mermer"],
@@ -167,9 +167,9 @@ const en = new Map([
     ['about-us', "About Us"],
     ['contact', "Contact"],
 
-    ['homepage-page-title', "Homepage | Premium Marble"],
+    ['homepage-page-title', "Premium Marble"],
     ['products-page-title', "Products | Premium Marble"],
-    ['news-page-title', "News | Premium Mermer"],
+    ['news-page-title', "News | Premium Marble"],
     ['about-us-page-title', "About Us | Premium Marble"],
     ['contact-page-title', "Contact | Premium Marble"],
 

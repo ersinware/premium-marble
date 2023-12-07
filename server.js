@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import { handler } from "./build/handler.js";
+import compress from "http-compression";
 import { sendImage } from "./src/lib/js/server/util.image.server.js";
 
 dotenv.config();
@@ -24,6 +25,7 @@ app
         })
     )
     .get("/api/image/:imageName", sendImage)
+    .use(compress())
     .use("/", express.static("static", { immutable: true, maxAge: 31556926000, index: false }))
     .use(handler);
 

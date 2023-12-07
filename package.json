@@ -24,6 +24,7 @@
 		"googleapis": "^128.0.0",
 		"helmet": "^7.1.0",
 		"html-minifier": "^4.0.0",
+		"http-compression": "^1.0.17",
 		"nodemailer": "^6.9.7",
 		"sharp": "^0.32.6"
 	}
