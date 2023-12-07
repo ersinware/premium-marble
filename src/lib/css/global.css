@@ -117,6 +117,73 @@ b {
 
 /* ||| */
 
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-display: swap;
+
+    src: url(/fonts/Poppins-Regular.woff2);
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+
+    src: url(/fonts/Poppins-Italic.woff2);
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 500;
+    font-display: swap;
+
+    src: url(/fonts/Poppins-Medium.woff2);
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 600;
+    font-display: swap;
+
+    src: url(/fonts/Poppins-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 700;
+    font-display: swap;
+
+    src: url(/fonts/Poppins-Bold.woff2);
+}
+
+@font-face {
+    font-family: Poppins;
+    font-weight: 800;
+    font-display: swap;
+
+    src: url(/fonts/Poppins-ExtraBold.woff2);
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-display: swap;
+
+    src: url(/fonts/Montserrat-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-display: swap;
+
+    src: url(/fonts/Montserrat-ExtraBold.woff2);
+}
+
+/* ||| */
+
 body {
     --actual-vh: calc(var(--vh, 1vh) * 100);
 
