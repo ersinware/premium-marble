@@ -39,7 +39,7 @@ const tr = new Map([
     ['footer-address-two', "4. Cadde, No: 1"],
     ['contact-form', "İletişim Formu"],
     ['sitemap', "SİTE HARİTASI"],
-    
+
     ['slider-item-title-one', "Mermerin Eşsiz Zerafeti"],
     ['slider-item-description-one', "Doğadan ilham alarak işlediğimiz mermer, mekânlarınıza eşsiz bir zerafet katıyor, estetik anlayışınızı yeniden tanımlıyoruz."],
     ['slider-item-title-two', "Taşın Ahengini Hissedin"],
@@ -144,6 +144,12 @@ const tr = new Map([
 
     ['corporation-description', "Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi kullanarak, doğaya zarar vermeden kaliteli mermer üretimi yapıyor."],
     ['street-address', "4. Cadde, No: 1"],
+
+    ['homepage-meta-description', "Silifke’nin köklü mermer fabrikalarından olan Premium Mermer Fabrikası, 2005 yılından bu yana son teknolojiyi kullanarak, doğaya zarar vermeden kaliteli mermer üretimi yapıyor."],
+    ['products-meta-description', "Premium Mermer Fabrikası'nda eşsiz mermer ürünlerini keşfedin. Modern tasarımı ve geleneksel zanaatı birleştirerek, mekanlarınıza benzersiz bir dokunuş sunan koleksiyonumuzu keşfedin."],
+    ['news-meta-description', "Premium Mermer Fabrikası'nın blogunda mermer endüstrisindeki en son güncellemelerle ilgili bilgi sahibi olun. Değerli içgörüler ve ilham verici tasarım önerilerini keşfedin."],
+    ['about-us-meta-description', "18 yıllık deneyimiyle Premium Mermer, müşteri taleplerine eksiksiz çözümlerle yanıt veren öncü bir markadır. Kalitemize, sürekli iyileşmeye ve yeniliğe olan bağlılığımız bizi tanımlar. Hikayemiz ve uzmanlığımız hakkında daha fazla bilgi edinin."],
+    ['contact-meta-description', "Sorularınız mı var, tartışmak istediğiniz bir proje mi var, yoksa sadece merhaba mı demek istiyorsunuz? Premium Mermer Fabrikası burada. Düşüncelerinizi duymak ve ihtiyaçlarınız için en iyi mermer çözümlerini sunmak için sabırsızlanıyoruz."],
 ])
 
 const en = new Map([
@@ -289,6 +295,12 @@ const en = new Map([
 
     ['corporation-description', "Premium Marble Factory, a longstanding marble facility in Silifke, has been producing quality marble since 2005, using the latest technology and prioritizing environmental sustainability."],
     ['street-address', "4th Avenue, No: 1"],
+
+    ['homepage-meta-description', "Premium Marble Factory, a longstanding marble facility in Silifke, has been producing quality marble since 2005, using the latest technology and prioritizing environmental sustainability."],
+    ['products-meta-description', "Explore a wide range of exquisite marble products at Premium Marble Factory. Our collection combines modern design and traditional craftsmanship, offering elegance, durability, and aesthetic appeal for your unique spaces."],
+    ['news-meta-description', "Stay informed and inspired with the latest updates in the marble industry on Premium Marble Factory's blog. Discover valuable insights and engaging design recommendations, showcasing our commitment to excellence."],
+    ['about-us-meta-description', "With 18 years of experience, Premium Marble is a leading brand responding to customer needs with comprehensive solutions. Our commitment to quality, continuous improvement, and innovation defines us. Learn more about our journey and expertise."],
+    ['contact-meta-description', "Have questions, projects to discuss, or just want to say hello? Premium Marble Factory is here for you. We look forward to hearing from you and providing the best marble solutions for your needs."]
 ])
 
 const languages = { tr, en }

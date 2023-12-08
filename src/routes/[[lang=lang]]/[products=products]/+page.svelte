@@ -32,6 +32,8 @@
 <svelte:head>
 	<title>{L("products-page-title", $lang)}</title>
 
+    <meta name="description" content={L("products-meta-description", $lang)}>
+
     <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL("products", "", PUBLIC_DEFAULT_LANGUAGE)} />
 	{#each arrLangs as lang}
 		<link rel="alternate" hreflang={lang} href={getFullLocalizedURL("products", "", lang)} />

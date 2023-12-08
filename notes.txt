@@ -4,25 +4,6 @@ safari'de, diğer tarayıcılarda test et
 
 //
 
-SEO
-    Use the meta description tag
-        <meta name="description" content="Brandon's Baseball Cards provides a large selection of vintage and modern baseball cards for sale. We also offer daily baseball news and events.">
-
-        Accurately summarize the page content
-        Use unique descriptions for each page
-
-        The meta description doesn't just have to be in sentence format; it's also a great place to include information about the page. For example, news or blog postings can list the author, date of publication, or byline information. This can give potential visitors very relevant information that might not be displayed in the snippet otherwise. 
-        Similarly, product pages might have the key bits of information—price, age, manufacturer—scattered throughout a page. A good meta description can bring all this data together.
-
-        For example, the following meta description provides detailed information about a book, and information is clearly tagged and separated:
-
-        <meta name="description" content="Written by A.N. Author, Illustrated by V. Gogh, Price: $17.99, Length: 784 pages">
-    Use the alt attribute
-
-favicon ayarla
-
-//
-
 language-switcher touchable olduğu zaman yapmadın
     touchable ayrı, hoverable ayrı yap
 

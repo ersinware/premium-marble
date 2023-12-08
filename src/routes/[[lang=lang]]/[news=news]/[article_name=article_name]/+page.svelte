@@ -21,6 +21,12 @@
 <svelte:head>
 	<title>{article.name} | {L("app-name", $lang)}</title>
 
+	{#if $lang === "tr"}
+		<meta name="description" content="'{article.name}' hakkında bir makale | Premium Mermer" />
+	{:else}
+		<meta name="description" content="An article about '{article.name}' | Premium Marble" />
+	{/if}
+
 	{@html `
         <script type="application/ld+json">
             {
@@ -28,7 +34,11 @@
                 "@type": "Article",
                 "headline": "${article.name}",
                 "image": [
-                    "${PUBLIC_HOST_ADDRESS}${getLinkForResponsiveImage(article.imageName, SMALL_IMAGE_MEDIA_DATA[SMALL_IMAGE_MEDIA_DATA.length - 1], undefined)}"
+                    "${PUBLIC_HOST_ADDRESS}${getLinkForResponsiveImage(
+											article.imageName,
+											SMALL_IMAGE_MEDIA_DATA[SMALL_IMAGE_MEDIA_DATA.length - 1],
+											undefined,
+										)}"
                 ],
                 "datePublished": "${PUBLIC_LAST_MOD}",
                 "dateModified": "${PUBLIC_LAST_MOD}",
@@ -41,8 +51,7 @@
 	    </script>
     `}
 
-
-    {@html `
+	{@html `
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -51,18 +60,21 @@
                     {
                         "@type": "ListItem",
                         "position": 1,
-                        "name": "${L('news', $lang)}",
-                        "item": "${PUBLIC_HOST_ADDRESS}${getLocalizedLink('news', $lang)}"
+                        "name": "${L("news", $lang)}",
+                        "item": "${PUBLIC_HOST_ADDRESS}${getLocalizedLink("news", $lang)}"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "${article.name}",
-                        "item": "${PUBLIC_HOST_ADDRESS}${getLocalizedLink('news', $lang)}/${getLocalizedPath($page.params.article_name, $lang)}"
+                        "item": "${PUBLIC_HOST_ADDRESS}${getLocalizedLink("news", $lang)}/${getLocalizedPath(
+													$page.params.article_name,
+													$lang,
+												)}"
                     }
                 ]
             }
-    </script>
+        </script>
     `}
 
 	<link

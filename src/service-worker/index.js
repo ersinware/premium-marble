@@ -36,6 +36,7 @@ function onFetch(event) {
 async function respond(event) {
     const url = new URL(event.request.url)
 
+    // instead of this, try to fetch from the cache
     if (ASSETS.includes(url.pathname)) return (await getCache()).match(url);
 
     const preloadResponse = await getPreloadResponse(event);
@@ -110,6 +111,10 @@ async function getResponse(request) {
 
         return response;
     }
+}
+
+async function getFromCache() {
+    
 }
 
 /* */

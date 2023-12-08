@@ -34,6 +34,7 @@
 
 <svelte:head>
 	<title>{L("homepage-page-title", $lang)}</title>
+    <meta name="description" content={L("homepage-meta-description", $lang)}>
 
 	{#if !$page.params.lang}
 		<script type="application/ld+json">

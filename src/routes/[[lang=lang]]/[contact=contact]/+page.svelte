@@ -13,6 +13,8 @@
 <svelte:head>
 	<title>{L("contact-page-title", $lang)}</title>
 
+    <meta name="description" content={L("contact-meta-description", $lang)}>
+
     <link rel="preconnect" href="https://www.google.com/maps" />
 
     <link rel="alternate" hreflang="x-default" href={getFullLocalizedURL('contact', "", PUBLIC_DEFAULT_LANGUAGE)} />
