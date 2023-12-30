@@ -1,9 +1,5 @@
 import { browser } from "$app/environment";
 
-export function waitFor(delay) {
-    return new Promise(resolve => setTimeout(resolve, delay))
-}
-
 export function yieldToMain() {
     if (browser && setZeroTimeout)
         return new Promise(resolve => setZeroTimeout(() => queueMicrotask(resolve)))

@@ -2,6 +2,8 @@ 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
 
 safari'de, diğer tarayıcılarda test et
 
+STRUCTURED DATA'LARDA SORUN VAR SANIRIM, TEST ET
+
 //
 
 language-switcher touchable olduğu zaman yapmadın
@@ -38,4 +40,6 @@ static adapter yap
 
 //
 
-seo notes'daki 'local business' kısmına bak
+haritayı dinamik olarak yükle
+google'a bildirimde bulun
+seo notes'daki 'local business' kısmına bak"

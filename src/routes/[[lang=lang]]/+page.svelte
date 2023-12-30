@@ -34,30 +34,32 @@
 
 <svelte:head>
 	<title>{L("homepage-page-title", $lang)}</title>
-    <meta name="description" content={L("homepage-meta-description", $lang)}>
+	<meta name="description" content={L("homepage-meta-description", $lang)} />
 
 	{#if !$page.params.lang}
-		<script type="application/ld+json">
+		{@html `
+            <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "url": "https://www.premiummermer.com.tr/",
             }
-		</script>
+            </script>
+        `}
 	{/if}
 
-     {@html `
+	{@html `
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
                 "@type": "Corporation",
                 "url": "https://www.premiummermer.com.tr",
                 "logo": "https://www.premiummermer.com.tr/api/image/premium-mermer-logo?density=5&width=1120",
-                "name": "${L('app-name', $lang)}",
-                "description": "${L('corporation-description', $lang)}}",
+                "name": "${L("app-name", $lang)}",
+                "description": "${L("corporation-description", $lang)}}",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "${L('street-address', $lang)}",
+                    "streetAddress": "${L("street-address", $lang)}",
                     "addressLocality": "Silifke",
                     "addressCountry": "TR",
                     "addressRegion": "Mersin",
