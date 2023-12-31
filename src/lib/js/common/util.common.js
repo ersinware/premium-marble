@@ -7,6 +7,10 @@ export function yieldToMain() {
         return new Promise(resolve => setTimeout(() => queueMicrotask(resolve), 0))
 }
 
+export function waitFor(delay) {
+    return new Promise((resolve, reject) => setTimeout(resolve, delay))
+}
+
 export function getPaths(pathname) {
     return pathname.split('/').filter(value => value)
 }

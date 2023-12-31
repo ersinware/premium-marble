@@ -24,7 +24,7 @@ const tr = new Map([
     ['contact', "İletişim"],
 
     ['homepage-page-title', "Premium Mermer"],
-    ['products-page-title', "Ürünler | Premium Mermer"],
+    ['products-page-title', "Ürünlerimiz | Premium Mermer"],
     ['news-page-title', "Haberler | Premium Mermer"],
     ['about-us-page-title', "Hakkımızda | Premium Mermer"],
     ['contact-page-title', "İletişim | Premium Mermer"],
