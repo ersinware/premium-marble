@@ -31,7 +31,7 @@ init()
 function init() {
     initLocalization()
     initLocalizationUtil(paths, searchParams, searchValues)
-    initMail()
+    // initMail()
 }
 
 export async function handle({ event, resolve }) {
